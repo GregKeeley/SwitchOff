@@ -6,7 +6,7 @@
 //  Copyright © 2019 Gregory Keeley. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class SwitchOffBrain {
     
@@ -16,7 +16,6 @@ class SwitchOffBrain {
     var neighborUp = Int()
     
     var neighborSwitches = [Int]()
-    
     
     func getNeighborTag(tag: Int) {
         neighborleft = tag - 1
@@ -32,5 +31,13 @@ class SwitchOffBrain {
     }
     func clearSwitchArray() {
         neighborSwitches.removeAll()
+    }
+    
+    func flipToggle(_ toggle: UISwitch) {
+        if toggle.isOn == true  {
+            toggle.isOn = false
+        } else {
+            toggle.isOn = true
+        }
     }
 }
