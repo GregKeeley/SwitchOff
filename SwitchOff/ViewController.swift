@@ -23,7 +23,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         switchCountLabel.text = "0"
     }
-    func switchCheck() {
+    func switchStateCheck() {
+
+    }
+    
+    func switchFlipCheck() {
         if switchCount > 25 {
             if switch_1.isOn == false && switch_2.isOn == false && switch_3.isOn == false {
             winLoseLabel.text = "WIN!"
@@ -40,14 +44,14 @@ class ViewController: UIViewController {
         switch_3.isOn = false
         switchCount += 1
         switchCountLabel.text = String(switchCount)
-        switchCheck()
+        switchFlipCheck()
     }
     @IBAction func switch_2Toggled(_ sender: UISwitch) {
         switch_1.isOn = false
-        switch_3.isOn = true
+        
         switchCount += 1
         switchCountLabel.text = String(switchCount)
-        switchCheck()
+        switchFlipCheck()
     }
     @IBAction func switch_3Toggled(_ sender: UISwitch) {
         if switch_2.isOn == true {
@@ -57,7 +61,7 @@ class ViewController: UIViewController {
         switch_1.isOn = false
         switchCount += 1
         switchCountLabel.text = String(switchCount)
-        switchCheck()
+        switchFlipCheck()
     }
     
     
