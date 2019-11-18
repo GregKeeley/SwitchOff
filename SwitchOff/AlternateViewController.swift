@@ -28,45 +28,35 @@ class AlternateViewController: UIViewController {
     
     
     
-    
+    var switchRange = 1...25
     
     
     @IBAction func switchFlipped(_ sender: UISwitch) {
         let toggleRight = sender.tag + 1
-                  let toggleLeft = sender.tag - 1
-                  let toggleDown = sender.tag + 5
-                  let toggleUp = sender.tag - 5
-                  let toggles = [toggleUp, toggleDown, toggleLeft, toggleRight]
-        if sender.isOn == false {
-            print(switchGrid ?? "Err")
-            
-          
-            
+        let toggleLeft = sender.tag - 1
+        let toggleDown = sender.tag + 5
+        let toggleUp = sender.tag - 5
+        let toggles = [toggleLeft, toggleRight, toggleUp, toggleDown]
+        //switcher.getNeighborTag(toggle: sender)
+        if sender.isOn == true {
             print("Sender: \(sender.tag) toggles: \(toggles)")
             for toggle in toggles {
-                if toggle > 0 {
-                    if toggle < 24 {
-                        switchGrid[toggle].isOn = true
-                    }
+                if switchRange.contains(toggle) {
+                    switchGrid[toggle].isOn = false
+                } else {
+                    print("\(toggle) is out of range")
                 }
             }
         } else {
             print("Sender: \(sender.tag) toggles: \(toggles)")
             for toggle in toggles {
-                if toggle > 0 {
-                    if toggle < 24 {
-                        switchGrid[toggle].isOn = false
-                        
-                        //            switcher.getNeighborTag(tag: sender.tag)
-                        //            switcher.clearSwitchArray()
-                        //            for toggle in switcher.neighborSwitches {
-                        //                var num = switchGrid.distance(from: sender.tag, to: 1)
-                        //                switcher.flipToggle([num])
-                    }
+                if switchRange.contains(toggle) {
+                    switchGrid[toggle].isOn = true
+                } else {
+                    print("\(toggle) is out of range")
                 }
-                
-                
             }
         }
     }
+    
 }

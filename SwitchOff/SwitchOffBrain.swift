@@ -17,17 +17,17 @@ class SwitchOffBrain {
     
     var neighborSwitches = [Int]()
     
-    func getNeighborTag(tag: Int) {
-        neighborleft = tag - 1
-        neighborRight = tag + 1
-        neighborDown = tag + 5
-        neighborUp = tag - 5
+    func getNeighborTag(toggle: UISwitch) {
+        neighborleft = toggle.tag - 1
+        neighborRight = toggle.tag + 1
+        neighborDown = toggle.tag + 5
+        neighborUp = toggle.tag - 5
         neighborSwitches.append(neighborUp)
         neighborSwitches.append(neighborRight)
         neighborSwitches.append(neighborleft)
         neighborSwitches.append(neighborDown)
         print(neighborSwitches, neighborUp, neighborDown, neighborRight, neighborleft)
-        
+        clearSwitchArray()
     }
     func clearSwitchArray() {
         neighborSwitches.removeAll()
