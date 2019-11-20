@@ -11,10 +11,10 @@ import UIKit
 class AlternateViewController: UIViewController {
     
     @IBOutlet var switchGrid: [UISwitch]!
-    
+    @IBOutlet weak var startButton: UIButton!
     
     var switcher = SwitchOffBrain()
-    
+    var switchRange = 1...25
     
     
     override func viewDidLoad() {
@@ -27,22 +27,25 @@ class AlternateViewController: UIViewController {
     }
     
     
-    
-    var switchRange = 1...25
-    
-    
     @IBAction func switchFlipped(_ sender: UISwitch) {
         let toggleRight = sender.tag + 1
         let toggleLeft = sender.tag - 1
         let toggleDown = sender.tag + 5
         let toggleUp = sender.tag - 5
-        let toggles = [toggleLeft, toggleRight, toggleUp, toggleDown]
-        //switcher.getNeighborTag(toggle: sender)
+        var toggles = [toggleLeft, toggleRight, toggleUp, toggleDown]
+        if sender.tag % 5 == 0 {
+            toggles.remove(at: 1)
+        }
+        if sender.tag % 5 == 1 {
+            toggles.remove(at: 0)
+        }
         if sender.isOn == true {
             print("Sender: \(sender.tag) toggles: \(toggles)")
             for toggle in toggles {
                 if switchRange.contains(toggle) {
-                    switchGrid[toggle].isOn = false
+                    // print(switchGrid)
+                    switchGrid[toggle - 1].isOn = false
+                    switcher.checkAllSwitches()
                 } else {
                     print("\(toggle) is out of range")
                 }
@@ -51,7 +54,8 @@ class AlternateViewController: UIViewController {
             print("Sender: \(sender.tag) toggles: \(toggles)")
             for toggle in toggles {
                 if switchRange.contains(toggle) {
-                    switchGrid[toggle].isOn = true
+                    switchGrid[toggle - 1].isOn = true
+                    switcher.checkAllSwitches()
                 } else {
                     print("\(toggle) is out of range")
                 }
@@ -59,4 +63,12 @@ class AlternateViewController: UIViewController {
         }
     }
     
+    @IBAction func startButtonPressed(_ sender: UIButton) {
+        for toggle in switchGrid {
+            switcher.gridSwitches.append(toggle)
+            print(switcher.gridSwitches)
+            startButton.isEnabled = false
+            //switcher.level_1_1(switchGrid)
+        }
+    }
 }

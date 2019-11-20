@@ -17,6 +17,8 @@ class SwitchOffBrain {
     
     var neighborSwitches = [Int]()
     
+    var gridSwitches = [UISwitch]()
+    
     func getNeighborTag(toggle: UISwitch) {
         neighborleft = toggle.tag - 1
         neighborRight = toggle.tag + 1
@@ -39,5 +41,21 @@ class SwitchOffBrain {
         } else {
             toggle.isOn = true
         }
+    }
+    func checkAllSwitches(){
+        for toggle in gridSwitches {
+            if toggle.isOn == false {
+                print("Win")
+            } else {
+                print("Keep going.. or try again")
+            }
+        }
+    }
+    func level_1_1(_ toggle: [UISwitch]) {
+        gridSwitches[11].isOn = true
+        gridSwitches[13].isOn = true
+        gridSwitches[7].isOn = true
+        gridSwitches[17].isOn = true
+//        checkAllSwitches()
     }
 }

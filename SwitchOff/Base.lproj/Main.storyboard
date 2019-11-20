@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SZn-eA-800">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SZn-eA-800">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -215,13 +215,6 @@
                                     <action selector="switchFlipped:" destination="SZn-eA-800" eventType="valueChanged" id="6Rz-vR-gKs"/>
                                 </connections>
                             </switch>
-                            <switch opaque="NO" tag="17" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j6L-k2-XIW">
-                                <rect key="frame" x="102" y="478" width="51" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <action selector="switchFlipped:" destination="SZn-eA-800" eventType="valueChanged" id="GRy-90-SAl"/>
-                                </connections>
-                            </switch>
                             <switch opaque="NO" tag="22" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OhL-Lh-ErO">
                                 <rect key="frame" x="102" y="524" width="51" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -265,10 +258,10 @@
                                 </connections>
                             </switch>
                             <switch opaque="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m9m-Rk-eCA">
-                                <rect key="frame" x="20" y="340" width="51" height="31"/>
+                                <rect key="frame" x="21" y="340" width="51" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <action selector="switchFlipped:" destination="SZn-eA-800" eventType="valueChanged" id="0Zo-t6-pvF"/>
+                                    <action selector="switchFlipped:" destination="SZn-eA-800" eventType="valueChanged" id="tVK-8X-gAw"/>
                                 </connections>
                             </switch>
                             <switch opaque="NO" tag="12" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DGS-Ow-XHV">
@@ -285,36 +278,53 @@
                                     <action selector="switchFlipped:" destination="SZn-eA-800" eventType="valueChanged" id="2Wu-NI-AjE"/>
                                 </connections>
                             </switch>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bmn-KH-gnx">
+                                <rect key="frame" x="158" y="631" width="99" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="startButtonPressed:" destination="SZn-eA-800" eventType="touchUpInside" id="Psb-m0-19a"/>
+                                </connections>
+                            </button>
+                            <switch opaque="NO" tag="17" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j6L-k2-XIW">
+                                <rect key="frame" x="102" y="478" width="51" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="switchFlipped:" destination="SZn-eA-800" eventType="valueChanged" id="GRy-90-SAl"/>
+                                </connections>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="eq6-WQ-ajt"/>
                     </view>
                     <connections>
-                        <outletCollection property="switchGrid" destination="Iua-sO-sQm" collectionClass="NSMutableArray" id="PgI-UN-msv"/>
-                        <outletCollection property="switchGrid" destination="M2h-FG-Pm9" collectionClass="NSMutableArray" id="EkX-OG-2qa"/>
-                        <outletCollection property="switchGrid" destination="fwd-On-E4S" collectionClass="NSMutableArray" id="uxB-zw-p5o"/>
-                        <outletCollection property="switchGrid" destination="hqO-cZ-GSR" collectionClass="NSMutableArray" id="WxH-Gq-yeA"/>
-                        <outletCollection property="switchGrid" destination="m9m-Rk-eCA" collectionClass="NSMutableArray" id="QR6-Gc-pse"/>
-                        <outletCollection property="switchGrid" destination="9b7-b9-g1X" collectionClass="NSMutableArray" id="AKq-IF-fvK"/>
-                        <outletCollection property="switchGrid" destination="Pbi-4V-Ggs" collectionClass="NSMutableArray" id="6m3-Vi-SrH"/>
-                        <outletCollection property="switchGrid" destination="TJq-FH-rAP" collectionClass="NSMutableArray" id="5BF-Gj-Sz3"/>
-                        <outletCollection property="switchGrid" destination="pLw-t3-gcw" collectionClass="NSMutableArray" id="Fog-Q4-iHr"/>
-                        <outletCollection property="switchGrid" destination="3ON-sJ-tRM" collectionClass="NSMutableArray" id="tLf-xe-jbJ"/>
-                        <outletCollection property="switchGrid" destination="DGQ-e0-eTQ" collectionClass="NSMutableArray" id="7vE-CW-J7f"/>
-                        <outletCollection property="switchGrid" destination="2td-tG-nPi" collectionClass="NSMutableArray" id="hax-tD-xb9"/>
-                        <outletCollection property="switchGrid" destination="32x-Rg-6GY" collectionClass="NSMutableArray" id="uIh-if-QKd"/>
-                        <outletCollection property="switchGrid" destination="O2y-YW-jdZ" collectionClass="NSMutableArray" id="k53-pf-E2r"/>
-                        <outletCollection property="switchGrid" destination="8LL-2G-c30" collectionClass="NSMutableArray" id="ZLi-dP-5pz"/>
-                        <outletCollection property="switchGrid" destination="Vnj-kt-f2g" collectionClass="NSMutableArray" id="kTd-ql-iCa"/>
-                        <outletCollection property="switchGrid" destination="iCD-Tr-h3S" collectionClass="NSMutableArray" id="ojO-Xb-kbj"/>
-                        <outletCollection property="switchGrid" destination="TU6-4g-Jbl" collectionClass="NSMutableArray" id="LCp-uW-u0C"/>
-                        <outletCollection property="switchGrid" destination="aBl-gl-Kof" collectionClass="NSMutableArray" id="1Ef-er-Ibg"/>
-                        <outletCollection property="switchGrid" destination="j6L-k2-XIW" collectionClass="NSMutableArray" id="8VW-j0-Yf9"/>
-                        <outletCollection property="switchGrid" destination="DGS-Ow-XHV" collectionClass="NSMutableArray" id="Uhn-K0-Kqh"/>
-                        <outletCollection property="switchGrid" destination="ReV-cZ-bVK" collectionClass="NSMutableArray" id="eyj-mu-vUT"/>
-                        <outletCollection property="switchGrid" destination="9Dr-J0-Kea" collectionClass="NSMutableArray" id="lAP-e1-1sF"/>
-                        <outletCollection property="switchGrid" destination="OhL-Lh-ErO" collectionClass="NSMutableArray" id="Bv7-f0-deH"/>
-                        <outletCollection property="switchGrid" destination="Kei-g6-QkA" collectionClass="NSMutableArray" id="vW5-yX-MmM"/>
+                        <outlet property="startButton" destination="Bmn-KH-gnx" id="PqP-FC-LRn"/>
+                        <outletCollection property="switchGrid" destination="m9m-Rk-eCA" collectionClass="NSMutableArray" id="kKs-yg-uM1"/>
+                        <outletCollection property="switchGrid" destination="hqO-cZ-GSR" collectionClass="NSMutableArray" id="dxG-3t-0IP"/>
+                        <outletCollection property="switchGrid" destination="fwd-On-E4S" collectionClass="NSMutableArray" id="ugI-Mr-VXb"/>
+                        <outletCollection property="switchGrid" destination="M2h-FG-Pm9" collectionClass="NSMutableArray" id="xDH-tc-h4S"/>
+                        <outletCollection property="switchGrid" destination="Iua-sO-sQm" collectionClass="NSMutableArray" id="BOd-fb-98l"/>
+                        <outletCollection property="switchGrid" destination="3ON-sJ-tRM" collectionClass="NSMutableArray" id="SUg-2U-173"/>
+                        <outletCollection property="switchGrid" destination="pLw-t3-gcw" collectionClass="NSMutableArray" id="zZ7-98-6lI"/>
+                        <outletCollection property="switchGrid" destination="TJq-FH-rAP" collectionClass="NSMutableArray" id="aKv-85-VL9"/>
+                        <outletCollection property="switchGrid" destination="Pbi-4V-Ggs" collectionClass="NSMutableArray" id="i9C-RV-N1V"/>
+                        <outletCollection property="switchGrid" destination="9b7-b9-g1X" collectionClass="NSMutableArray" id="bqx-GK-p0d"/>
+                        <outletCollection property="switchGrid" destination="ReV-cZ-bVK" collectionClass="NSMutableArray" id="q5B-CM-mGd"/>
+                        <outletCollection property="switchGrid" destination="DGS-Ow-XHV" collectionClass="NSMutableArray" id="hhf-yE-yvZ"/>
+                        <outletCollection property="switchGrid" destination="iCD-Tr-h3S" collectionClass="NSMutableArray" id="7dL-ag-Om6"/>
+                        <outletCollection property="switchGrid" destination="O2y-YW-jdZ" collectionClass="NSMutableArray" id="AlC-9A-EQR"/>
+                        <outletCollection property="switchGrid" destination="DGQ-e0-eTQ" collectionClass="NSMutableArray" id="m5x-rR-Eu7"/>
+                        <outletCollection property="switchGrid" destination="9Dr-J0-Kea" collectionClass="NSMutableArray" id="PBx-0F-GwU"/>
+                        <outletCollection property="switchGrid" destination="j6L-k2-XIW" collectionClass="NSMutableArray" id="iN2-YU-h9t"/>
+                        <outletCollection property="switchGrid" destination="TU6-4g-Jbl" collectionClass="NSMutableArray" id="aBx-Cm-DB6"/>
+                        <outletCollection property="switchGrid" destination="8LL-2G-c30" collectionClass="NSMutableArray" id="mY0-kb-nfq"/>
+                        <outletCollection property="switchGrid" destination="2td-tG-nPi" collectionClass="NSMutableArray" id="TTn-TZ-Afb"/>
+                        <outletCollection property="switchGrid" destination="Kei-g6-QkA" collectionClass="NSMutableArray" id="8qh-GJ-sVP"/>
+                        <outletCollection property="switchGrid" destination="OhL-Lh-ErO" collectionClass="NSMutableArray" id="917-gN-Hgz"/>
+                        <outletCollection property="switchGrid" destination="aBl-gl-Kof" collectionClass="NSMutableArray" id="T0J-Na-S1V"/>
+                        <outletCollection property="switchGrid" destination="Vnj-kt-f2g" collectionClass="NSMutableArray" id="n3m-n3-qoT"/>
+                        <outletCollection property="switchGrid" destination="32x-Rg-6GY" collectionClass="NSMutableArray" id="RMX-cA-7Ei"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yDL-JQ-dn6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
