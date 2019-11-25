@@ -294,12 +294,30 @@
                                     <action selector="switchFlipped:" destination="SZn-eA-800" eventType="valueChanged" id="GRy-90-SAl"/>
                                 </connections>
                             </switch>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2dt-aC-zZr">
+                                <rect key="frame" x="177" y="747" width="60" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Level 1-1"/>
+                                <connections>
+                                    <action selector="level_1_1" destination="SZn-eA-800" eventType="touchUpInside" id="XSI-Yj-u6B"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oc6-wr-PQf">
+                                <rect key="frame" x="143" y="813" width="129" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Win Animation test"/>
+                                <connections>
+                                    <action selector="winAnimationTest" destination="SZn-eA-800" eventType="touchUpInside" id="e94-Ad-6cI"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="eq6-WQ-ajt"/>
                     </view>
                     <connections>
+                        <outlet property="level1Button" destination="2dt-aC-zZr" id="uP7-jh-IhM"/>
                         <outlet property="startButton" destination="Bmn-KH-gnx" id="PqP-FC-LRn"/>
+                        <outlet property="winAnimationButton" destination="oc6-wr-PQf" id="6ad-gG-NDl"/>
                         <outletCollection property="switchGrid" destination="m9m-Rk-eCA" collectionClass="NSMutableArray" id="kKs-yg-uM1"/>
                         <outletCollection property="switchGrid" destination="hqO-cZ-GSR" collectionClass="NSMutableArray" id="dxG-3t-0IP"/>
                         <outletCollection property="switchGrid" destination="fwd-On-E4S" collectionClass="NSMutableArray" id="ugI-Mr-VXb"/>

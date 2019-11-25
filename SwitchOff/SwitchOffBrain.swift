@@ -18,6 +18,7 @@ class SwitchOffBrain {
     var neighborSwitches = [Int]()
     
     var gridSwitches = [UISwitch]()
+    var switchStates = [Bool]()
     
     func getNeighborTag(toggle: UISwitch) {
         neighborleft = toggle.tag - 1
@@ -46,9 +47,11 @@ class SwitchOffBrain {
         for toggle in gridSwitches {
             if toggle.isOn == false {
                 print("Win")
+                winAnimation()
             } else {
                 print("Keep going.. or try again")
             }
+            
         }
     }
     func level_1_1(_ toggle: [UISwitch]) {
@@ -57,5 +60,33 @@ class SwitchOffBrain {
         gridSwitches[7].isOn = true
         gridSwitches[17].isOn = true
 //        checkAllSwitches()
+    }
+    func getToggleStates() -> [Bool] {
+        for toggle in gridSwitches {
+            switchStates.append(toggle.isOn)
+        }
+        return switchStates
+    }
+    func winAnimation() {
+        
+        gridSwitches[0].isOn = true
+        sleep(UInt32(CGFloat(0.50)))
+        gridSwitches[0].isOn = false
+        sleep(UInt32(CGFloat(0.50)))
+        gridSwitches[1].isOn = true
+        sleep(UInt32(CGFloat(0.50)))
+        gridSwitches[1].isOn = false
+        sleep(UInt32(CGFloat(0.50)))
+        gridSwitches[2].isOn = true
+        sleep(UInt32(CGFloat(0.50)))
+        gridSwitches[2].isOn = false
+        sleep(UInt32(CGFloat(0.50)))
+        gridSwitches[3].isOn = true
+        sleep(UInt32(CGFloat(0.50)))
+        gridSwitches[3].isOn = false
+        sleep(UInt32(CGFloat(0.50)))
+        gridSwitches[4].isOn = true
+        sleep(UInt32(CGFloat(0.50)))
+        gridSwitches[4].isOn = false
     }
 }

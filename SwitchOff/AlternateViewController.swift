@@ -12,6 +12,8 @@ class AlternateViewController: UIViewController {
     
     @IBOutlet var switchGrid: [UISwitch]!
     @IBOutlet weak var startButton: UIButton!
+    @IBOutlet weak var level1Button: UIButton!
+    @IBOutlet weak var winAnimationButton: UIButton!
     
     var switcher = SwitchOffBrain()
     var switchRange = 1...25
@@ -19,13 +21,32 @@ class AlternateViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         for state in switchGrid {
             if state.isOn == true {
                 state.isOn = false
             }
         }
     }
+    func populateSwitchArray() {
+        for toggle in switchGrid {
+            switcher.gridSwitches.append(toggle)
+            startButton.isEnabled = false
+        }
+    }
+    @IBAction func winAnimationTest() {
+        populateSwitchArray()
+        switcher.winAnimation()
+    }
     
+    @IBAction func level_1_1() {
+        print(switcher.gridSwitches.description)
+        switcher.gridSwitches[11].isOn = true
+        switcher.gridSwitches[13].isOn = true
+        switcher.gridSwitches[7].isOn = true
+        switcher.gridSwitches[17].isOn = true
+        // switcher.checkAllSwitches()
+    }
     
     @IBAction func switchFlipped(_ sender: UISwitch) {
         let toggleRight = sender.tag + 1
@@ -43,7 +64,6 @@ class AlternateViewController: UIViewController {
             print("Sender: \(sender.tag) toggles: \(toggles)")
             for toggle in toggles {
                 if switchRange.contains(toggle) {
-                    // print(switchGrid)
                     switchGrid[toggle - 1].isOn = false
                     switcher.checkAllSwitches()
                 } else {
@@ -64,11 +84,11 @@ class AlternateViewController: UIViewController {
     }
     
     @IBAction func startButtonPressed(_ sender: UIButton) {
-        for toggle in switchGrid {
-            switcher.gridSwitches.append(toggle)
-            print(switcher.gridSwitches)
-            startButton.isEnabled = false
-            //switcher.level_1_1(switchGrid)
-        }
+        populateSwitchArray()
+        //                print(switcher.gridSwitches.count)
+        //        for toggle in switchGrid {
+        //            switcher.gridSwitches.append(toggle)
+        //            startButton.isEnabled = false
     }
 }
+
