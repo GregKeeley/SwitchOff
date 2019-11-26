@@ -10,10 +10,12 @@ import UIKit
 
 class AlternateViewController: UIViewController {
     
+    @IBOutlet weak var winLabel: UILabel!
     @IBOutlet var switchGrid: [UISwitch]!
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var winAnimationButton: UIButton!
     @IBOutlet weak var resetButton: UIButton!
+    @IBOutlet weak var level1: UIButton!
     
     var switcher = SwitchOffBrain()
     var switchRange = 1...25
@@ -22,6 +24,7 @@ class AlternateViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     allSwitchesOff()
+        winLabel.isHidden = true
     }
     
     func allSwitchesOff() {
@@ -60,6 +63,10 @@ class AlternateViewController: UIViewController {
             if switchRange.contains(toggle) {
             switcher.flipToggle(switchGrid[toggle - 1])
             }
+             let winState = switcher.checkAllSwitches()
+            if winState == true {
+                winLabel.isHidden = false
+            }
         }
 //        if sender.isOn == true {
 //            print("Sender: \(sender.tag) toggles: \(toggles)")
@@ -96,6 +103,16 @@ class AlternateViewController: UIViewController {
         switcher.gridSwitches[10].isOn = true
         switcher.gridSwitches[12].isOn = true
         switcher.gridSwitches[14].isOn = true
+    }
+    
+    @IBAction func level1ButtonPressed(_ sender: UIButton) {
+        populateSwitchArray()
+        allSwitchesOff()
+        switcher.gridSwitches[7].isOn = true
+        switcher.gridSwitches[11].isOn = true
+        switcher.gridSwitches[12].isOn = true
+        switcher.gridSwitches[13].isOn = true
+        switcher.gridSwitches[17].isOn = true
     }
 }
 

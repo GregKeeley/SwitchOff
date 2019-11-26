@@ -43,16 +43,16 @@ class SwitchOffBrain {
             toggle.isOn = true
         }
     }
-    func checkAllSwitches(){
+    func checkAllSwitches() -> Bool {
         for toggle in gridSwitches {
             if toggle.isOn == false {
-                print("Win")
                 winAnimation()
+                return true
             } else {
-                print("Keep going.. or try again")
+                print()
             }
-            
         }
+        return false
     }
     func level_1_1(_ toggle: [UISwitch]) {
         gridSwitches[11].isOn = true
