@@ -67,26 +67,27 @@ class SwitchOffBrain {
         }
         return switchStates
     }
+
     func winAnimation() {
         
         gridSwitches[0].isOn = true
-        sleep(UInt32(CGFloat(0.50)))
+        
         gridSwitches[0].isOn = false
-        sleep(UInt32(CGFloat(0.50)))
-        gridSwitches[1].isOn = true
-        sleep(UInt32(CGFloat(0.50)))
-        gridSwitches[1].isOn = false
-        sleep(UInt32(CGFloat(0.50)))
-        gridSwitches[2].isOn = true
-        sleep(UInt32(CGFloat(0.50)))
-        gridSwitches[2].isOn = false
-        sleep(UInt32(CGFloat(0.50)))
-        gridSwitches[3].isOn = true
-        sleep(UInt32(CGFloat(0.50)))
-        gridSwitches[3].isOn = false
-        sleep(UInt32(CGFloat(0.50)))
-        gridSwitches[4].isOn = true
-        sleep(UInt32(CGFloat(0.50)))
-        gridSwitches[4].isOn = false
+//        sleep(UInt32(CGFloat(0.50)))
+//        gridSwitches[1].isOn = true
+//        sleep(UInt32(CGFloat(0.50)))
+//        gridSwitches[1].isOn = false
+//        sleep(UInt32(CGFloat(0.50)))
+//        gridSwitches[2].isOn = true
+//        sleep(UInt32(CGFloat(0.50)))
+//        gridSwitches[2].isOn = false
+//        sleep(UInt32(CGFloat(0.50)))
+//        gridSwitches[3].isOn = true
+//        sleep(UInt32(CGFloat(0.50)))
+//        gridSwitches[3].isOn = false
+//        sleep(UInt32(CGFloat(0.50)))
+//        gridSwitches[4].isOn = true
+//        sleep(UInt32(CGFloat(0.50)))
+//        gridSwitches[4].isOn = false
     }
 }
