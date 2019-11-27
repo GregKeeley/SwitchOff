@@ -18,7 +18,7 @@ class AlternateViewController: UIViewController {
     @IBOutlet weak var level1: UIButton!
     
     var switcher = SwitchOffBrain()
-    var switchRange = 1...25
+    
     
     
     override func viewDidLoad() {
@@ -48,49 +48,27 @@ class AlternateViewController: UIViewController {
 
     
     @IBAction func switchFlipped(_ sender: UISwitch) {
-        let toggleRight = sender.tag + 1
-        let toggleLeft = sender.tag - 1
-        let toggleDown = sender.tag + 5
-        let toggleUp = sender.tag - 5
-        var toggles = [toggleLeft, toggleRight, toggleUp, toggleDown]
-        if sender.tag % 5 == 0 {
-            toggles.remove(at: 1)
-        }
-        if sender.tag % 5 == 1 {
-            toggles.remove(at: 0)
-        }
-        for toggle in toggles {
-            if switchRange.contains(toggle) {
-            switcher.flipToggle(switchGrid[toggle - 1])
-            }
-             let winState = switcher.checkAllSwitches()
-            if winState == true {
-                winLabel.isHidden = false
-            }
-        }
-//        if sender.isOn == true {
-//            print("Sender: \(sender.tag) toggles: \(toggles)")
-//            for toggle in toggles {
+        switcher.neighborRight = sender.tag + 1
+        switcher.neighborLeft = sender.tag - 1
+        switcher.neighborDown = sender.tag + 5
+        switcher.neighborUp = sender.tag - 5
+        switcher.switchFlipped(senderTag: sender.tag)
+//        var toggles = [toggleLeft, toggleRight, toggleUp, toggleDown]
+//            if sender.tag % 5 == 0 {
+//                toggles.remove(at: 1)
+//            }
+//            else if sender.tag % 5 == 1 {
+//                toggles.remove(at: 0)
+//            }
+//            for toggle in toggles { //3
 //                if switchRange.contains(toggle) {
-//                    switchGrid[toggle - 1].isOn = false
-//                    switcher.checkAllSwitches()
-//                } else {
-//                    print("\(toggle) is out of range")
+//                    switcher.flipToggle(switchGrid[toggle - 1])
+//                }
+//                let winState = switcher.checkAllSwitches()
+//                if winState == false {
+//                    winLabel.isHidden = false
 //                }
 //            }
-//        } else {
-//            print("Sender: \(sender.tag) toggles: \(toggles)")
-//
-//            for toggle in toggles {
-//                if switchRange.contains(toggle) {
-//                    switchGrid[toggle - 1].isOn = true
-//
-//                    switcher.checkAllSwitches()
-//                } else {
-//                    print("\(toggle) is out of range")
-//                }
-//            }
-//        }
     }
     @IBAction func resetButtonPressed(_ sender: UIButton) {
         allSwitchesOff()
@@ -113,6 +91,9 @@ class AlternateViewController: UIViewController {
         switcher.gridSwitches[12].isOn = true
         switcher.gridSwitches[13].isOn = true
         switcher.gridSwitches[17].isOn = true
+    }
+    @IBAction func level2buttonPressed(_ sender: UIButton) {
+        level2()
     }
 }
 
