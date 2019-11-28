@@ -20,7 +20,9 @@ class SwitchOffBrain {
     var gridSwitches = [UISwitch]()
     var switchStates = [Bool]()
     
-    var switchRange = 1...25
+    let switchRange = 1...25
+    var flipCount = 0
+    var currentLevel = 1
     
     func flipToggle(_ toggle: UISwitch) {
         if toggle.isOn == true  {
@@ -29,9 +31,24 @@ class SwitchOffBrain {
             toggle.isOn = true
         }
     }
-    
+    func winCheck() -> Bool {
+        var win = false
+        for toggle in gridSwitches {
+            switchStates.append(toggle.isOn)
+            
+        }
+        if switchStates.contains(true) {
+            print("not yet")
+        } else {
+            win = true
+            print("win")
+        }
+        print(switchStates.description)
+        return win
+    }
     func checkAllSwitches() -> Bool {
         print(gridSwitches)
+        
         for toggle in gridSwitches {
             if toggle.isOn == false {
                 winAnimation()
@@ -252,6 +269,24 @@ class SwitchOffBrain {
         }
     }
     
-    
+//MARK: Levels
+    func level1() {
+        gridSwitches[7].isOn = true
+        gridSwitches[11].isOn = true
+        gridSwitches[12].isOn = true
+        gridSwitches[13].isOn = true
+        gridSwitches[17].isOn = true
+    }
+    func level2() {
+        gridSwitches[10].isOn = true
+        gridSwitches[12].isOn = true
+        gridSwitches[14].isOn = true
+    }
+    func level3() {
+        gridSwitches[6].isOn = true
+        gridSwitches[16].isOn = true
+        gridSwitches[18].isOn = true
+        gridSwitches[8].isOn = true
+    }
 }
 
