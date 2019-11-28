@@ -71,7 +71,7 @@ class AlternateViewController: UIViewController {
     }
         
     @IBAction func resetButtonPressed(_ sender: UIButton) {
-        allSwitchesOff()
+        switcher.resetAnimation()
         startButton.isEnabled = true
     }
     
