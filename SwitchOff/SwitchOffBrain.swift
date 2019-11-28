@@ -14,15 +14,16 @@ class SwitchOffBrain {
     var neighborRight = Int()
     var neighborDown = Int()
     var neighborUp = Int()
-    
     var neighborSwitches = [Int]()
-    
     var gridSwitches = [UISwitch]()
     var switchStates = [Bool]()
-    
     let switchRange = 1...25
     var flipCount = 0
     var currentLevel = 1
+    
+    func randomToggle() -> Int {
+        return Int.random(in: 1...25)
+    }
     
     func flipToggle(_ toggle: UISwitch) {
         if toggle.isOn == true  {
@@ -75,7 +76,7 @@ class SwitchOffBrain {
         return switchStates
     }
     func resetAnimation() {
-       let switchMatrix = gridSwitches
+        let switchMatrix = gridSwitches
         switchMatrix[0].isOn = true
         switchMatrix[5].isOn = true
         switchMatrix[10].isOn = true
@@ -120,17 +121,17 @@ class SwitchOffBrain {
                         switchMatrix[13].isOn = false
                         switchMatrix[18].isOn = false
                         switchMatrix[23].isOn = false
-                         switchMatrix[4].isOn = true
-                         switchMatrix[9].isOn = true
-                         switchMatrix[14].isOn = true
-                         switchMatrix[19].isOn = true
-                         switchMatrix[24].isOn = true
-                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.10) {
-                             switchMatrix[4].isOn = false
-                             switchMatrix[9].isOn = false
-                             switchMatrix[14].isOn = false
-                             switchMatrix[19].isOn = false
-                             switchMatrix[24].isOn = false
+                        switchMatrix[4].isOn = true
+                        switchMatrix[9].isOn = true
+                        switchMatrix[14].isOn = true
+                        switchMatrix[19].isOn = true
+                        switchMatrix[24].isOn = true
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.10) {
+                            switchMatrix[4].isOn = false
+                            switchMatrix[9].isOn = false
+                            switchMatrix[14].isOn = false
+                            switchMatrix[19].isOn = false
+                            switchMatrix[24].isOn = false
                         }
                     }
                 }
@@ -139,81 +140,82 @@ class SwitchOffBrain {
     }
     
     func winAnimation() {
+        let delay = 0.05
         let switchMatrix = gridSwitches
         switchMatrix[0].isOn = true
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.10) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
             switchMatrix[0].isOn = false
             switchMatrix[1].isOn = true
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.10) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
                 switchMatrix[1].isOn = false
                 switchMatrix[2].isOn = true
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.10) {
+                DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
                     switchMatrix[2].isOn = false
                     switchMatrix[3].isOn = true
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.10) {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
                         switchMatrix[3].isOn = false
                         switchMatrix[4].isOn = true
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.10) {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
                             switchMatrix[4].isOn = false
                             switchMatrix[9].isOn = true
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.10) {
+                            DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
                                 switchMatrix[9].isOn = false
                                 switchMatrix[14].isOn = true
-                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.10) {
+                                DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
                                     switchMatrix[14].isOn = false
                                     switchMatrix[19].isOn = true
-                                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.10) {
+                                    DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
                                         switchMatrix[19].isOn = false
                                         switchMatrix[24].isOn = true
-                                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.10) {
+                                        DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
                                             switchMatrix[24].isOn = false
                                             switchMatrix[23].isOn = true
-                                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.10) {
+                                            DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
                                                 switchMatrix[23].isOn = false
                                                 switchMatrix[22].isOn = true
-                                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.10) {
+                                                DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
                                                     switchMatrix[22].isOn = false
                                                     switchMatrix[21].isOn = true
-                                                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.10) {
+                                                    DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
                                                         switchMatrix[21].isOn = false
                                                         switchMatrix[20].isOn = true
-                                                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.10) {
+                                                        DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
                                                             switchMatrix[20].isOn = false
                                                             switchMatrix[15].isOn = true
-                                                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.10) {
+                                                            DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
                                                                 switchMatrix[15].isOn = false
                                                                 switchMatrix[10].isOn = true
-                                                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.10) {
+                                                                DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
                                                                     switchMatrix[10].isOn = false
                                                                     switchMatrix[5].isOn = true
-                                                                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.10) {
+                                                                    DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
                                                                         switchMatrix[5].isOn = false
                                                                         switchMatrix[6].isOn = true
-                                                                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.10) {
+                                                                        DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
                                                                             switchMatrix[6].isOn = false
                                                                             switchMatrix[7].isOn = true
-                                                                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.10) {
+                                                                            DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
                                                                                 switchMatrix[7].isOn = false
                                                                                 switchMatrix[8].isOn = true
-                                                                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.10) {
+                                                                                DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
                                                                                     switchMatrix[8].isOn = false
                                                                                     switchMatrix[13].isOn = true
-                                                                                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.10) {
+                                                                                    DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
                                                                                         switchMatrix[13].isOn = false
                                                                                         switchMatrix[18].isOn = true
-                                                                                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.10) {
+                                                                                        DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
                                                                                             switchMatrix[18].isOn = false
                                                                                             switchMatrix[17].isOn = true
-                                                                                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.10) {
+                                                                                            DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
                                                                                                 switchMatrix[17].isOn = false
                                                                                                 switchMatrix[16].isOn = true
-                                                                                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.10) {
+                                                                                                DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
                                                                                                     switchMatrix[16].isOn = false
                                                                                                     switchMatrix[11].isOn = true
-                                                                                                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.10) {
+                                                                                                    DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
                                                                                                         switchMatrix[11].isOn = false
                                                                                                         switchMatrix[12].isOn = true
-                                                                                                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.10) {
+                                                                                                        DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
                                                                                                             switchMatrix[12].isOn = false
                                                                                                         }
                                                                                                     }
@@ -269,7 +271,7 @@ class SwitchOffBrain {
         }
     }
     
-//MARK: Levels
+    //MARK: Levels
     func level1() {
         gridSwitches[7].isOn = true
         gridSwitches[11].isOn = true
@@ -287,6 +289,66 @@ class SwitchOffBrain {
         gridSwitches[16].isOn = true
         gridSwitches[18].isOn = true
         gridSwitches[8].isOn = true
+    }
+    func level4() {
+        gridSwitches[15].isOn = true
+        gridSwitches[16].isOn = true
+        gridSwitches[17].isOn = true
+        gridSwitches[3].isOn = true
+        gridSwitches[8].isOn = true
+        gridSwitches[9].isOn = true
+        gridSwitches[12].isOn = true
+    }
+    func level5() {
+        gridSwitches[10].isOn = true
+        gridSwitches[15].isOn = true
+        gridSwitches[20].isOn = true
+        gridSwitches[4].isOn = true
+        gridSwitches[9].isOn = true
+        gridSwitches[14].isOn = true
+        gridSwitches[6].isOn = true
+        gridSwitches[18].isOn = true
+    }
+    func level6() {
+        gridSwitches[randomToggle()].isOn = true
+        gridSwitches[randomToggle()].isOn = true
+        gridSwitches[randomToggle()].isOn = true
+    }
+    func level7() {
+        gridSwitches[randomToggle()].isOn = true
+        gridSwitches[randomToggle()].isOn = true
+        gridSwitches[randomToggle()].isOn = true
+        gridSwitches[randomToggle()].isOn = true
+        
+        
+    }
+    func level8() {
+        gridSwitches[randomToggle()].isOn = true
+        gridSwitches[randomToggle()].isOn = true
+        gridSwitches[randomToggle()].isOn = true
+        gridSwitches[randomToggle()].isOn = true
+        gridSwitches[randomToggle()].isOn = true
+        
+    }
+    func level9() {
+        gridSwitches[randomToggle()].isOn = true
+        gridSwitches[randomToggle()].isOn = true
+        gridSwitches[randomToggle()].isOn = true
+        gridSwitches[randomToggle()].isOn = true
+        gridSwitches[randomToggle()].isOn = true
+        gridSwitches[randomToggle()].isOn = true
+        
+    }
+    func level10() {
+        gridSwitches[randomToggle()].isOn = true
+        gridSwitches[randomToggle()].isOn = true
+        gridSwitches[randomToggle()].isOn = true
+        gridSwitches[randomToggle()].isOn = true
+        gridSwitches[randomToggle()].isOn = true
+        gridSwitches[randomToggle()].isOn = true
+        gridSwitches[randomToggle()].isOn = true
+        gridSwitches[randomToggle()].isOn = true
+        
     }
 }
 

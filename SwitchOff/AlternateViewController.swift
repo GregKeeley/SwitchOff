@@ -14,7 +14,7 @@ class AlternateViewController: UIViewController {
     @IBOutlet var switchGrid: [UISwitch]!
     @IBOutlet weak var winAnimationButton: UIButton!
     @IBOutlet weak var resetButton: UIButton!
-    @IBOutlet weak var level1: UIButton!
+    @IBOutlet weak var beginGameButton: UIButton!
     @IBOutlet weak var flipsCounterLabel: UILabel!
     @IBOutlet weak var nextLevelButton: UIButton!
     
@@ -74,7 +74,7 @@ class AlternateViewController: UIViewController {
         if winState == true {
             winLabel.isHidden = false
             switcher.winAnimation()
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
                 self.nextLevelButton.isHidden = false
             }
             switcher.currentLevel += 1
@@ -82,16 +82,19 @@ class AlternateViewController: UIViewController {
     }
     
     @IBAction func resetButtonPressed(_ sender: UIButton) {
+        beginGameButton.isHidden = false
+        flipsCounterLabel.text = switcher.flipCount.description
         switcher.flipCount = 0
         switcher.resetAnimation()
     }
     
     
-    @IBAction func level1ButtonPressed(_ sender: UIButton) {
-        switcher.level1()
-    }
+
     @IBAction func nextLevelButtonPressed() {
+        beginGameButton.isHidden = true
         switcher.flipCount = 0
+        flipsCounterLabel.text = switcher.flipCount.description
+        
         switch switcher.currentLevel {
         case 1:
             switcher.level1()
@@ -99,6 +102,20 @@ class AlternateViewController: UIViewController {
             switcher.level2()
         case 3:
             switcher.level3()
+        case 4:
+            switcher.level4()
+        case 5:
+            switcher.level5()
+        case 6:
+            switcher.level6()
+        case 7:
+            switcher.level7()
+        case 8:
+            switcher.level8()
+        case 9:
+            switcher.level9()
+        case 10:
+            switcher.level10()
         default:
             break
         }
