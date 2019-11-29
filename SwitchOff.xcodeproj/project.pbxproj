@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C14D6D5E23915D1E00918CCC /* LevelSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14D6D5D23915D1E00918CCC /* LevelSelectViewController.swift */; };
 		C161FAD523807EEA006184E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C161FAD423807EEA006184E8 /* AppDelegate.swift */; };
 		C161FAD723807EEA006184E8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C161FAD623807EEA006184E8 /* SceneDelegate.swift */; };
 		C161FAD923807EEA006184E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C161FAD823807EEA006184E8 /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C14D6D5D23915D1E00918CCC /* LevelSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelSelectViewController.swift; sourceTree = "<group>"; };
 		C161FAD123807EEA006184E8 /* SwitchOff.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwitchOff.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C161FAD423807EEA006184E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C161FAD623807EEA006184E8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				C161FAD623807EEA006184E8 /* SceneDelegate.swift */,
 				C161FAD823807EEA006184E8 /* ViewController.swift */,
 				C161FADA23807EEA006184E8 /* Main.storyboard */,
+				C14D6D5D23915D1E00918CCC /* LevelSelectViewController.swift */,
 				C17878052380FEE10055E341 /* SwitchOffBrain.swift */,
 				C161FB122380F106006184E8 /* AlternateViewController.swift */,
 				C1E4E5ED238DBDCB00DAEB18 /* Levels.swift */,
@@ -153,6 +156,7 @@
 				C161FAD723807EEA006184E8 /* SceneDelegate.swift in Sources */,
 				C161FB132380F106006184E8 /* AlternateViewController.swift in Sources */,
 				C17878062380FEE10055E341 /* SwitchOffBrain.swift in Sources */,
+				C14D6D5E23915D1E00918CCC /* LevelSelectViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

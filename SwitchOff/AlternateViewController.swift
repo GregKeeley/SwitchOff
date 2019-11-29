@@ -17,13 +17,16 @@ class AlternateViewController: UIViewController {
     @IBOutlet weak var beginGameButton: UIButton!
     @IBOutlet weak var flipsCounterLabel: UILabel!
     @IBOutlet weak var nextLevelButton: UIButton!
-    
+    @IBOutlet weak var currentLevelLabel: UILabel!
+    @IBOutlet weak var levelLabel: UILabel!
     var switcher = SwitchOffBrain()
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        currentLevelLabel.isHidden = true
+        levelLabel.isHidden = true
         populateSwitchArray()
         allSwitchesOff()
         nextLevelButton.isHidden = true
@@ -46,7 +49,9 @@ class AlternateViewController: UIViewController {
         populateSwitchArray()
         switcher.winAnimation()
     }
-    
+    @IBAction func unwindSegue(segue: UIStoryboardSegue) {
+        nextLevelButtonPressed()
+    }
     
     
     @IBAction func switchFlipped(_ sender: UISwitch) {
@@ -90,11 +95,16 @@ class AlternateViewController: UIViewController {
     
     
 
-    @IBAction func nextLevelButtonPressed() {
+    @IBAction func
+        nextLevelButtonPressed() {
+        levelLabel.isHidden = false
+        currentLevelLabel.isHidden = false
+        currentLevelLabel.text = switcher.currentLevel.description
         beginGameButton.isHidden = true
         switcher.flipCount = 0
         flipsCounterLabel.text = switcher.flipCount.description
-        
+        populateSwitchArray()
+        print(switcher.currentLevel)
         switch switcher.currentLevel {
         case 1:
             switcher.level1()

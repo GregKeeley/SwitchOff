@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SZn-eA-800">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EFL-U7-lwe">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
@@ -268,15 +268,21 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j2v-QN-xFY">
-                                <rect key="frame" x="148" y="160" width="79" height="51"/>
+                                <rect key="frame" x="148" y="204" width="79" height="51"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <state key="normal" title="Begin"/>
                                 <connections>
                                     <action selector="nextLevelButtonPressed" destination="SZn-eA-800" eventType="touchUpInside" id="wcC-yo-uW6"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Switch Off" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d6g-XF-k4d">
+                                <rect key="frame" x="95.666666666666686" y="147" width="184" height="49"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="41"/>
+                                <color key="textColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Win" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ns9-fx-HOf">
-                                <rect key="frame" x="159.66666666666666" y="219" width="56" height="40"/>
+                                <rect key="frame" x="159.66666666666666" y="263" width="56" height="40"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="33"/>
                                 <color key="textColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -311,9 +317,15 @@
                                     <action selector="nextLevelButtonPressed" destination="SZn-eA-800" eventType="touchUpInside" id="gRM-fo-PGN"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Switch Off" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d6g-XF-k4d">
-                                <rect key="frame" x="95" y="103" width="184" height="49"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="41"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fdZ-FY-why">
+                                <rect key="frame" x="208" y="664.33333333333337" width="11" height="20.666666666666629"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NEh-bb-Oih">
+                                <rect key="frame" x="155" y="664.33333333333337" width="45" height="20.666666666666629"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -338,6 +350,7 @@
                             <constraint firstItem="O2y-YW-jdZ" firstAttribute="top" secondItem="iCD-Tr-h3S" secondAttribute="top" id="Jcr-zX-tYI"/>
                             <constraint firstItem="OhL-Lh-ErO" firstAttribute="top" secondItem="j6L-k2-XIW" secondAttribute="bottom" constant="8" id="KPM-x7-J7H"/>
                             <constraint firstItem="j6L-k2-XIW" firstAttribute="top" secondItem="DGS-Ow-XHV" secondAttribute="bottom" constant="8" id="KSU-qL-dk6"/>
+                            <constraint firstItem="NEh-bb-Oih" firstAttribute="centerX" secondItem="4HA-h2-Mp0" secondAttribute="centerX" constant="-10" id="Kwb-Jv-NvU"/>
                             <constraint firstItem="32x-Rg-6GY" firstAttribute="leading" secondItem="Vnj-kt-f2g" secondAttribute="trailing" constant="8" id="LXc-bX-fIR"/>
                             <constraint firstItem="j9M-OP-kNO" firstAttribute="leading" secondItem="0vR-e8-CmI" secondAttribute="trailing" constant="8" id="NPj-nU-x6i"/>
                             <constraint firstItem="TU6-4g-Jbl" firstAttribute="leading" secondItem="iCD-Tr-h3S" secondAttribute="leading" id="OC1-iJ-iT8"/>
@@ -348,6 +361,7 @@
                             <constraint firstItem="3ON-sJ-tRM" firstAttribute="top" secondItem="m9m-Rk-eCA" secondAttribute="bottom" constant="8" id="RGr-It-7Z5"/>
                             <constraint firstItem="Iua-sO-sQm" firstAttribute="leading" secondItem="M2h-FG-Pm9" secondAttribute="trailing" constant="8" id="Ru4-H5-gIg"/>
                             <constraint firstItem="0vR-e8-CmI" firstAttribute="leading" secondItem="eq6-WQ-ajt" secondAttribute="leading" constant="76" id="RzJ-pq-hOn"/>
+                            <constraint firstItem="oc6-wr-PQf" firstAttribute="top" secondItem="fdZ-FY-why" secondAttribute="bottom" constant="61.329999999999998" id="SL8-io-ur5"/>
                             <constraint firstItem="aBl-gl-Kof" firstAttribute="leading" secondItem="OhL-Lh-ErO" secondAttribute="trailing" constant="8" id="STZ-bb-0fq"/>
                             <constraint firstItem="iCD-Tr-h3S" firstAttribute="leading" secondItem="DGS-Ow-XHV" secondAttribute="trailing" constant="8" id="Sgv-L9-d17"/>
                             <constraint firstItem="2td-tG-nPi" firstAttribute="top" secondItem="DGQ-e0-eTQ" secondAttribute="bottom" constant="8" id="UPg-Gv-SaO"/>
@@ -365,13 +379,16 @@
                             <constraint firstItem="pLw-t3-gcw" firstAttribute="leading" secondItem="3ON-sJ-tRM" secondAttribute="trailing" constant="8" id="b7q-Ku-s8x"/>
                             <constraint firstItem="iCD-Tr-h3S" firstAttribute="centerY" secondItem="4HA-h2-Mp0" secondAttribute="centerY" id="bBV-SF-H9F"/>
                             <constraint firstItem="oc6-wr-PQf" firstAttribute="centerX" secondItem="4HA-h2-Mp0" secondAttribute="centerX" id="cIn-aE-6oh"/>
+                            <constraint firstItem="fdZ-FY-why" firstAttribute="top" secondItem="0vR-e8-CmI" secondAttribute="bottom" constant="8" id="crT-bo-fML"/>
                             <constraint firstItem="PoC-1C-0hj" firstAttribute="centerX" secondItem="4HA-h2-Mp0" secondAttribute="centerX" id="d6Z-FZ-74f"/>
                             <constraint firstItem="9Dr-J0-Kea" firstAttribute="top" secondItem="ReV-cZ-bVK" secondAttribute="bottom" constant="8" id="dBs-J4-YyD"/>
                             <constraint firstItem="pLw-t3-gcw" firstAttribute="top" secondItem="hqO-cZ-GSR" secondAttribute="bottom" constant="8" id="dER-8M-x3l"/>
                             <constraint firstItem="9b7-b9-g1X" firstAttribute="leading" secondItem="Pbi-4V-Ggs" secondAttribute="trailing" constant="8" id="fP8-Kq-dxV"/>
+                            <constraint firstItem="fdZ-FY-why" firstAttribute="leading" secondItem="NEh-bb-Oih" secondAttribute="trailing" constant="8" id="gQb-Lx-JfP"/>
                             <constraint firstItem="j2v-QN-xFY" firstAttribute="centerX" secondItem="4HA-h2-Mp0" secondAttribute="centerX" id="gpT-gW-DKJ"/>
                             <constraint firstItem="j6L-k2-XIW" firstAttribute="leading" secondItem="9Dr-J0-Kea" secondAttribute="trailing" constant="8" id="hdn-Tp-lO7"/>
                             <constraint firstItem="9b7-b9-g1X" firstAttribute="top" secondItem="Iua-sO-sQm" secondAttribute="bottom" constant="8" id="iaD-oc-UiI"/>
+                            <constraint firstItem="oc6-wr-PQf" firstAttribute="top" secondItem="NEh-bb-Oih" secondAttribute="bottom" constant="61.329999999999998" id="idu-2S-N1Z"/>
                             <constraint firstItem="Ns9-fx-HOf" firstAttribute="centerX" secondItem="4HA-h2-Mp0" secondAttribute="centerX" id="j2Q-ry-t4P"/>
                             <constraint firstItem="Kei-g6-QkA" firstAttribute="top" secondItem="9Dr-J0-Kea" secondAttribute="bottom" constant="8" id="jZY-lB-iJY"/>
                             <constraint firstItem="TJq-FH-rAP" firstAttribute="top" secondItem="fwd-On-E4S" secondAttribute="bottom" constant="8" id="jkN-cz-lha"/>
@@ -381,6 +398,7 @@
                             <constraint firstItem="d6g-XF-k4d" firstAttribute="top" secondItem="eq6-WQ-ajt" secondAttribute="top" constant="59" id="mep-Fq-7eN"/>
                             <constraint firstItem="fwd-On-E4S" firstAttribute="leading" secondItem="TJq-FH-rAP" secondAttribute="leading" id="mhT-Dp-paW"/>
                             <constraint firstItem="aBl-gl-Kof" firstAttribute="leading" secondItem="TU6-4g-Jbl" secondAttribute="leading" id="p40-dz-gR5"/>
+                            <constraint firstItem="NEh-bb-Oih" firstAttribute="top" secondItem="0vR-e8-CmI" secondAttribute="bottom" constant="8" id="pu8-QS-Xlf"/>
                             <constraint firstItem="0vR-e8-CmI" firstAttribute="top" secondItem="Vnj-kt-f2g" secondAttribute="bottom" constant="128.33000000000001" id="u0b-vF-xJq"/>
                             <constraint firstItem="iCD-Tr-h3S" firstAttribute="top" secondItem="TJq-FH-rAP" secondAttribute="bottom" constant="8" id="uUz-h1-g22"/>
                             <constraint firstItem="TU6-4g-Jbl" firstAttribute="leading" secondItem="j6L-k2-XIW" secondAttribute="trailing" constant="8" id="ukL-X4-9Rh"/>
@@ -392,9 +410,18 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="eq6-WQ-ajt"/>
                     </view>
+                    <navigationItem key="navigationItem" id="FJQ-6t-Sh7">
+                        <barButtonItem key="rightBarButtonItem" title="Level Select" id="M9V-3W-tcG">
+                            <connections>
+                                <segue destination="B3n-WI-hyn" kind="presentation" id="qt7-Dq-aSx"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="beginGameButton" destination="j2v-QN-xFY" id="tH1-tS-04d"/>
+                        <outlet property="currentLevelLabel" destination="fdZ-FY-why" id="1cf-Sm-olA"/>
                         <outlet property="flipsCounterLabel" destination="j9M-OP-kNO" id="1kv-Il-mGx"/>
+                        <outlet property="levelLabel" destination="NEh-bb-Oih" id="b5f-5h-fw4"/>
                         <outlet property="nextLevelButton" destination="PoC-1C-0hj" id="mgS-8o-ZUi"/>
                         <outlet property="resetButton" destination="yGb-md-kg8" id="mOU-Nw-2Og"/>
                         <outlet property="winAnimationButton" destination="oc6-wr-PQf" id="6ad-gG-NDl"/>
@@ -427,6 +454,132 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yDL-JQ-dn6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="884" y="770.68965517241384"/>
+        </scene>
+        <!--Level Select View Controller-->
+        <scene sceneID="gtj-m7-tJD">
+            <objects>
+                <viewController id="B3n-WI-hyn" customClass="LevelSelectViewController" customModule="SwitchOff" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0YA-ic-XCW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JwS-ht-9cF">
+                                <rect key="frame" x="116" y="74" width="47" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Level 1"/>
+                                <connections>
+                                    <action selector="levelSelectedButtonPressed:" destination="B3n-WI-hyn" eventType="touchUpInside" id="j9Q-n5-lBz"/>
+                                    <segue destination="3e7-4I-Xq0" kind="unwind" unwindAction="unwindSegueWithSegue:" id="Btn-Vl-Mut"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ycb-J5-EBx">
+                                <rect key="frame" x="115" y="130" width="49" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Level 2"/>
+                                <connections>
+                                    <action selector="levelSelectedButtonPressed:" destination="B3n-WI-hyn" eventType="touchUpInside" id="7ef-FG-W1k"/>
+                                    <segue destination="3e7-4I-Xq0" kind="unwind" unwindAction="unwindSegueWithSegue:" id="jMI-a1-2ZK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ix-EM-kGu">
+                                <rect key="frame" x="115" y="191" width="49" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Level 3"/>
+                                <connections>
+                                    <action selector="levelSelectedButtonPressed:" destination="B3n-WI-hyn" eventType="touchUpInside" id="7xZ-4f-RBb"/>
+                                    <segue destination="3e7-4I-Xq0" kind="unwind" unwindAction="unwindSegueWithSegue:" id="ViD-GJ-Ayz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gPU-DN-Tl7">
+                                <rect key="frame" x="114" y="243" width="50" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Level 4"/>
+                                <connections>
+                                    <action selector="levelSelectedButtonPressed:" destination="B3n-WI-hyn" eventType="touchUpInside" id="XA4-B9-Mvc"/>
+                                    <segue destination="3e7-4I-Xq0" kind="unwind" unwindAction="unwindSegueWithSegue:" id="BJN-PD-pcJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ghh-qU-Zqo">
+                                <rect key="frame" x="115" y="297" width="49" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Level 5"/>
+                                <connections>
+                                    <action selector="levelSelectedButtonPressed:" destination="B3n-WI-hyn" eventType="touchUpInside" id="pUn-6U-nFH"/>
+                                    <segue destination="3e7-4I-Xq0" kind="unwind" unwindAction="unwindSegueWithSegue:" id="C67-tc-2Ig"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="6" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wvS-Qz-jiB">
+                                <rect key="frame" x="212" y="73" width="49" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Level 6"/>
+                                <connections>
+                                    <action selector="levelSelectedButtonPressed:" destination="B3n-WI-hyn" eventType="touchUpInside" id="cPH-wb-3Je"/>
+                                    <segue destination="3e7-4I-Xq0" kind="unwind" unwindAction="unwindSegueWithSegue:" id="ng2-b0-GCQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="7" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gi8-iZ-mkX">
+                                <rect key="frame" x="212" y="129" width="48" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Level 7"/>
+                                <connections>
+                                    <action selector="levelSelectedButtonPressed:" destination="B3n-WI-hyn" eventType="touchUpInside" id="euX-i6-tCc"/>
+                                    <segue destination="3e7-4I-Xq0" kind="unwind" unwindAction="unwindSegueWithSegue:" id="OlB-oa-JFC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="8" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Fg-bb-fOP">
+                                <rect key="frame" x="212" y="190" width="49" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Level 8"/>
+                                <connections>
+                                    <action selector="levelSelectedButtonPressed:" destination="B3n-WI-hyn" eventType="touchUpInside" id="Orb-bG-s4O"/>
+                                    <segue destination="3e7-4I-Xq0" kind="unwind" unwindAction="unwindSegueWithSegue:" id="PPH-i9-EZ9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="9" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KFD-gt-TzK">
+                                <rect key="frame" x="212" y="242" width="49" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Level 9"/>
+                                <connections>
+                                    <action selector="levelSelectedButtonPressed:" destination="B3n-WI-hyn" eventType="touchUpInside" id="agm-Qp-l2G"/>
+                                    <segue destination="3e7-4I-Xq0" kind="unwind" unwindAction="unwindSegueWithSegue:" id="Hvj-VI-L7l"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="10" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yMM-VN-ddz">
+                                <rect key="frame" x="208" y="296" width="56" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Level 10"/>
+                                <connections>
+                                    <action selector="levelSelectedButtonPressed:" destination="B3n-WI-hyn" eventType="touchUpInside" id="Py0-hS-h9S"/>
+                                    <segue destination="3e7-4I-Xq0" kind="unwind" unwindAction="unwindSegueWithSegue:" id="uwe-mA-Kxp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="0Qa-7n-ZH0"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="17w-1i-gyE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="3e7-4I-Xq0" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1668" y="770.68965517241384"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="BKq-gZ-esy">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="EFL-U7-lwe" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mpy-7R-JOp">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="SZn-eA-800" kind="relationship" relationship="rootViewController" id="jfJ-Fs-fNJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R7P-21-NzZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-58.399999999999999" y="770.68965517241384"/>
         </scene>

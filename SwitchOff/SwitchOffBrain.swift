@@ -22,7 +22,7 @@ class SwitchOffBrain {
     var currentLevel = 1
     
     func randomToggle() -> Int {
-        return Int.random(in: 1...25)
+        return Int.random(in: 0...24)
     }
     
     func flipToggle(_ toggle: UISwitch) {
@@ -293,7 +293,7 @@ class SwitchOffBrain {
     func level4() {
         gridSwitches[15].isOn = true
         gridSwitches[16].isOn = true
-        gridSwitches[17].isOn = true
+        gridSwitches[21].isOn = true
         gridSwitches[3].isOn = true
         gridSwitches[8].isOn = true
         gridSwitches[9].isOn = true
