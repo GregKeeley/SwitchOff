@@ -66,7 +66,6 @@ class SwitchOffBrain {
         gridSwitches[13].isOn = true
         gridSwitches[7].isOn = true
         gridSwitches[17].isOn = true
-        //        checkAllSwitches()
     }
     
     func getToggleStates() -> [Bool] {
@@ -142,6 +141,16 @@ class SwitchOffBrain {
     func winAnimation() {
         let delay = 0.05
         let switchMatrix = gridSwitches
+//        let winAnimationArr = [0,1,2,3,4,9,14,19,24,23,22,21,20,15,10,5,6,7,8,13,18,17,16,11,12]
+//        switchMatrix[0].isOn = true
+//        for num in 0..<winAnimationArr.count {
+//            DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
+//                switchMatrix[winAnimationArr[num]].isOn = false
+//                if num != winAnimationArr.count - 1 {
+//                    switchMatrix[winAnimationArr[num + 1]].isOn = true
+//                }
+//            }
+//        }
         switchMatrix[0].isOn = true
         DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
             switchMatrix[0].isOn = false
