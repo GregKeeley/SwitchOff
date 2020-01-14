@@ -9,14 +9,10 @@
 import UIKit
 
 class LevelSelectViewController: UIViewController {
-    
     var levelSelection = 1
-
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
-    
         @IBAction func levelSelectedButtonPressed(_ sender: UIButton) {
             levelSelection = sender.tag
             
@@ -25,11 +21,8 @@ class LevelSelectViewController: UIViewController {
         guard let alternateVC = segue.destination as? AlternateViewController else {
             fatalError("Failed to prepare for segue")
         }
-        
         let level = levelSelection
-        print("\(levelSelection)")
         alternateVC.currentLevel = level
-
     }
     
 }

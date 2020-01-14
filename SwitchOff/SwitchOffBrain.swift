@@ -39,23 +39,17 @@ class SwitchOffBrain {
             
         }
         if switchStates.contains(true) {
-            print("not yet")
         } else {
             win = true
-            print("win")
         }
-        print(switchStates.description)
         return win
     }
     func checkAllSwitches() -> Bool {
-        print(gridSwitches)
-        
         for toggle in gridSwitches {
             if toggle.isOn == false {
                 winAnimation()
                 return true
             } else {
-                print()
             }
         }
         return false

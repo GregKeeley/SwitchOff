@@ -9,7 +9,6 @@
 import UIKit
 
 class AlternateViewController: UIViewController {
-    
     @IBOutlet weak var winLabel: UILabel!
     @IBOutlet var switchGrid: [UISwitch]!
     @IBOutlet weak var winAnimationButton: UIButton!
@@ -19,15 +18,10 @@ class AlternateViewController: UIViewController {
     @IBOutlet weak var nextLevelButton: UIButton!
     @IBOutlet weak var currentLevelLabel: UILabel!
     @IBOutlet weak var levelLabel: UILabel!
-
-    
     var switcher = SwitchOffBrain()
     var currentLevel = 1
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         currentLevelLabel.isHidden = true
         levelLabel.isHidden = true
         populateSwitchArray()
@@ -36,7 +30,6 @@ class AlternateViewController: UIViewController {
         winLabel.isHidden = true
         loadData()
     }
-    
     func allSwitchesOff() {
         for state in switchGrid {
             if state.isOn == true {
@@ -55,27 +48,21 @@ class AlternateViewController: UIViewController {
         switcher.flipCount = 0
         switcher.resetAnimation()
     }
-    
     func loadData() {
         winLabel.isHidden = true
         levelLabel.isHidden = false
         currentLevelLabel.isHidden = false
         currentLevelLabel.text = currentLevel.description
         beginGameButton.isHidden = true
-        
-        
         switcher.flipCount = 0
         flipsCounterLabel.text = switcher.flipCount.description
         populateSwitchArray()
-        print(currentLevel)
         switch currentLevel {
         case 1:
             switcher.level1()
         case 2:
-            
             switcher.level2()
         case 3:
-            
             switcher.level3()
         case 4:
             switcher.level4()
@@ -94,31 +81,25 @@ class AlternateViewController: UIViewController {
         default:
             break
         }
-        
     }
     @IBAction func winAnimationTest() {
         populateSwitchArray()
         switcher.winAnimation()
     }
     @IBAction func unwindSegue(segue: UIStoryboardSegue) {
-      
         guard let levelSelectVC = segue.source as? LevelSelectViewController else {
             fatalError("Failed to load level")
         }
-        print("Unwound")
         currentLevel = levelSelectVC.levelSelection
         reset()
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
             self.loadData()
         }
     }
-    
-    
     @IBAction func switchFlipped(_ sender: UISwitch) {
         switcher.flipCount += 1
         flipsCounterLabel.text = switcher.flipCount.description
         switcher.switchStates.removeAll()
-        print(switcher.switchStates.count)
         let toggleRight = sender.tag + 1
         let toggleLeft = sender.tag - 1
         let toggleDown = sender.tag + 5
@@ -146,23 +127,17 @@ class AlternateViewController: UIViewController {
             switcher.currentLevel += 1
         }
     }
-    
     @IBAction func resetButtonPressed(_ sender: UIButton) {
-        beginGameButton.isHidden = false
+       // beginGameButton.isHidden = false
         flipsCounterLabel.text = switcher.flipCount.description
         switcher.flipCount = 0
         switcher.resetAnimation()
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
             self.loadData()
         }
-        
     }
-    
-    
-    
     @IBAction func
         nextLevelButtonPressed() {
-        
         loadData()
     }
 }
