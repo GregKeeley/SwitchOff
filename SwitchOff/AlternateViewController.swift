@@ -19,12 +19,15 @@ class AlternateViewController: UIViewController {
     @IBOutlet weak var nextLevelButton: UIButton!
     @IBOutlet weak var currentLevelLabel: UILabel!
     @IBOutlet weak var levelLabel: UILabel!
+
+    
     var switcher = SwitchOffBrain()
     var currentLevel = 1
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         currentLevelLabel.isHidden = true
         levelLabel.isHidden = true
         populateSwitchArray()
@@ -46,40 +49,51 @@ class AlternateViewController: UIViewController {
             switcher.gridSwitches.append(toggle)
         }
     }
+    func reset() {
+        beginGameButton.isHidden = false
+        flipsCounterLabel.text = switcher.flipCount.description
+        switcher.flipCount = 0
+        switcher.resetAnimation()
+    }
+    
     func loadData() {
-            levelLabel.isHidden = false
-            currentLevelLabel.isHidden = false
-            currentLevelLabel.text = switcher.currentLevel.description
-            beginGameButton.isHidden = true
-            switcher.flipCount = 0
-            flipsCounterLabel.text = switcher.flipCount.description
-            populateSwitchArray()
-            print("currentLevel: \(currentLevel)")
-            print(switcher.currentLevel)
-            switch currentLevel {
-            case 1:
-                switcher.level1()
-            case 2:
-                switcher.level2()
-            case 3:
-                switcher.level3()
-            case 4:
-                switcher.level4()
-            case 5:
-                switcher.level5()
-            case 6:
-                switcher.level6()
-            case 7:
-                switcher.level7()
-            case 8:
-                switcher.level8()
-            case 9:
-                switcher.level9()
-            case 10:
-                switcher.level10()
-            default:
-                break
-            }
+        winLabel.isHidden = true
+        levelLabel.isHidden = false
+        currentLevelLabel.isHidden = false
+        currentLevelLabel.text = currentLevel.description
+        beginGameButton.isHidden = true
+        
+        
+        switcher.flipCount = 0
+        flipsCounterLabel.text = switcher.flipCount.description
+        populateSwitchArray()
+        print(currentLevel)
+        switch currentLevel {
+        case 1:
+            switcher.level1()
+        case 2:
+            
+            switcher.level2()
+        case 3:
+            
+            switcher.level3()
+        case 4:
+            switcher.level4()
+        case 5:
+            switcher.level5()
+        case 6:
+            switcher.level6()
+        case 7:
+            switcher.level7()
+        case 8:
+            switcher.level8()
+        case 9:
+            switcher.level9()
+        case 10:
+            switcher.level10()
+        default:
+            break
+        }
         
     }
     @IBAction func winAnimationTest() {
@@ -87,11 +101,16 @@ class AlternateViewController: UIViewController {
         switcher.winAnimation()
     }
     @IBAction func unwindSegue(segue: UIStoryboardSegue) {
-        nextLevelButtonPressed()
-        let vc = LevelSelectViewController()
-        currentLevel = vc.levelSelection
-        loadData()
-        print("Unwind: \(vc.levelSelection)")
+      
+        guard let levelSelectVC = segue.source as? LevelSelectViewController else {
+            fatalError("Failed to load level")
+        }
+        print("Unwound")
+        currentLevel = levelSelectVC.levelSelection
+        reset()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
+            self.loadData()
+        }
     }
     
     
@@ -133,12 +152,17 @@ class AlternateViewController: UIViewController {
         flipsCounterLabel.text = switcher.flipCount.description
         switcher.flipCount = 0
         switcher.resetAnimation()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
+            self.loadData()
+        }
+        
     }
     
     
-
+    
     @IBAction func
         nextLevelButtonPressed() {
+        
         loadData()
     }
 }
