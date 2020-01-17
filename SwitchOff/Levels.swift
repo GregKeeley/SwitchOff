@@ -28,17 +28,19 @@ func allOtherSwitchesOff(switchArr: [UISwitch]) {
             
         }
         func level2() {
-            let switchesOn = [switcher.gridSwitches[10], switcher.gridSwitches[12], switcher.gridSwitches[14]]
-            allOtherSwitchesOff(switchArr: switchesOn)
-            switcher.gridSwitches[10].isOn = true
-            switcher.gridSwitches[12].isOn = true
-            switcher.gridSwitches[14].isOn = true
+            let toggles = [10,12,14]
+            for toggle in toggles {
+                switcher.gridSwitches[toggle].isOn = true
+            }
+//            switcher.gridSwitches[10].isOn = true
+//            switcher.gridSwitches[12].isOn = true
+//            switcher.gridSwitches[14].isOn = true
         }
         func level3() {
-            switcher.gridSwitches[6].isOn = true
-            switcher.gridSwitches[16].isOn = true
-            switcher.gridSwitches[18].isOn = true
-            switcher.gridSwitches[8].isOn = true
+            let toggles = [6,16,18,8]
+            for toggle in toggles {
+                switcher.gridSwitches[toggle].isOn = true
+            }
         }
     }
 }

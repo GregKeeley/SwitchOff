@@ -55,12 +55,12 @@ class SwitchOffBrain {
         return false
     }
     
-    func level_1_1(_ toggle: [UISwitch]) {
-        gridSwitches[11].isOn = true
-        gridSwitches[13].isOn = true
-        gridSwitches[7].isOn = true
-        gridSwitches[17].isOn = true
-    }
+//    func level_1_1(_ toggle: [UISwitch]) {
+//        gridSwitches[11].isOn = true
+//        gridSwitches[13].isOn = true
+//        gridSwitches[7].isOn = true
+//        gridSwitches[17].isOn = true
+//    }
     
     func getToggleStates() -> [Bool] {
         for toggle in gridSwitches {
@@ -68,6 +68,116 @@ class SwitchOffBrain {
         }
         return switchStates
     }
+
+    func switchFlipped(senderTag: Int) {
+        neighborRight = senderTag + 1
+        neighborLeft = senderTag - 1
+        neighborDown = senderTag + 5
+        neighborUp = senderTag - 5
+        neighborSwitches.append(neighborLeft)
+        neighborSwitches.append(neighborRight)
+        neighborSwitches.append(neighborUp)
+        neighborSwitches.append(neighborDown)
+        for toggle in neighborSwitches {
+            
+            if toggle % 5 == 0 {
+                neighborSwitches.remove(at: 1)
+            }
+            else if toggle % 5 == 1 {
+                neighborSwitches.remove(at: 0)
+            }
+        }
+        
+        for toggle in neighborSwitches {
+            if switchRange.contains(toggle) {
+                flipToggle(gridSwitches[toggle - 1])
+            }
+        }
+    }
+    
+    //MARK: Levels
+    func level1() {
+        gridSwitches[7].isOn = true
+        gridSwitches[11].isOn = true
+        gridSwitches[12].isOn = true
+        gridSwitches[13].isOn = true
+        gridSwitches[17].isOn = true
+    }
+    func level2() {
+        gridSwitches[10].isOn = true
+        gridSwitches[12].isOn = true
+        gridSwitches[14].isOn = true
+    }
+    func level3() {
+        gridSwitches[6].isOn = true
+        gridSwitches[16].isOn = true
+        gridSwitches[18].isOn = true
+        gridSwitches[8].isOn = true
+    }
+    func level4() {
+        gridSwitches[15].isOn = true
+        gridSwitches[16].isOn = true
+        gridSwitches[21].isOn = true
+        gridSwitches[3].isOn = true
+        gridSwitches[8].isOn = true
+        gridSwitches[9].isOn = true
+        gridSwitches[12].isOn = true
+    }
+    func level5() {
+        gridSwitches[10].isOn = true
+        gridSwitches[15].isOn = true
+        gridSwitches[20].isOn = true
+        gridSwitches[4].isOn = true
+        gridSwitches[9].isOn = true
+        gridSwitches[14].isOn = true
+        gridSwitches[6].isOn = true
+        gridSwitches[18].isOn = true
+    }
+    func level6() {
+        gridSwitches[randomToggle()].isOn = true
+        gridSwitches[randomToggle()].isOn = true
+        gridSwitches[randomToggle()].isOn = true
+    }
+    func level7() {
+        gridSwitches[randomToggle()].isOn = true
+        gridSwitches[randomToggle()].isOn = true
+        gridSwitches[randomToggle()].isOn = true
+        gridSwitches[randomToggle()].isOn = true
+        
+        
+    }
+    func level8() {
+        gridSwitches[randomToggle()].isOn = true
+        gridSwitches[randomToggle()].isOn = true
+        gridSwitches[randomToggle()].isOn = true
+        gridSwitches[randomToggle()].isOn = true
+        gridSwitches[randomToggle()].isOn = true
+        
+    }
+    func level9() {
+        gridSwitches[randomToggle()].isOn = true
+        gridSwitches[randomToggle()].isOn = true
+        gridSwitches[randomToggle()].isOn = true
+        gridSwitches[randomToggle()].isOn = true
+        gridSwitches[randomToggle()].isOn = true
+        gridSwitches[randomToggle()].isOn = true
+        
+    }
+    func level10() {
+        gridSwitches[randomToggle()].isOn = true
+        gridSwitches[randomToggle()].isOn = true
+        gridSwitches[randomToggle()].isOn = true
+        gridSwitches[randomToggle()].isOn = true
+        gridSwitches[randomToggle()].isOn = true
+        gridSwitches[randomToggle()].isOn = true
+        gridSwitches[randomToggle()].isOn = true
+        gridSwitches[randomToggle()].isOn = true
+        
+    }
+}
+
+// MARK: Animations
+extension SwitchOffBrain {
     func resetAnimation() {
         let switchMatrix = gridSwitches
         switchMatrix[0].isOn = true
@@ -236,112 +346,4 @@ class SwitchOffBrain {
             }
         }
     }
-    
-    
-    func switchFlipped(senderTag: Int) {
-        neighborRight = senderTag + 1
-        neighborLeft = senderTag - 1
-        neighborDown = senderTag + 5
-        neighborUp = senderTag - 5
-        neighborSwitches.append(neighborLeft)
-        neighborSwitches.append(neighborRight)
-        neighborSwitches.append(neighborUp)
-        neighborSwitches.append(neighborDown)
-        for toggle in neighborSwitches {
-            
-            if toggle % 5 == 0 {
-                neighborSwitches.remove(at: 1)
-            }
-            else if toggle % 5 == 1 {
-                neighborSwitches.remove(at: 0)
-            }
-        }
-        
-        for toggle in neighborSwitches {
-            if switchRange.contains(toggle) {
-                flipToggle(gridSwitches[toggle - 1])
-            }
-        }
-    }
-    
-    //MARK: Levels
-    func level1() {
-        gridSwitches[7].isOn = true
-        gridSwitches[11].isOn = true
-        gridSwitches[12].isOn = true
-        gridSwitches[13].isOn = true
-        gridSwitches[17].isOn = true
-    }
-    func level2() {
-        gridSwitches[10].isOn = true
-        gridSwitches[12].isOn = true
-        gridSwitches[14].isOn = true
-    }
-    func level3() {
-        gridSwitches[6].isOn = true
-        gridSwitches[16].isOn = true
-        gridSwitches[18].isOn = true
-        gridSwitches[8].isOn = true
-    }
-    func level4() {
-        gridSwitches[15].isOn = true
-        gridSwitches[16].isOn = true
-        gridSwitches[21].isOn = true
-        gridSwitches[3].isOn = true
-        gridSwitches[8].isOn = true
-        gridSwitches[9].isOn = true
-        gridSwitches[12].isOn = true
-    }
-    func level5() {
-        gridSwitches[10].isOn = true
-        gridSwitches[15].isOn = true
-        gridSwitches[20].isOn = true
-        gridSwitches[4].isOn = true
-        gridSwitches[9].isOn = true
-        gridSwitches[14].isOn = true
-        gridSwitches[6].isOn = true
-        gridSwitches[18].isOn = true
-    }
-    func level6() {
-        gridSwitches[randomToggle()].isOn = true
-        gridSwitches[randomToggle()].isOn = true
-        gridSwitches[randomToggle()].isOn = true
-    }
-    func level7() {
-        gridSwitches[randomToggle()].isOn = true
-        gridSwitches[randomToggle()].isOn = true
-        gridSwitches[randomToggle()].isOn = true
-        gridSwitches[randomToggle()].isOn = true
-        
-        
-    }
-    func level8() {
-        gridSwitches[randomToggle()].isOn = true
-        gridSwitches[randomToggle()].isOn = true
-        gridSwitches[randomToggle()].isOn = true
-        gridSwitches[randomToggle()].isOn = true
-        gridSwitches[randomToggle()].isOn = true
-        
-    }
-    func level9() {
-        gridSwitches[randomToggle()].isOn = true
-        gridSwitches[randomToggle()].isOn = true
-        gridSwitches[randomToggle()].isOn = true
-        gridSwitches[randomToggle()].isOn = true
-        gridSwitches[randomToggle()].isOn = true
-        gridSwitches[randomToggle()].isOn = true
-        
-    }
-    func level10() {
-        gridSwitches[randomToggle()].isOn = true
-        gridSwitches[randomToggle()].isOn = true
-        gridSwitches[randomToggle()].isOn = true
-        gridSwitches[randomToggle()].isOn = true
-        gridSwitches[randomToggle()].isOn = true
-        gridSwitches[randomToggle()].isOn = true
-        gridSwitches[randomToggle()].isOn = true
-        gridSwitches[randomToggle()].isOn = true
-        
-    }
 }
-
