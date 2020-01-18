@@ -251,6 +251,7 @@ extension SwitchOffBrain {
         let switchMatrix = gridSwitches
         switchMatrix[0].isOn = true
         DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
+            self.makeImpact()
             switchMatrix[0].isOn = false
             switchMatrix[1].isOn = true
             DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
@@ -263,6 +264,7 @@ extension SwitchOffBrain {
                         switchMatrix[3].isOn = false
                         switchMatrix[4].isOn = true
                         DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
+                            self.makeImpact()
                             switchMatrix[4].isOn = false
                             switchMatrix[9].isOn = true
                             DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
@@ -275,6 +277,7 @@ extension SwitchOffBrain {
                                         switchMatrix[19].isOn = false
                                         switchMatrix[24].isOn = true
                                         DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
+                                            self.makeImpact()
                                             switchMatrix[24].isOn = false
                                             switchMatrix[23].isOn = true
                                             DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
@@ -287,6 +290,7 @@ extension SwitchOffBrain {
                                                         switchMatrix[21].isOn = false
                                                         switchMatrix[20].isOn = true
                                                         DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
+                                                            self.makeImpact()
                                                             switchMatrix[20].isOn = false
                                                             switchMatrix[15].isOn = true
                                                             DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
@@ -299,6 +303,7 @@ extension SwitchOffBrain {
                                                                         switchMatrix[5].isOn = false
                                                                         switchMatrix[6].isOn = true
                                                                         DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
+                                                                            self.makeImpact()
                                                                             switchMatrix[6].isOn = false
                                                                             switchMatrix[7].isOn = true
                                                                             DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
@@ -311,6 +316,7 @@ extension SwitchOffBrain {
                                                                                         switchMatrix[13].isOn = false
                                                                                         switchMatrix[18].isOn = true
                                                                                         DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
+                                                                                            self.makeImpact()
                                                                                             switchMatrix[18].isOn = false
                                                                                             switchMatrix[17].isOn = true
                                                                                             DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
@@ -320,6 +326,7 @@ extension SwitchOffBrain {
                                                                                                     switchMatrix[16].isOn = false
                                                                                                     switchMatrix[11].isOn = true
                                                                                                     DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
+                                                                                                        self.makeImpact()
                                                                                                         switchMatrix[11].isOn = false
                                                                                                         switchMatrix[12].isOn = true
                                                                                                         DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
