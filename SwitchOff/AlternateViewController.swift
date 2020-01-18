@@ -17,14 +17,17 @@ class AlternateViewController: UIViewController {
     @IBOutlet weak var currentLevelLabel: UILabel!
     @IBOutlet weak var levelLabel: UILabel!
     @IBOutlet var titleLabels: [UILabel]!
-    var switcher = SwitchOffBrain()
+    var switchBrain = SwitchOffBrain()
     var currentLevel = 1
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        populateSwitchArray()
+        switchBrain.startGameState()
+        allSwitchesOff()
         currentLevelLabel.isHidden = true
         levelLabel.isHidden = true
-        populateSwitchArray()
-        allSwitchesOff()
+
         nextLevelButton.isHidden = true
         winLabel.isHidden = true
         loadData()
@@ -39,13 +42,13 @@ class AlternateViewController: UIViewController {
     }
     func populateSwitchArray() {
         for toggle in switchGrid {
-            switcher.gridSwitches.append(toggle)
+            switchBrain.gridSwitches.append(toggle)
         }
     }
     func reset() {
-        flipsCounterLabel.text = switcher.flipCount.description
-        switcher.flipCount = 0
-        switcher.resetAnimation()
+        flipsCounterLabel.text = switchBrain.flipCount.description
+        switchBrain.flipCount = 0
+        switchBrain.resetAnimation()
     }
     func loadData() {
         winLabel.isHidden = true
@@ -53,30 +56,30 @@ class AlternateViewController: UIViewController {
         currentLevelLabel.isHidden = false
         currentLevelLabel.text = currentLevel.description
         
-        switcher.flipCount = 0
-        flipsCounterLabel.text = switcher.flipCount.description
+        switchBrain.flipCount = 0
+        flipsCounterLabel.text = switchBrain.flipCount.description
         populateSwitchArray()
         switch currentLevel {
         case 1:
-            switcher.level1()
+            switchBrain.level1()
         case 2:
-            switcher.level2()
+            switchBrain.level2()
         case 3:
-            switcher.level3()
+            switchBrain.level3()
         case 4:
-            switcher.level4()
+            switchBrain.level4()
         case 5:
-            switcher.level5()
+            switchBrain.level5()
         case 6:
-            switcher.level6()
+            switchBrain.level6()
         case 7:
-            switcher.level7()
+            switchBrain.level7()
         case 8:
-            switcher.level8()
+            switchBrain.level8()
         case 9:
-            switcher.level9()
+            switchBrain.level9()
         case 10:
-            switcher.level10()
+            switchBrain.level10()
         default:
             break
         }
@@ -93,49 +96,50 @@ class AlternateViewController: UIViewController {
         }
     }
     @IBAction func switchFlipped(_ sender: UISwitch) {
+        switchBrain.gameHasBegun()
         for title in titleLabels {
             title.isHidden = true
         }
-        switcher.flipCount += 1
-        flipsCounterLabel.text = switcher.flipCount.description
-        switcher.switchStates.removeAll()
-        let toggleRight = sender.tag + 1
-        let toggleLeft = sender.tag - 1
-        let toggleDown = sender.tag + 5
-        let toggleUp = sender.tag - 5
-        var toggles = [toggleLeft, toggleRight, toggleUp, toggleDown]
+        switchBrain.flipCount += 1
+        flipsCounterLabel.text = switchBrain.flipCount.description
+        switchBrain.switchStates.removeAll()
+        var neighborToggles = [(sender.tag - 1), (sender.tag + 1), (sender.tag - 5), (sender.tag + 5)]
         if sender.tag % 5 == 0 {
-            toggles.remove(at: 1)
+            neighborToggles.remove(at: 1)
         }
         if sender.tag % 5 == 1 {
-            toggles.remove(at: 0)
+            neighborToggles.remove(at: 0)
         }
-        for toggle in toggles {
-            if switcher.switchRange.contains(toggle) {
-                switcher.flipToggle(switchGrid[toggle - 1])
+        for toggle in neighborToggles {
+            if switchBrain.switchRange.contains(toggle) {
+                switchBrain.flipToggle(switchGrid[toggle - 1])
             }
         }
-        let winState = switcher.winCheck()
+        let winState = switchBrain.winCheck()
         if winState == true {
             winLabel.isHidden = false
-            switcher.winAnimation()
+            switchBrain.winAnimation()
+            switchBrain.changeGridStatus()
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
                 self.nextLevelButton.isHidden = false
             }
             currentLevel += 1
-            switcher.currentLevel += 1
+            switchBrain.currentLevel += 1
         }
     }
     @IBAction func resetButtonPressed(_ sender: UIButton) {
-        flipsCounterLabel.text = switcher.flipCount.description
-        switcher.flipCount = 0
-        switcher.resetAnimation()
+        nextLevelButton.isHidden = true
+        flipsCounterLabel.text = switchBrain.flipCount.description
+        switchBrain.flipCount = 0
+        switchBrain.resetAnimation2()
+       // switcher.resetAnimation()
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
             self.loadData()
         }
     }
     @IBAction func nextLevelButtonPressed() {
         nextLevelButton.isHidden = true
+        switchBrain.changeGridStatus()
         loadData()
     }
 }

@@ -20,6 +20,7 @@ class SwitchOffBrain {
     let switchRange = 1...25
     var flipCount = 0
     var currentLevel = 1
+    let impact = UIImpactFeedbackGenerator()
     
     func randomToggle() -> Int {
         return Int.random(in: 0...24)
@@ -30,6 +31,11 @@ class SwitchOffBrain {
             toggle.isOn = false
         } else {
             toggle.isOn = true
+        }
+    }
+    func changeGridStatus() {
+        for toggle in switchRange {
+            gridSwitches[toggle].isEnabled.toggle()
         }
     }
     func winCheck() -> Bool {
@@ -44,23 +50,6 @@ class SwitchOffBrain {
         }
         return win
     }
-    func checkAllSwitches() -> Bool {
-        for toggle in gridSwitches {
-            if toggle.isOn == false {
-                winAnimation()
-                return true
-            } else {
-            }
-        }
-        return false
-    }
-    
-//    func level_1_1(_ toggle: [UISwitch]) {
-//        gridSwitches[11].isOn = true
-//        gridSwitches[13].isOn = true
-//        gridSwitches[7].isOn = true
-//        gridSwitches[17].isOn = true
-//    }
     
     func getToggleStates() -> [Bool] {
         for toggle in gridSwitches {
@@ -96,6 +85,15 @@ class SwitchOffBrain {
     }
     
     //MARK: Levels
+    func loadLevelSwitches(toggles: [Int]) {
+        for toggle in toggles {
+            gridSwitches[toggle].isOn = true
+        }
+    }
+    func level0() {
+        let toggles = [7,11,12,13,17]
+        loadLevelSwitches(toggles: toggles)
+    }
     func level1() {
         gridSwitches[7].isOn = true
         gridSwitches[11].isOn = true
@@ -180,12 +178,14 @@ class SwitchOffBrain {
 extension SwitchOffBrain {
     func resetAnimation() {
         let switchMatrix = gridSwitches
+        impact.impactOccurred()
         switchMatrix[0].isOn = true
         switchMatrix[5].isOn = true
         switchMatrix[10].isOn = true
         switchMatrix[15].isOn = true
         switchMatrix[20].isOn = true
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.10) {
+            self.impact.impactOccurred()
             switchMatrix[0].isOn = false
             switchMatrix[5].isOn = false
             switchMatrix[10].isOn = false
@@ -197,6 +197,7 @@ extension SwitchOffBrain {
             switchMatrix[16].isOn = true
             switchMatrix[21].isOn = true
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.10) {
+                self.impact.impactOccurred()
                 switchMatrix[1].isOn = false
                 switchMatrix[6].isOn = false
                 switchMatrix[11].isOn = false
@@ -208,6 +209,7 @@ extension SwitchOffBrain {
                 switchMatrix[17].isOn = true
                 switchMatrix[22].isOn = true
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.10) {
+                    self.impact.impactOccurred()
                     switchMatrix[2].isOn = false
                     switchMatrix[7].isOn = false
                     switchMatrix[12].isOn = false
@@ -219,6 +221,7 @@ extension SwitchOffBrain {
                     switchMatrix[18].isOn = true
                     switchMatrix[23].isOn = true
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.10) {
+                        self.impact.impactOccurred()
                         switchMatrix[3].isOn = false
                         switchMatrix[8].isOn = false
                         switchMatrix[13].isOn = false
@@ -230,6 +233,7 @@ extension SwitchOffBrain {
                         switchMatrix[19].isOn = true
                         switchMatrix[24].isOn = true
                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.10) {
+                            self.impact.impactOccurred()
                             switchMatrix[4].isOn = false
                             switchMatrix[9].isOn = false
                             switchMatrix[14].isOn = false
