@@ -19,6 +19,10 @@ class AlternateViewController: UIViewController {
     @IBOutlet weak var scoreStrLabel: UILabel!
     @IBOutlet weak var levelSelectButton: UIButton!
     @IBOutlet var titleLabels: [UILabel]!
+    
+    
+    @IBOutlet weak var winAnimationTest: UIButton!
+    
     var switchBrain = SwitchOffBrain()
     var currentLevel = 0
     var secretButtonPresses = 0
@@ -30,6 +34,7 @@ class AlternateViewController: UIViewController {
         allSwitchesOff()
         loadData()
         
+        winAnimationTest.isHidden = true
         currentLevelLabel.isHidden = true
         secretLevelButton.isHidden = true
         nextLevelButton.isHidden = true
@@ -58,7 +63,7 @@ class AlternateViewController: UIViewController {
     func reset() {
         scoreNumLabel.text = switchBrain.flipCount.description
         switchBrain.flipCount = 0
-        switchBrain.resetAnimation()
+        switchBrain.resetAnimation2()
     }
     func loadData() {
         winLabel.isHidden = true
@@ -71,27 +76,57 @@ class AlternateViewController: UIViewController {
         populateSwitchArray()
         switch currentLevel {
         case 0:
-            switchBrain.level0()
+            switchBrain.loadLevelSwitches(toggles: levels.level0)
         case 1:
-            switchBrain.level1()
+            switchBrain.loadLevelSwitches(toggles: levels.level1)
         case 2:
-            switchBrain.level2()
+            switchBrain.loadLevelSwitches(toggles: levels.level2)
         case 3:
-            switchBrain.level3()
+            switchBrain.loadLevelSwitches(toggles: levels.level3)
         case 4:
-            switchBrain.level4()
+            switchBrain.loadLevelSwitches(toggles: levels.level4)
         case 5:
-            switchBrain.level5()
+            switchBrain.loadLevelSwitches(toggles: levels.level5)
         case 6:
-            switchBrain.level6()
+            switchBrain.loadLevelSwitches(toggles: levels.level6)
         case 7:
-            switchBrain.level7()
+            switchBrain.loadLevelSwitches(toggles: levels.level7)
         case 8:
-            switchBrain.level8()
+            switchBrain.loadLevelSwitches(toggles: levels.level8)
         case 9:
-            switchBrain.level9()
+            switchBrain.loadLevelSwitches(toggles: levels.level9)
         case 10:
-            switchBrain.level10()
+            switchBrain.loadLevelSwitches(toggles: levels.level10)
+        case 11:
+            switchBrain.loadLevelSwitches(toggles: levels.level11)
+        case 12:
+            switchBrain.loadLevelSwitches(toggles: levels.level12)
+        case 13:
+            switchBrain.loadLevelSwitches(toggles: levels.level13)
+        case 14:
+            switchBrain.loadLevelSwitches(toggles: levels.level14)
+        case 15:
+            switchBrain.loadLevelSwitches(toggles: levels.level15)
+        case 16:
+            switchBrain.loadLevelSwitches(toggles: levels.level16)
+        case 17:
+            switchBrain.loadLevelSwitches(toggles: levels.level17)
+        case 18:
+            switchBrain.loadLevelSwitches(toggles: levels.level18)
+        case 19:
+            switchBrain.loadLevelSwitches(toggles: levels.level19)
+        case 20:
+            switchBrain.loadLevelSwitches(toggles: levels.level20)
+        case 21:
+            switchBrain.loadLevelSwitches(toggles: levels.level21)
+        case 22:
+            switchBrain.loadLevelSwitches(toggles: levels.level22)
+        case 23:
+            switchBrain.loadLevelSwitches(toggles: levels.level23)
+        case 24:
+            switchBrain.loadLevelSwitches(toggles: levels.level24)
+        case 25:
+            switchBrain.loadLevelSwitches(toggles: levels.level25)
         default:
             break
         }
@@ -169,6 +204,10 @@ class AlternateViewController: UIViewController {
         if secretButtonPresses > 25 {
             levelSelectButton.isHidden = false
         }
+    }
+    
+    @IBAction func winAnimationTestPressed(_ sender: Any) {
+        switchBrain.winAnimation()
     }
 }
 

@@ -414,6 +414,18 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WYc-kz-chF">
+                                <rect key="frame" x="232" y="710" width="123" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="WinAnimationTest"/>
+                                <connections>
+                                    <action selector="winAnimationTestPressed:" destination="SZn-eA-800" eventType="touchUpInside" id="wkn-JI-IUt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xsM-1H-H79">
+                                <rect key="frame" x="20" y="52" width="22" height="22"/>
+                                <state key="normal" image="gear" catalog="system"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -429,6 +441,7 @@
                             <constraint firstItem="aBl-gl-Kof" firstAttribute="top" secondItem="TU6-4g-Jbl" secondAttribute="bottom" constant="8" id="7b3-lt-sd0"/>
                             <constraint firstItem="0vR-e8-CmI" firstAttribute="top" secondItem="WWj-h2-6hN" secondAttribute="bottom" constant="8" id="Avg-18-G22"/>
                             <constraint firstItem="Pbi-4V-Ggs" firstAttribute="leading" secondItem="TJq-FH-rAP" secondAttribute="trailing" constant="8" id="BNq-qZ-IMe"/>
+                            <constraint firstItem="xsM-1H-H79" firstAttribute="top" secondItem="eq6-WQ-ajt" secondAttribute="top" constant="8" id="BvT-Zj-eFJ"/>
                             <constraint firstItem="8LL-2G-c30" firstAttribute="leading" secondItem="TU6-4g-Jbl" secondAttribute="trailing" constant="8" id="CPW-IB-f3R"/>
                             <constraint firstItem="F8N-QE-Dnq" firstAttribute="top" secondItem="d6g-XF-k4d" secondAttribute="bottom" constant="8" id="Cyc-PR-FLP"/>
                             <constraint firstItem="2td-tG-nPi" firstAttribute="leading" secondItem="8LL-2G-c30" secondAttribute="trailing" constant="8" id="Fq2-WO-DBT"/>
@@ -465,6 +478,7 @@
                             <constraint firstItem="hqO-cZ-GSR" firstAttribute="leading" secondItem="m9m-Rk-eCA" secondAttribute="trailing" constant="8" id="XCP-6k-SI4"/>
                             <constraint firstItem="DGS-Ow-XHV" firstAttribute="top" secondItem="pLw-t3-gcw" secondAttribute="bottom" constant="8" id="XT2-X1-PF6"/>
                             <constraint firstItem="DGS-Ow-XHV" firstAttribute="top" secondItem="iCD-Tr-h3S" secondAttribute="top" id="Xa3-jO-UBe"/>
+                            <constraint firstItem="xsM-1H-H79" firstAttribute="leading" secondItem="eq6-WQ-ajt" secondAttribute="leading" constant="20" id="YKE-xQ-KAe"/>
                             <constraint firstItem="qM5-eo-egm" firstAttribute="top" secondItem="eq6-WQ-ajt" secondAttribute="top" id="aLR-CE-2dw"/>
                             <constraint firstItem="32x-Rg-6GY" firstAttribute="top" secondItem="2td-tG-nPi" secondAttribute="bottom" constant="8" id="aVZ-j9-C7W"/>
                             <constraint firstItem="pLw-t3-gcw" firstAttribute="leading" secondItem="3ON-sJ-tRM" secondAttribute="trailing" constant="8" id="b7q-Ku-s8x"/>
@@ -507,6 +521,7 @@
                         <outlet property="scoreNumLabel" destination="j9M-OP-kNO" id="1kv-Il-mGx"/>
                         <outlet property="scoreStrLabel" destination="0vR-e8-CmI" id="WM0-kd-xxn"/>
                         <outlet property="secretLevelButton" destination="WWj-h2-6hN" id="no9-GD-48A"/>
+                        <outlet property="winAnimationTest" destination="WYc-kz-chF" id="0d1-vU-xas"/>
                         <outlet property="winLabel" destination="Ns9-fx-HOf" id="Mwh-7m-Qrh"/>
                         <outletCollection property="switchGrid" destination="m9m-Rk-eCA" collectionClass="NSMutableArray" id="kKs-yg-uM1"/>
                         <outletCollection property="switchGrid" destination="hqO-cZ-GSR" collectionClass="NSMutableArray" id="dxG-3t-0IP"/>
@@ -651,4 +666,7 @@
             <point key="canvasLocation" x="2046" y="771"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="gear" catalog="system" width="64" height="58"/>
+    </resources>
 </document>
