@@ -16,7 +16,7 @@ struct levels {
     static let level4 = [15,16,21,3,8,9,12]
     static let level5 = [10,15,20,4,9,14,6,18]
     static let level6 = [0]
-    static let level7 = [0]
+    static let level7 = [6,16,18,8]
     static let level8 = [0]
     static let level9 = [0]
     static let level10 = [0]

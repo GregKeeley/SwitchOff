@@ -19,14 +19,14 @@ class AlternateViewController: UIViewController {
     @IBOutlet weak var scoreStrLabel: UILabel!
     @IBOutlet weak var levelSelectButton: UIButton!
     @IBOutlet var titleLabels: [UILabel]!
-    
+    @IBOutlet weak var settingButton: UIButton!
     
     @IBOutlet weak var winAnimationTest: UIButton!
     
     var switchBrain = SwitchOffBrain()
     var currentLevel = 0
     var secretButtonPresses = 0
-    
+    var isEditingLevel = false
     override func viewDidLoad() {
         super.viewDidLoad()
         populateSwitchArray()
@@ -34,6 +34,7 @@ class AlternateViewController: UIViewController {
         allSwitchesOff()
         loadData()
         
+        settingButton.isHidden = true
         winAnimationTest.isHidden = true
         currentLevelLabel.isHidden = true
         secretLevelButton.isHidden = true
@@ -136,52 +137,63 @@ class AlternateViewController: UIViewController {
         guard let levelSelectVC = segue.source as? LevelSelectViewController else {
             fatalError("Failed to load level")
         }
+        isEditingLevel = levelSelectVC.isEditingLevel
         currentLevel = levelSelectVC.levelSelection
         reset()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
-            self.loadData()
+        if isEditingLevel == false {
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
+                self.loadData()
+            }
         }
     }
+    
     @IBAction func switchFlipped(_ sender: UISwitch) {
+        
         switchBrain.gameHasBegun()
-        for title in titleLabels {
-            title.isHidden = true
-        }
-        switchBrain.flipCount += 1
-        scoreNumLabel.text = switchBrain.flipCount.description
-        switchBrain.switchStates.removeAll()
-        var neighborToggles = [(sender.tag - 1), (sender.tag + 1), (sender.tag - 5), (sender.tag + 5)]
-        if sender.tag % 5 == 0 {
-            neighborToggles.remove(at: 1)
-        }
-        if sender.tag % 5 == 1 {
-            neighborToggles.remove(at: 0)
-        }
-        for toggle in neighborToggles {
-            if switchBrain.switchRange.contains(toggle) {
-                switchBrain.flipToggle(switchGrid[toggle - 1])
+        if isEditingLevel == false {
+            for title in titleLabels {
+                title.isHidden = true
             }
-        }
-        let winState = switchBrain.winCheck()
-        if currentLevel != 0 {
-            if winState == true {
-                winLabel.isHidden = false
-                switchBrain.winAnimation()
-                switchBrain.changeGridStatus()
-                DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                    self.nextLevelButton.isHidden = false
+            switchBrain.flipCount += 1
+            scoreNumLabel.text = switchBrain.flipCount.description
+            switchBrain.switchStates.removeAll()
+            
+            var neighborToggles = [(sender.tag - 1), (sender.tag + 1), (sender.tag - 5), (sender.tag + 5)]
+            if sender.tag % 5 == 0 {
+                neighborToggles.remove(at: 1)
+            }
+            if sender.tag % 5 == 1 {
+                neighborToggles.remove(at: 0)
+            }
+            for toggle in neighborToggles {
+                if switchBrain.switchRange.contains(toggle) {
+                    switchBrain.flipToggle(switchGrid[toggle - 1])
                 }
+            }
+            let winState = switchBrain.winCheck()
+            if currentLevel != 0 {
+                if winState == true {
+                    winLabel.isHidden = false
+                    switchBrain.winAnimation()
+                    switchBrain.changeGridStatus()
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                        self.nextLevelButton.isHidden = false
+                    }
+                    currentLevel += 1
+                    switchBrain.currentLevel += 1
+                }
+            } else {
+                scoreStrLabel.isHidden = false
+                scoreNumLabel.isHidden = false
+                resetButton.isHidden = false
+                
                 currentLevel += 1
                 switchBrain.currentLevel += 1
+                loadData()
             }
         } else {
-            scoreStrLabel.isHidden = false
-            scoreNumLabel.isHidden = false
-            resetButton.isHidden = false
             
-            currentLevel += 1
-            switchBrain.currentLevel += 1
-            loadData()
         }
     }
     @IBAction func resetButtonPressed(_ sender: UIButton) {
@@ -201,7 +213,7 @@ class AlternateViewController: UIViewController {
     }
     @IBAction func secretButtonPressed() {
         secretButtonPresses += 1
-        if secretButtonPresses > 25 {
+        if secretButtonPresses > 5 {
             levelSelectButton.isHidden = false
         }
     }

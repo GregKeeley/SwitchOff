@@ -425,6 +425,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xsM-1H-H79">
                                 <rect key="frame" x="20" y="52" width="22" height="22"/>
                                 <state key="normal" image="gear" catalog="system"/>
+                                <connections>
+                                    <segue destination="nDm-ge-FNW" kind="show" identifier="settingsSegue" id="030-zC-gC7"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -521,6 +524,7 @@
                         <outlet property="scoreNumLabel" destination="j9M-OP-kNO" id="1kv-Il-mGx"/>
                         <outlet property="scoreStrLabel" destination="0vR-e8-CmI" id="WM0-kd-xxn"/>
                         <outlet property="secretLevelButton" destination="WWj-h2-6hN" id="no9-GD-48A"/>
+                        <outlet property="settingButton" destination="xsM-1H-H79" id="MXA-MN-LjT"/>
                         <outlet property="winAnimationTest" destination="WYc-kz-chF" id="0d1-vU-xas"/>
                         <outlet property="winLabel" destination="Ns9-fx-HOf" id="Mwh-7m-Qrh"/>
                         <outletCollection property="switchGrid" destination="m9m-Rk-eCA" collectionClass="NSMutableArray" id="kKs-yg-uM1"/>
@@ -556,6 +560,59 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yDL-JQ-dn6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="884" y="770.68965517241384"/>
+        </scene>
+        <!--Setting Table View Controller-->
+        <scene sceneID="iWl-3n-3u5">
+            <objects>
+                <tableViewController id="nDm-ge-FNW" customClass="SettingTableViewController" customModule="SwitchOff" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="goH-Ln-bfH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <sections>
+                            <tableViewSection id="9Eo-ZZ-i7r">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="uW8-V4-iYL">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uW8-V4-iYL" id="Fvw-hS-oV6">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Win Animation Button" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ft-JG-ASL">
+                                                    <rect key="frame" x="16" y="11" width="166" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h0h-7D-rWd">
+                                                    <rect key="frame" x="306" y="6" width="51" height="31"/>
+                                                </switch>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="4ft-JG-ASL" firstAttribute="centerY" secondItem="h0h-7D-rWd" secondAttribute="centerY" id="FPK-em-ED3"/>
+                                                <constraint firstItem="4ft-JG-ASL" firstAttribute="top" secondItem="Fvw-hS-oV6" secondAttribute="topMargin" id="Fo6-y3-xiE"/>
+                                                <constraint firstAttribute="trailing" secondItem="h0h-7D-rWd" secondAttribute="trailing" constant="20" id="YqQ-cW-966"/>
+                                                <constraint firstItem="4ft-JG-ASL" firstAttribute="leading" secondItem="Fvw-hS-oV6" secondAttribute="leadingMargin" id="bkV-ed-1ea"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="nDm-ge-FNW" id="J80-Hu-Lb7"/>
+                            <outlet property="delegate" destination="nDm-ge-FNW" id="VIl-wf-dDg"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="mAg-20-MtJ"/>
+                    <connections>
+                        <outlet property="winAnimationTestToggle" destination="h0h-7D-rWd" id="46Q-7V-4hh"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oBr-sc-n4f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2072" y="421"/>
         </scene>
         <!--Level Select View Controller-->
         <scene sceneID="gtj-m7-tJD">
@@ -655,15 +712,27 @@
                                     <segue destination="3e7-4I-Xq0" kind="unwind" unwindAction="unwindSegueWithSegue:" id="uwe-mA-Kxp"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Msh-80-y6W">
+                                <rect key="frame" x="147.66666666666666" y="694" width="80" height="30"/>
+                                <state key="normal" title="Level Editor"/>
+                                <connections>
+                                    <action selector="levelEditorButtonPressed" destination="B3n-WI-hyn" eventType="touchUpInside" id="a5y-CM-cYj"/>
+                                    <segue destination="3e7-4I-Xq0" kind="unwind" unwindAction="unwindSegueWithSegue:" id="xSJ-5e-Uye"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Msh-80-y6W" firstAttribute="bottom" secondItem="0Qa-7n-ZH0" secondAttribute="bottom" id="1Js-1t-XWr"/>
+                            <constraint firstItem="Msh-80-y6W" firstAttribute="centerX" secondItem="0YA-ic-XCW" secondAttribute="centerX" id="2Uf-an-4ws"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="0Qa-7n-ZH0"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="17w-1i-gyE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="3e7-4I-Xq0" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2046" y="771"/>
+            <point key="canvasLocation" x="2082" y="1118"/>
         </scene>
     </scenes>
     <resources>
