@@ -429,6 +429,13 @@
                                     <segue destination="nDm-ge-FNW" kind="show" identifier="settingsSegue" id="030-zC-gC7"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sY7-CI-jNz">
+                                <rect key="frame" x="151" y="520" width="72" height="30"/>
+                                <state key="normal" title="Print Level"/>
+                                <connections>
+                                    <action selector="printLevelButtonPressed" destination="SZn-eA-800" eventType="touchUpInside" id="qEQ-nE-JAP"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -484,6 +491,7 @@
                             <constraint firstItem="xsM-1H-H79" firstAttribute="leading" secondItem="eq6-WQ-ajt" secondAttribute="leading" constant="20" id="YKE-xQ-KAe"/>
                             <constraint firstItem="qM5-eo-egm" firstAttribute="top" secondItem="eq6-WQ-ajt" secondAttribute="top" id="aLR-CE-2dw"/>
                             <constraint firstItem="32x-Rg-6GY" firstAttribute="top" secondItem="2td-tG-nPi" secondAttribute="bottom" constant="8" id="aVZ-j9-C7W"/>
+                            <constraint firstItem="sY7-CI-jNz" firstAttribute="centerX" secondItem="4HA-h2-Mp0" secondAttribute="centerX" id="asH-9f-IR6"/>
                             <constraint firstItem="pLw-t3-gcw" firstAttribute="leading" secondItem="3ON-sJ-tRM" secondAttribute="trailing" constant="8" id="b7q-Ku-s8x"/>
                             <constraint firstItem="iCD-Tr-h3S" firstAttribute="centerY" secondItem="4HA-h2-Mp0" secondAttribute="centerY" id="bBV-SF-H9F"/>
                             <constraint firstItem="Pbi-4V-Ggs" firstAttribute="top" secondItem="M2h-FG-Pm9" secondAttribute="bottom" constant="8" id="bsy-Wd-Rb4"/>
@@ -493,6 +501,7 @@
                             <constraint firstItem="Ns9-fx-HOf" firstAttribute="leading" secondItem="eq6-WQ-ajt" secondAttribute="leading" constant="85" id="eJn-md-uDS"/>
                             <constraint firstItem="9b7-b9-g1X" firstAttribute="leading" secondItem="Pbi-4V-Ggs" secondAttribute="trailing" constant="8" id="fP8-Kq-dxV"/>
                             <constraint firstItem="j6L-k2-XIW" firstAttribute="leading" secondItem="9Dr-J0-Kea" secondAttribute="trailing" constant="8" id="hdn-Tp-lO7"/>
+                            <constraint firstItem="d6g-XF-k4d" firstAttribute="top" secondItem="sY7-CI-jNz" secondAttribute="bottom" constant="-383" id="iTl-Z3-paQ"/>
                             <constraint firstItem="9b7-b9-g1X" firstAttribute="top" secondItem="Iua-sO-sQm" secondAttribute="bottom" constant="8" id="iaD-oc-UiI"/>
                             <constraint firstItem="Kei-g6-QkA" firstAttribute="top" secondItem="9Dr-J0-Kea" secondAttribute="bottom" constant="8" id="jZY-lB-iJY"/>
                             <constraint firstItem="WWj-h2-6hN" firstAttribute="leading" secondItem="eq6-WQ-ajt" secondAttribute="leading" constant="20" id="kmY-v2-fF2"/>
@@ -520,6 +529,7 @@
                         <outlet property="currentLevelLabel" destination="fdZ-FY-why" id="1cf-Sm-olA"/>
                         <outlet property="levelSelectButton" destination="qM5-eo-egm" id="pc8-PM-yfb"/>
                         <outlet property="nextLevelButton" destination="PoC-1C-0hj" id="mgS-8o-ZUi"/>
+                        <outlet property="printLevelButton" destination="sY7-CI-jNz" id="ibT-mG-F0h"/>
                         <outlet property="resetButton" destination="yGb-md-kg8" id="mOU-Nw-2Og"/>
                         <outlet property="scoreNumLabel" destination="j9M-OP-kNO" id="1kv-Il-mGx"/>
                         <outlet property="scoreStrLabel" destination="0vR-e8-CmI" id="WM0-kd-xxn"/>
@@ -622,102 +632,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JwS-ht-9cF">
-                                <rect key="frame" x="116" y="74" width="47" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Level 1"/>
-                                <connections>
-                                    <action selector="levelSelectedButtonPressed:" destination="B3n-WI-hyn" eventType="touchUpInside" id="j9Q-n5-lBz"/>
-                                    <segue destination="3e7-4I-Xq0" kind="unwind" unwindAction="unwindSegueWithSegue:" id="Btn-Vl-Mut"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ycb-J5-EBx">
-                                <rect key="frame" x="115" y="130" width="49" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Level 2"/>
-                                <connections>
-                                    <action selector="levelSelectedButtonPressed:" destination="B3n-WI-hyn" eventType="touchUpInside" id="7ef-FG-W1k"/>
-                                    <segue destination="3e7-4I-Xq0" kind="unwind" unwindAction="unwindSegueWithSegue:" id="jMI-a1-2ZK"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ix-EM-kGu">
-                                <rect key="frame" x="115" y="191" width="49" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Level 3"/>
-                                <connections>
-                                    <action selector="levelSelectedButtonPressed:" destination="B3n-WI-hyn" eventType="touchUpInside" id="7xZ-4f-RBb"/>
-                                    <segue destination="3e7-4I-Xq0" kind="unwind" unwindAction="unwindSegueWithSegue:" id="ViD-GJ-Ayz"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gPU-DN-Tl7">
-                                <rect key="frame" x="114" y="243" width="50" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Level 4"/>
-                                <connections>
-                                    <action selector="levelSelectedButtonPressed:" destination="B3n-WI-hyn" eventType="touchUpInside" id="XA4-B9-Mvc"/>
-                                    <segue destination="3e7-4I-Xq0" kind="unwind" unwindAction="unwindSegueWithSegue:" id="BJN-PD-pcJ"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ghh-qU-Zqo">
-                                <rect key="frame" x="115" y="297" width="49" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Level 5"/>
-                                <connections>
-                                    <action selector="levelSelectedButtonPressed:" destination="B3n-WI-hyn" eventType="touchUpInside" id="pUn-6U-nFH"/>
-                                    <segue destination="3e7-4I-Xq0" kind="unwind" unwindAction="unwindSegueWithSegue:" id="C67-tc-2Ig"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="6" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wvS-Qz-jiB">
-                                <rect key="frame" x="212" y="73" width="49" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Level 6"/>
-                                <connections>
-                                    <action selector="levelSelectedButtonPressed:" destination="B3n-WI-hyn" eventType="touchUpInside" id="cPH-wb-3Je"/>
-                                    <segue destination="3e7-4I-Xq0" kind="unwind" unwindAction="unwindSegueWithSegue:" id="ng2-b0-GCQ"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="7" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gi8-iZ-mkX">
-                                <rect key="frame" x="212" y="129" width="48" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Level 7"/>
-                                <connections>
-                                    <action selector="levelSelectedButtonPressed:" destination="B3n-WI-hyn" eventType="touchUpInside" id="euX-i6-tCc"/>
-                                    <segue destination="3e7-4I-Xq0" kind="unwind" unwindAction="unwindSegueWithSegue:" id="OlB-oa-JFC"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="8" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Fg-bb-fOP">
-                                <rect key="frame" x="212" y="190" width="49" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Level 8"/>
-                                <connections>
-                                    <action selector="levelSelectedButtonPressed:" destination="B3n-WI-hyn" eventType="touchUpInside" id="Orb-bG-s4O"/>
-                                    <segue destination="3e7-4I-Xq0" kind="unwind" unwindAction="unwindSegueWithSegue:" id="PPH-i9-EZ9"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="9" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KFD-gt-TzK">
-                                <rect key="frame" x="212" y="242" width="49" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Level 9"/>
-                                <connections>
-                                    <action selector="levelSelectedButtonPressed:" destination="B3n-WI-hyn" eventType="touchUpInside" id="agm-Qp-l2G"/>
-                                    <segue destination="3e7-4I-Xq0" kind="unwind" unwindAction="unwindSegueWithSegue:" id="Hvj-VI-L7l"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="10" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yMM-VN-ddz">
-                                <rect key="frame" x="208" y="296" width="56" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Level 10"/>
-                                <connections>
-                                    <action selector="levelSelectedButtonPressed:" destination="B3n-WI-hyn" eventType="touchUpInside" id="Py0-hS-h9S"/>
-                                    <segue destination="3e7-4I-Xq0" kind="unwind" unwindAction="unwindSegueWithSegue:" id="uwe-mA-Kxp"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Msh-80-y6W">
-                                <rect key="frame" x="147.66666666666666" y="694" width="80" height="30"/>
-                                <state key="normal" title="Level Editor"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Msh-80-y6W">
+                                <rect key="frame" x="118.66666666666669" y="690" width="138" height="34"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Level Editor">
+                                            <attributes>
+                                                <font key="NSFont" size="19" name="Menlo-Regular"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
                                 <connections>
                                     <action selector="levelEditorButtonPressed" destination="B3n-WI-hyn" eventType="touchUpInside" id="a5y-CM-cYj"/>
                                     <segue destination="3e7-4I-Xq0" kind="unwind" unwindAction="unwindSegueWithSegue:" id="xSJ-5e-Uye"/>
+                                </connections>
+                            </button>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gKJ-7v-k9G">
+                                <rect key="frame" x="0.0" y="271" width="375" height="216"/>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K6U-qp-9Cf">
+                                <rect key="frame" x="29" y="494.99999999999994" width="317" height="36.333333333333314"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Press here to go to level">
+                                            <attributes>
+                                                <font key="NSFont" size="21" name="Menlo-Regular"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <segue destination="3e7-4I-Xq0" kind="unwind" unwindAction="unwindSegueWithSegue:" id="EFX-lA-pVW"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -725,9 +671,17 @@
                         <constraints>
                             <constraint firstItem="Msh-80-y6W" firstAttribute="bottom" secondItem="0Qa-7n-ZH0" secondAttribute="bottom" id="1Js-1t-XWr"/>
                             <constraint firstItem="Msh-80-y6W" firstAttribute="centerX" secondItem="0YA-ic-XCW" secondAttribute="centerX" id="2Uf-an-4ws"/>
+                            <constraint firstItem="gKJ-7v-k9G" firstAttribute="leading" secondItem="0Qa-7n-ZH0" secondAttribute="leading" id="DWq-G2-LMd"/>
+                            <constraint firstItem="gKJ-7v-k9G" firstAttribute="centerY" secondItem="0YA-ic-XCW" secondAttribute="centerY" id="Fv3-AH-afi"/>
+                            <constraint firstItem="K6U-qp-9Cf" firstAttribute="centerX" secondItem="0YA-ic-XCW" secondAttribute="centerX" id="ITi-qU-LHn"/>
+                            <constraint firstItem="K6U-qp-9Cf" firstAttribute="top" secondItem="gKJ-7v-k9G" secondAttribute="bottom" constant="8" id="VgY-Z7-p5J"/>
+                            <constraint firstItem="gKJ-7v-k9G" firstAttribute="trailing" secondItem="0Qa-7n-ZH0" secondAttribute="trailing" id="dpM-hR-LMl"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0Qa-7n-ZH0"/>
                     </view>
+                    <connections>
+                        <outlet property="levelPicker" destination="gKJ-7v-k9G" id="wsP-ix-Awz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="17w-1i-gyE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="3e7-4I-Xq0" userLabel="Exit" sceneMemberID="exit"/>

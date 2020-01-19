@@ -20,6 +20,7 @@ class AlternateViewController: UIViewController {
     @IBOutlet weak var levelSelectButton: UIButton!
     @IBOutlet var titleLabels: [UILabel]!
     @IBOutlet weak var settingButton: UIButton!
+    @IBOutlet weak var printLevelButton: UIButton!
     
     @IBOutlet weak var winAnimationTest: UIButton!
     
@@ -33,7 +34,7 @@ class AlternateViewController: UIViewController {
         switchBrain.startGameState()
         allSwitchesOff()
         loadData()
-        
+        printLevelButton.isHidden = true
         settingButton.isHidden = true
         winAnimationTest.isHidden = true
         currentLevelLabel.isHidden = true
@@ -145,6 +146,8 @@ class AlternateViewController: UIViewController {
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
                 self.loadData()
             }
+        } else {
+            printLevelButton.isHidden = false
         }
     }
     
@@ -197,6 +200,7 @@ class AlternateViewController: UIViewController {
         }
     }
     @IBAction func resetButtonPressed(_ sender: UIButton) {
+        if isEditingLevel == false {
         nextLevelButton.isHidden = true
         scoreNumLabel.text = switchBrain.flipCount.description
         switchBrain.flipCount = 0
@@ -204,6 +208,9 @@ class AlternateViewController: UIViewController {
        // switcher.resetAnimation()
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
             self.loadData()
+            }
+        } else {
+            switchBrain.resetAnimation2()
         }
     }
     @IBAction func nextLevelButtonPressed() {
@@ -220,6 +227,18 @@ class AlternateViewController: UIViewController {
     
     @IBAction func winAnimationTestPressed(_ sender: Any) {
         switchBrain.winAnimation()
+    }
+    @IBAction func printLevelButtonPressed() {
+        var newLevelToggles = [Int]()
+        print("Ok")
+        for toggle in switchGrid {
+            if toggle.isOn == true {
+                newLevelToggles.append(toggle.tag - 1)
+                
+            }
+        }
+       print(newLevelToggles)
+        
     }
 }
 
