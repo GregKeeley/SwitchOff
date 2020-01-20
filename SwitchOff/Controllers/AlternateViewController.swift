@@ -23,7 +23,27 @@ class AlternateViewController: UIViewController {
     @IBOutlet weak var settingButton: UIButton!
     @IBOutlet weak var printLevelButton: UIButton!
     
-    @IBOutlet weak var winAnimationTest: UIButton!
+    @IBOutlet weak var muteIcon: UIImageView!
+    @IBOutlet weak var winAnimationTestButton: UIButton!
+    
+    var currentAniTestStatus = AnimationTestStatus.off {
+        didSet {
+            if currentAniTestStatus.rawValue == "On" {
+                winAnimationTestButton.isHidden = false
+            }
+            UserPreference.shared.updateAnimationTest(with: currentAniTestStatus)
+        }
+    }
+    var currentSFXStatus = SFXStatus.on {
+        didSet {
+            if currentSFXStatus.rawValue == "Off" {
+                muteIcon.isHidden = true
+            } else {
+                muteIcon.isHidden = false
+            }
+            UserPreference.shared.updateSFXStatus(with: currentSFXStatus)
+        }
+    }
     
     var resetSFX: AVAudioPlayer?
     
@@ -33,13 +53,15 @@ class AlternateViewController: UIViewController {
     var isEditingLevel = false
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         populateSwitchArray()
         switchBrain.startGameState()
         allSwitchesOff()
         loadData()
+        muteIcon.isHidden = true
         printLevelButton.isHidden = true
         settingButton.isHidden = false
-        winAnimationTest.isHidden = true
+        winAnimationTestButton.isHidden = true
         currentLevelLabel.isHidden = true
         secretLevelButton.isHidden = true
         nextLevelButton.isHidden = true
@@ -56,15 +78,19 @@ class AlternateViewController: UIViewController {
         levelSelectButton.layer.cornerRadius = 4
     }
     func playSound(fileName: String, format: String) {
-        let path = Bundle.main.path(forResource: fileName, ofType: format)!
-        let url = URL(fileURLWithPath: path)
-
-        do {
-            resetSFX = try AVAudioPlayer(contentsOf: url)
-            resetSFX?.play()
-            print("played resetSound")
-        } catch {
-            print("could not load resetSound")
+        if currentSFXStatus.rawValue == "On" {
+            let path = Bundle.main.path(forResource: fileName, ofType: format)!
+            let url = URL(fileURLWithPath: path)
+            
+            do {
+                resetSFX = try AVAudioPlayer(contentsOf: url)
+                resetSFX?.play()
+                print("played resetSound")
+            } catch {
+                print("could not load resetSound")
+            }
+        } else {
+            print("Sound is muted")
         }
     }
     func allSwitchesOff() {

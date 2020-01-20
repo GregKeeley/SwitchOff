@@ -73,9 +73,9 @@ class SettingTableViewController: UITableViewController {
             fatalError("Failed to prepare for segue")
         }
         if winAnimationTestToggle.isOn == true {
-            altVC.winAnimationTest.isEnabled = true
+            altVC.winAnimationTestButton.isEnabled = true
         } else {
-            altVC.winAnimationTest.isEnabled = false
+            altVC.winAnimationTestButton.isEnabled = false
         }
     }
 
