@@ -18,6 +18,10 @@
 		C161FB132380F106006184E8 /* AlternateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C161FB122380F106006184E8 /* AlternateViewController.swift */; };
 		C176ECCB23D35DA400DE3009 /* brainExtensionAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = C176ECCA23D35DA400DE3009 /* brainExtensionAnimations.swift */; };
 		C17878062380FEE10055E341 /* SwitchOffBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17878052380FEE10055E341 /* SwitchOffBrain.swift */; };
+		C199497B23D625FE00F4462C /* resetSoundmp3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C199497A23D625FE00F4462C /* resetSoundmp3.mp3 */; };
+		C199497E23D6297100F4462C /* resetSound2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C199497D23D6297100F4462C /* resetSound2.mp3 */; };
+		C199498023D62E7000F4462C /* winFanfare.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C199497F23D62E7000F4462C /* winFanfare.mp3 */; };
+		C199498223D647A900F4462C /* winFanfare2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C199498123D647A900F4462C /* winFanfare2.mp3 */; };
 		C1E4E5EE238DBDCB00DAEB18 /* Levels.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E4E5ED238DBDCB00DAEB18 /* Levels.swift */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +39,10 @@
 		C161FB122380F106006184E8 /* AlternateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlternateViewController.swift; sourceTree = "<group>"; };
 		C176ECCA23D35DA400DE3009 /* brainExtensionAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = brainExtensionAnimations.swift; sourceTree = "<group>"; };
 		C17878052380FEE10055E341 /* SwitchOffBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchOffBrain.swift; sourceTree = "<group>"; };
+		C199497A23D625FE00F4462C /* resetSoundmp3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = resetSoundmp3.mp3; sourceTree = "<group>"; };
+		C199497D23D6297100F4462C /* resetSound2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = resetSound2.mp3; sourceTree = "<group>"; };
+		C199497F23D62E7000F4462C /* winFanfare.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = winFanfare.mp3; sourceTree = "<group>"; };
+		C199498123D647A900F4462C /* winFanfare2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = winFanfare2.mp3; sourceTree = "<group>"; };
 		C1E4E5ED238DBDCB00DAEB18 /* Levels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Levels.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -77,12 +85,24 @@
 				C17878052380FEE10055E341 /* SwitchOffBrain.swift */,
 				C176ECCA23D35DA400DE3009 /* brainExtensionAnimations.swift */,
 				C161FB122380F106006184E8 /* AlternateViewController.swift */,
+				C199497923D625ED00F4462C /* Sounds */,
 				C1E4E5ED238DBDCB00DAEB18 /* Levels.swift */,
 				C161FADD23807EED006184E8 /* Assets.xcassets */,
 				C161FADF23807EED006184E8 /* LaunchScreen.storyboard */,
 				C161FAE223807EED006184E8 /* Info.plist */,
 			);
 			path = SwitchOff;
+			sourceTree = "<group>";
+		};
+		C199497923D625ED00F4462C /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				C199497A23D625FE00F4462C /* resetSoundmp3.mp3 */,
+				C199497F23D62E7000F4462C /* winFanfare.mp3 */,
+				C199497D23D6297100F4462C /* resetSound2.mp3 */,
+				C199498123D647A900F4462C /* winFanfare2.mp3 */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,6 +166,10 @@
 				C161FAE123807EED006184E8 /* LaunchScreen.storyboard in Resources */,
 				C161FADE23807EED006184E8 /* Assets.xcassets in Resources */,
 				C161FADC23807EEA006184E8 /* Main.storyboard in Resources */,
+				C199498023D62E7000F4462C /* winFanfare.mp3 in Resources */,
+				C199497B23D625FE00F4462C /* resetSoundmp3.mp3 in Resources */,
+				C199497E23D6297100F4462C /* resetSound2.mp3 in Resources */,
+				C199498223D647A900F4462C /* winFanfare2.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

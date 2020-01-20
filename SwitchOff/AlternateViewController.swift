@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class AlternateViewController: UIViewController {
     @IBOutlet weak var winLabel: UILabel!
@@ -24,6 +25,8 @@ class AlternateViewController: UIViewController {
     
     @IBOutlet weak var winAnimationTest: UIButton!
     
+    var resetSFX: AVAudioPlayer?
+    
     var switchBrain = SwitchOffBrain()
     var currentLevel = 0
     var secretButtonPresses = 0
@@ -35,7 +38,7 @@ class AlternateViewController: UIViewController {
         allSwitchesOff()
         loadData()
         printLevelButton.isHidden = true
-        settingButton.isHidden = true
+        settingButton.isHidden = false
         winAnimationTest.isHidden = true
         currentLevelLabel.isHidden = true
         secretLevelButton.isHidden = true
@@ -48,8 +51,22 @@ class AlternateViewController: UIViewController {
         levelSelectButton.isHidden = true
     
         nextLevelButton.layer.cornerRadius = 4
+        resetButton.layer.cornerRadius = 4
+        settingButton.layer.cornerRadius = 4
+        levelSelectButton.layer.cornerRadius = 4
     }
-    
+    func playSound(fileName: String, format: String) {
+        let path = Bundle.main.path(forResource: fileName, ofType: format)!
+        let url = URL(fileURLWithPath: path)
+
+        do {
+            resetSFX = try AVAudioPlayer(contentsOf: url)
+            resetSFX?.play()
+            print("played resetSound")
+        } catch {
+            print("could not load resetSound")
+        }
+    }
     func allSwitchesOff() {
         for state in switchGrid {
             if state.isOn == true {
@@ -63,6 +80,7 @@ class AlternateViewController: UIViewController {
         }
     }
     func reset() {
+        playSound(fileName: "resetSound2", format: "mp3")
         scoreNumLabel.text = switchBrain.flipCount.description
         switchBrain.flipCount = 0
         switchBrain.resetAnimation2()
@@ -177,6 +195,7 @@ class AlternateViewController: UIViewController {
             let winState = switchBrain.winCheck()
             if currentLevel != 0 {
                 if winState == true {
+                    playSound(fileName: "winFanfare2", format: "mp3")
                     winLabel.isHidden = false
                     switchBrain.winAnimation()
                     switchBrain.changeGridStatus()
@@ -200,6 +219,7 @@ class AlternateViewController: UIViewController {
         }
     }
     @IBAction func resetButtonPressed(_ sender: UIButton) {
+        playSound(fileName: "resetSound2", format: "mp3")
         if isEditingLevel == false {
         nextLevelButton.isHidden = true
         scoreNumLabel.text = switchBrain.flipCount.description

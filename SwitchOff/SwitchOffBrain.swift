@@ -14,7 +14,7 @@ class SwitchOffBrain {
     var neighborRight = Int()
     var neighborDown = Int()
     var neighborUp = Int()
-    var neighborSwitches = [Int]()
+//    var neighborSwitches = [Int]()
     var gridSwitches = [UISwitch]()
     var switchStates = [Bool]()
     let switchRange = 1...25
@@ -60,25 +60,18 @@ class SwitchOffBrain {
     }
 
     func switchFlipped(senderTag: Int) {
-        neighborRight = senderTag + 1
-        neighborLeft = senderTag - 1
-        neighborDown = senderTag + 5
-        neighborUp = senderTag - 5
-        neighborSwitches.append(neighborLeft)
-        neighborSwitches.append(neighborRight)
-        neighborSwitches.append(neighborUp)
-        neighborSwitches.append(neighborDown)
-        for toggle in neighborSwitches {
+        var surroundingSwitches = [senderTag - 1, senderTag + 1, senderTag - 5, senderTag + 5]
+        for toggle in surroundingSwitches {
             
             if toggle % 5 == 0 {
-                neighborSwitches.remove(at: 1)
+                surroundingSwitches.remove(at: 1)
             }
             else if toggle % 5 == 1 {
-                neighborSwitches.remove(at: 0)
+                surroundingSwitches.remove(at: 0)
             }
         }
         
-        for toggle in neighborSwitches {
+        for toggle in surroundingSwitches {
             if switchRange.contains(toggle) {
                 flipToggle(gridSwitches[toggle - 1])
             }
