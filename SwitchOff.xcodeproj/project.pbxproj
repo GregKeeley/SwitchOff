@@ -22,6 +22,7 @@
 		C199497E23D6297100F4462C /* resetSound2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C199497D23D6297100F4462C /* resetSound2.mp3 */; };
 		C199498023D62E7000F4462C /* winFanfare.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C199497F23D62E7000F4462C /* winFanfare.mp3 */; };
 		C199498223D647A900F4462C /* winFanfare2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C199498123D647A900F4462C /* winFanfare2.mp3 */; };
+		C199498923D65E4E00F4462C /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = C199498823D65E4E00F4462C /* UserDefaults.swift */; };
 		C1E4E5EE238DBDCB00DAEB18 /* Levels.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E4E5ED238DBDCB00DAEB18 /* Levels.swift */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +44,7 @@
 		C199497D23D6297100F4462C /* resetSound2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = resetSound2.mp3; sourceTree = "<group>"; };
 		C199497F23D62E7000F4462C /* winFanfare.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = winFanfare.mp3; sourceTree = "<group>"; };
 		C199498123D647A900F4462C /* winFanfare2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = winFanfare2.mp3; sourceTree = "<group>"; };
+		C199498823D65E4E00F4462C /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		C1E4E5ED238DBDCB00DAEB18 /* Levels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Levels.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -76,19 +78,14 @@
 		C161FAD323807EEA006184E8 /* SwitchOff */ = {
 			isa = PBXGroup;
 			children = (
-				C161FAD423807EEA006184E8 /* AppDelegate.swift */,
-				C161FAD623807EEA006184E8 /* SceneDelegate.swift */,
-				C161FAD823807EEA006184E8 /* ViewController.swift */,
-				C161FADA23807EEA006184E8 /* Main.storyboard */,
-				C105554123D4948F006BED53 /* SettingTableViewController.swift */,
-				C14D6D5D23915D1E00918CCC /* LevelSelectViewController.swift */,
+				C199498723D65E3900F4462C /* UserDefaults */,
+				C199498523D65C1B00F4462C /* Storyboards */,
+				C199498423D65C0600F4462C /* Supporting Files */,
 				C17878052380FEE10055E341 /* SwitchOffBrain.swift */,
 				C176ECCA23D35DA400DE3009 /* brainExtensionAnimations.swift */,
-				C161FB122380F106006184E8 /* AlternateViewController.swift */,
+				C199498323D65BFE00F4462C /* Controllers */,
 				C199497923D625ED00F4462C /* Sounds */,
 				C1E4E5ED238DBDCB00DAEB18 /* Levels.swift */,
-				C161FADD23807EED006184E8 /* Assets.xcassets */,
-				C161FADF23807EED006184E8 /* LaunchScreen.storyboard */,
 				C161FAE223807EED006184E8 /* Info.plist */,
 			);
 			path = SwitchOff;
@@ -103,6 +100,44 @@
 				C199498123D647A900F4462C /* winFanfare2.mp3 */,
 			);
 			path = Sounds;
+			sourceTree = "<group>";
+		};
+		C199498323D65BFE00F4462C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C161FAD823807EEA006184E8 /* ViewController.swift */,
+				C161FB122380F106006184E8 /* AlternateViewController.swift */,
+				C105554123D4948F006BED53 /* SettingTableViewController.swift */,
+				C14D6D5D23915D1E00918CCC /* LevelSelectViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		C199498423D65C0600F4462C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C161FADD23807EED006184E8 /* Assets.xcassets */,
+				C161FAD423807EEA006184E8 /* AppDelegate.swift */,
+				C161FAD623807EEA006184E8 /* SceneDelegate.swift */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C199498523D65C1B00F4462C /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				C161FADA23807EEA006184E8 /* Main.storyboard */,
+				C161FADF23807EED006184E8 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		C199498723D65E3900F4462C /* UserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				C199498823D65E4E00F4462C /* UserDefaults.swift */,
+			);
+			path = UserDefaults;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,6 +221,7 @@
 				C161FAD723807EEA006184E8 /* SceneDelegate.swift in Sources */,
 				C161FB132380F106006184E8 /* AlternateViewController.swift in Sources */,
 				C176ECCB23D35DA400DE3009 /* brainExtensionAnimations.swift in Sources */,
+				C199498923D65E4E00F4462C /* UserDefaults.swift in Sources */,
 				C105554223D4948F006BED53 /* SettingTableViewController.swift in Sources */,
 				C17878062380FEE10055E341 /* SwitchOffBrain.swift in Sources */,
 				C14D6D5E23915D1E00918CCC /* LevelSelectViewController.swift in Sources */,

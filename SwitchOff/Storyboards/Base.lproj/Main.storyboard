@@ -596,14 +596,17 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Win Animation Button" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ft-JG-ASL">
-                                                    <rect key="frame" x="16" y="11" width="166" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Animation Test Button: On" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ft-JG-ASL">
+                                                    <rect key="frame" x="16" y="11" width="200" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h0h-7D-rWd">
                                                     <rect key="frame" x="306" y="6" width="51" height="31"/>
+                                                    <connections>
+                                                        <action selector="aniTestStatusChanged:" destination="nDm-ge-FNW" eventType="valueChanged" id="Dll-nZ-Qzu"/>
+                                                    </connections>
                                                 </switch>
                                             </subviews>
                                             <constraints>
@@ -611,6 +614,34 @@
                                                 <constraint firstItem="4ft-JG-ASL" firstAttribute="top" secondItem="Fvw-hS-oV6" secondAttribute="topMargin" id="Fo6-y3-xiE"/>
                                                 <constraint firstAttribute="trailing" secondItem="h0h-7D-rWd" secondAttribute="trailing" constant="20" id="YqQ-cW-966"/>
                                                 <constraint firstItem="4ft-JG-ASL" firstAttribute="leading" secondItem="Fvw-hS-oV6" secondAttribute="leadingMargin" id="bkV-ed-1ea"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="CHf-qc-GtR">
+                                        <rect key="frame" x="0.0" y="71.666667938232422" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CHf-qc-GtR" id="0CR-mQ-uAQ">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sound Effects: On" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YmE-d5-2vJ">
+                                                    <rect key="frame" x="16" y="11.666666666666664" width="139" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zob-wy-IKe">
+                                                    <rect key="frame" x="306" y="6.6666666666666679" width="51" height="31.000000000000004"/>
+                                                    <connections>
+                                                        <action selector="SFXStatusChanged:" destination="nDm-ge-FNW" eventType="valueChanged" id="yBF-fT-ROb"/>
+                                                    </connections>
+                                                </switch>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="zob-wy-IKe" secondAttribute="trailing" constant="20" id="7A3-48-qvF"/>
+                                                <constraint firstItem="YmE-d5-2vJ" firstAttribute="leading" secondItem="0CR-mQ-uAQ" secondAttribute="leadingMargin" id="jsr-rV-Jyv"/>
+                                                <constraint firstItem="YmE-d5-2vJ" firstAttribute="centerY" secondItem="0CR-mQ-uAQ" secondAttribute="centerY" id="sxe-s7-xa0"/>
+                                                <constraint firstItem="zob-wy-IKe" firstAttribute="centerY" secondItem="YmE-d5-2vJ" secondAttribute="centerY" id="w4E-H8-k4K"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -624,6 +655,9 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="mAg-20-MtJ"/>
                     <connections>
+                        <outlet property="aniTestLabel" destination="4ft-JG-ASL" id="BIB-sI-ZvT"/>
+                        <outlet property="sfxStatusLabel" destination="YmE-d5-2vJ" id="Q2k-tM-vXY"/>
+                        <outlet property="sfxStatusToggle" destination="zob-wy-IKe" id="oh5-a0-uPM"/>
                         <outlet property="winAnimationTestToggle" destination="h0h-7D-rWd" id="46Q-7V-4hh"/>
                     </connections>
                 </tableViewController>
