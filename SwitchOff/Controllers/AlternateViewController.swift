@@ -36,11 +36,7 @@ class AlternateViewController: UIViewController {
     }
     var currentSFXStatus = SFXStatus.on {
         didSet {
-            if currentSFXStatus.rawValue == "Off" {
-                muteIcon.isHidden = true
-            } else {
-                muteIcon.isHidden = false
-            }
+            
             UserPreference.shared.updateSFXStatus(with: currentSFXStatus)
         }
     }
@@ -251,7 +247,8 @@ class AlternateViewController: UIViewController {
         scoreNumLabel.text = switchBrain.flipCount.description
         switchBrain.flipCount = 0
         switchBrain.resetAnimation2()
-       // switcher.resetAnimation()
+        switchBrain.changeGridStatus()
+//            currentLevel = currentLevel - 1
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
             self.loadData()
             }
