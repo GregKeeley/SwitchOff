@@ -26,6 +26,8 @@ class AlternateViewController: UIViewController {
     @IBOutlet weak var muteIcon: UIImageView!
     @IBOutlet weak var winAnimationTestButton: UIButton!
     
+    var gridDisabled = false
+    
     var currentAniTestStatus = AnimationTestStatus.off {
         didSet {
             if currentAniTestStatus.rawValue == "On" {
@@ -72,6 +74,8 @@ class AlternateViewController: UIViewController {
         resetButton.layer.cornerRadius = 4
         settingButton.layer.cornerRadius = 4
         levelSelectButton.layer.cornerRadius = 4
+        
+        
     }
     func playSound(fileName: String, format: String) {
         if currentSFXStatus.rawValue == "On" {
@@ -116,6 +120,7 @@ class AlternateViewController: UIViewController {
         switchBrain.flipCount = 0
         scoreNumLabel.text = switchBrain.flipCount.description
         populateSwitchArray()
+        
         switch currentLevel {
         case 0:
             switchBrain.loadLevelSwitches(toggles: levels.level0)
@@ -218,14 +223,16 @@ class AlternateViewController: UIViewController {
             if currentLevel != 0 {
                 if winState == true {
                     playSound(fileName: "winFanfare2", format: "mp3")
+                    //gridDisabled = true
                     winLabel.isHidden = false
                     switchBrain.winAnimation()
                     switchBrain.changeGridStatus()
+                    gridDisabled = true
                     DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
                         self.nextLevelButton.isHidden = false
                     }
-                    currentLevel += 1
-                    switchBrain.currentLevel += 1
+                    //currentLevel += 1
+                    //switchBrain.currentLevel += 1
                 }
             } else {
                 scoreStrLabel.isHidden = false
@@ -242,26 +249,40 @@ class AlternateViewController: UIViewController {
     }
     @IBAction func resetButtonPressed(_ sender: UIButton) {
         playSound(fileName: "resetSound2", format: "mp3")
-        if isEditingLevel == false {
-        nextLevelButton.isHidden = true
-        scoreNumLabel.text = switchBrain.flipCount.description
-        switchBrain.flipCount = 0
-        switchBrain.resetAnimation2()
-        switchBrain.changeGridStatus()
-//            currentLevel = currentLevel - 1
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
-            self.loadData()
+        if gridDisabled == false {
+            if isEditingLevel == false {
+                nextLevelButton.isHidden = true
+                scoreNumLabel.text = switchBrain.flipCount.description
+                switchBrain.flipCount = 0
+                switchBrain.resetAnimation2()
+                //switchBrain.changeGridStatus()
+                //            currentLevel = currentLevel - 1
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.7) {
+                    self.loadData()
+                }
+            } else {
+                switchBrain.resetAnimation2()
             }
         } else {
             switchBrain.resetAnimation2()
+            switchBrain.changeGridStatus()
+            nextLevelButton.isHidden = true
+            print("Reset button pressed: gridStatus: \(gridDisabled)")
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.7) {
+                self.loadData()
+            }
         }
+        
     }
     @IBAction func nextLevelButtonPressed() {
+        currentLevel += 1
+        switchBrain.currentLevel += 1
         nextLevelButton.isHidden = true
         switchBrain.changeGridStatus()
         loadData()
     }
     @IBAction func secretButtonPressed() {
+       
         secretButtonPresses += 1
         if secretButtonPresses > 5 {
             levelSelectButton.isHidden = false

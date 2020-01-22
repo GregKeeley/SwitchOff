@@ -83,9 +83,9 @@
 				C199498423D65C0600F4462C /* Supporting Files */,
 				C17878052380FEE10055E341 /* SwitchOffBrain.swift */,
 				C176ECCA23D35DA400DE3009 /* brainExtensionAnimations.swift */,
+				C1E4E5ED238DBDCB00DAEB18 /* Levels.swift */,
 				C199498323D65BFE00F4462C /* Controllers */,
 				C199497923D625ED00F4462C /* Sounds */,
-				C1E4E5ED238DBDCB00DAEB18 /* Levels.swift */,
 				C161FAE223807EED006184E8 /* Info.plist */,
 			);
 			path = SwitchOff;

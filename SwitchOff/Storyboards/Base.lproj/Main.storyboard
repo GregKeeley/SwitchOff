@@ -377,13 +377,14 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WWj-h2-6hN">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WWj-h2-6hN">
                                 <rect key="frame" x="20" y="704" width="55" height="30"/>
                                 <color key="tintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment content="Level:">
                                             <attributes>
+                                                <color key="NSColor" red="0.20316129920000001" green="0.78006720539999996" blue="0.3476932049" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <font key="NSFont" size="15" name="Menlo-Regular"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
@@ -475,7 +476,6 @@
                             <constraint firstItem="Pbi-4V-Ggs" firstAttribute="leading" secondItem="TJq-FH-rAP" secondAttribute="trailing" constant="8" id="BNq-qZ-IMe"/>
                             <constraint firstItem="8LL-2G-c30" firstAttribute="leading" secondItem="TU6-4g-Jbl" secondAttribute="trailing" constant="8" id="CPW-IB-f3R"/>
                             <constraint firstItem="F8N-QE-Dnq" firstAttribute="top" secondItem="d6g-XF-k4d" secondAttribute="bottom" constant="8" id="Cyc-PR-FLP"/>
-                            <constraint firstItem="iQd-dq-1ma" firstAttribute="width" secondItem="xsM-1H-H79" secondAttribute="width" id="FG2-sa-Ml3"/>
                             <constraint firstItem="2td-tG-nPi" firstAttribute="leading" secondItem="8LL-2G-c30" secondAttribute="trailing" constant="8" id="Fq2-WO-DBT"/>
                             <constraint firstItem="TU6-4g-Jbl" firstAttribute="top" secondItem="iCD-Tr-h3S" secondAttribute="bottom" constant="8" id="GcV-ba-vMw"/>
                             <constraint firstItem="fwd-On-E4S" firstAttribute="top" secondItem="Iua-sO-sQm" secondAttribute="top" id="I7N-tv-3XP"/>
@@ -537,7 +537,6 @@
                             <constraint firstItem="PoC-1C-0hj" firstAttribute="centerX" secondItem="aBl-gl-Kof" secondAttribute="centerX" id="sFX-js-nk2"/>
                             <constraint firstItem="fwd-On-E4S" firstAttribute="leading" secondItem="hqO-cZ-GSR" secondAttribute="trailing" constant="8" id="u2P-ce-WZ2"/>
                             <constraint firstItem="iCD-Tr-h3S" firstAttribute="top" secondItem="TJq-FH-rAP" secondAttribute="bottom" constant="8" id="uUz-h1-g22"/>
-                            <constraint firstItem="qM5-eo-egm" firstAttribute="height" secondItem="iQd-dq-1ma" secondAttribute="height" multiplier="0.925926" id="uZB-wL-XwJ"/>
                             <constraint firstItem="TU6-4g-Jbl" firstAttribute="leading" secondItem="j6L-k2-XIW" secondAttribute="trailing" constant="8" id="ukL-X4-9Rh"/>
                             <constraint firstItem="Vnj-kt-f2g" firstAttribute="leading" secondItem="aBl-gl-Kof" secondAttribute="trailing" constant="8" id="woD-Rb-oxg"/>
                             <constraint firstItem="ZCB-bJ-pYg" firstAttribute="centerX" secondItem="4HA-h2-Mp0" secondAttribute="centerX" id="xXW-I7-67F"/>

@@ -97,4 +97,5 @@ class SwitchOffBrain {
             gridSwitches[toggle].isOn = true
         }
     }
+
 }
