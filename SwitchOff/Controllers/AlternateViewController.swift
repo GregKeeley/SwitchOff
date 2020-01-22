@@ -30,6 +30,7 @@ class AlternateViewController: UIViewController {
     
     var currentAniTestStatus = AnimationTestStatus.off {
         didSet {
+            print(currentAniTestStatus.rawValue)
             if currentAniTestStatus.rawValue == "On" {
                 winAnimationTestButton.isHidden = false
             }
@@ -38,7 +39,11 @@ class AlternateViewController: UIViewController {
     }
     var currentSFXStatus = SFXStatus.on {
         didSet {
-            
+            if currentSFXStatus.rawValue == "Off" {
+                muteIcon.isHidden = false
+            } else {
+                muteIcon.isHidden = true
+            }
             UserPreference.shared.updateSFXStatus(with: currentSFXStatus)
         }
     }
@@ -56,7 +61,10 @@ class AlternateViewController: UIViewController {
         switchBrain.startGameState()
         allSwitchesOff()
         loadData()
-        muteIcon.isHidden = true
+        updateUserPreferences()
+        loadPreferences()
+        
+        //muteIcon.isHidden = true
         printLevelButton.isHidden = true
         settingButton.isHidden = false
         winAnimationTestButton.isHidden = true
@@ -74,8 +82,28 @@ class AlternateViewController: UIViewController {
         resetButton.layer.cornerRadius = 4
         settingButton.layer.cornerRadius = 4
         levelSelectButton.layer.cornerRadius = 4
-        
-        
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        updateUserPreferences()
+        loadPreferences()
+    }
+    private func updateUserPreferences() {
+        if let aniTestStatus = UserPreference.shared.getAniTestStatus() {
+            currentAniTestStatus = aniTestStatus
+            print(aniTestStatus.rawValue)
+        }
+        if let sfxTestStatus = UserPreference.shared.getSFXStatus() {
+            currentSFXStatus = sfxTestStatus
+            print(sfxTestStatus.rawValue)
+        }
+    }
+    func loadPreferences() {
+        if currentSFXStatus.rawValue == "Off" {
+            muteIcon.isHidden = false
+        } else {
+            muteIcon.isHidden = true
+        }
     }
     func playSound(fileName: String, format: String) {
         if currentSFXStatus.rawValue == "On" {

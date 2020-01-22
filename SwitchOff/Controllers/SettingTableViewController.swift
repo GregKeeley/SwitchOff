@@ -62,9 +62,11 @@ class SettingTableViewController: UITableViewController {
     }
     private func toggleSFXStatus() {
         currentSFXStatus = currentSFXStatus == SFXStatus.on ? SFXStatus.off : SFXStatus.on
+        UserPreference.shared.updateSFXStatus(with: currentSFXStatus)
     }
     private func toggleAniTestButtonStatus() {
         currentAniTestStatus = currentAniTestStatus == AnimationTestStatus.on ? AnimationTestStatus.off : AnimationTestStatus.on
+        UserPreference.shared.updateAnimationTest(with: currentAniTestStatus)
     }
     
     
