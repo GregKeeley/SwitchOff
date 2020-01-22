@@ -9,7 +9,7 @@
 import UIKit
 
 struct levels {
-    static let level0 = [7,11,12,13,17]
+//    static let level0 = []
     static let level1 = [7,11,12,13,17]
     static let level2 = [10,12,14]
     static let level3 = [2, 10, 14, 22]

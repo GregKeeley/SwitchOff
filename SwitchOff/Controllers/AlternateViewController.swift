@@ -44,7 +44,8 @@ class AlternateViewController: UIViewController {
             } else {
                 muteIcon.isHidden = true
             }
-            UserPreference.shared.updateSFXStatus(with: currentSFXStatus)
+            currentSFXStatus = UserPreference.shared.getSFXStatus()!
+            loadPreferenceSettings()
         }
     }
     
@@ -54,6 +55,7 @@ class AlternateViewController: UIViewController {
     var currentLevel = 0
     var secretButtonPresses = 0
     var isEditingLevel = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -62,9 +64,10 @@ class AlternateViewController: UIViewController {
         allSwitchesOff()
         loadData()
         updateUserPreferences()
-        loadPreferences()
+        loadPreferenceSettings()
         
-        //muteIcon.isHidden = true
+        switchGrid[0].isOn = false
+        
         printLevelButton.isHidden = true
         settingButton.isHidden = false
         winAnimationTestButton.isHidden = true
@@ -82,12 +85,9 @@ class AlternateViewController: UIViewController {
         resetButton.layer.cornerRadius = 4
         settingButton.layer.cornerRadius = 4
         levelSelectButton.layer.cornerRadius = 4
+        muteIcon.layer.cornerRadius = 4
     }
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-        updateUserPreferences()
-        loadPreferences()
-    }
+
     private func updateUserPreferences() {
         if let aniTestStatus = UserPreference.shared.getAniTestStatus() {
             currentAniTestStatus = aniTestStatus
@@ -98,7 +98,7 @@ class AlternateViewController: UIViewController {
             print(sfxTestStatus.rawValue)
         }
     }
-    func loadPreferences() {
+    func loadPreferenceSettings() {
         if currentSFXStatus.rawValue == "Off" {
             muteIcon.isHidden = false
         } else {
@@ -133,78 +133,22 @@ class AlternateViewController: UIViewController {
             switchBrain.gridSwitches.append(toggle)
         }
     }
+
     func reset() {
         playSound(fileName: "resetSound2", format: "mp3")
         scoreNumLabel.text = switchBrain.flipCount.description
         switchBrain.flipCount = 0
-        switchBrain.resetAnimation2()
+        switchBrain.resetAnimation2(level: switchBrain.loadLevelArray(currentLevel: currentLevel))
     }
     func loadData() {
         winLabel.isHidden = true
         secretLevelButton.isHidden = false
         currentLevelLabel.isHidden = false
         currentLevelLabel.text = currentLevel.description
-        
         switchBrain.flipCount = 0
         scoreNumLabel.text = switchBrain.flipCount.description
         populateSwitchArray()
-        
-        switch currentLevel {
-        case 0:
-            switchBrain.loadLevelSwitches(toggles: levels.level0)
-        case 1:
-            switchBrain.loadLevelSwitches(toggles: levels.level1)
-        case 2:
-            switchBrain.loadLevelSwitches(toggles: levels.level2)
-        case 3:
-            switchBrain.loadLevelSwitches(toggles: levels.level3)
-        case 4:
-            switchBrain.loadLevelSwitches(toggles: levels.level4)
-        case 5:
-            switchBrain.loadLevelSwitches(toggles: levels.level5)
-        case 6:
-            switchBrain.loadLevelSwitches(toggles: levels.level6)
-        case 7:
-            switchBrain.loadLevelSwitches(toggles: levels.level7)
-        case 8:
-            switchBrain.loadLevelSwitches(toggles: levels.level8)
-        case 9:
-            switchBrain.loadLevelSwitches(toggles: levels.level9)
-        case 10:
-            switchBrain.loadLevelSwitches(toggles: levels.level10)
-        case 11:
-            switchBrain.loadLevelSwitches(toggles: levels.level11)
-        case 12:
-            switchBrain.loadLevelSwitches(toggles: levels.level12)
-        case 13:
-            switchBrain.loadLevelSwitches(toggles: levels.level13)
-        case 14:
-            switchBrain.loadLevelSwitches(toggles: levels.level14)
-        case 15:
-            switchBrain.loadLevelSwitches(toggles: levels.level15)
-        case 16:
-            switchBrain.loadLevelSwitches(toggles: levels.level16)
-        case 17:
-            switchBrain.loadLevelSwitches(toggles: levels.level17)
-        case 18:
-            switchBrain.loadLevelSwitches(toggles: levels.level18)
-        case 19:
-            switchBrain.loadLevelSwitches(toggles: levels.level19)
-        case 20:
-            switchBrain.loadLevelSwitches(toggles: levels.level20)
-        case 21:
-            switchBrain.loadLevelSwitches(toggles: levels.level21)
-        case 22:
-            switchBrain.loadLevelSwitches(toggles: levels.level22)
-        case 23:
-            switchBrain.loadLevelSwitches(toggles: levels.level23)
-        case 24:
-            switchBrain.loadLevelSwitches(toggles: levels.level24)
-        case 25:
-            switchBrain.loadLevelSwitches(toggles: levels.level25)
-        default:
-            break
-        }
+        switchBrain.loadLevelSwitches(toggles: switchBrain.loadLevelArray(currentLevel: currentLevel))
     }
 
     @IBAction func unwindSegue(segue: UIStoryboardSegue) {
@@ -213,9 +157,9 @@ class AlternateViewController: UIViewController {
         }
         isEditingLevel = levelSelectVC.isEditingLevel
         currentLevel = levelSelectVC.levelSelection
+        loadPreferenceSettings()
         reset()
         if isEditingLevel == false {
-            
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
                 self.loadData()
             }
@@ -248,7 +192,7 @@ class AlternateViewController: UIViewController {
                 }
             }
             let winState = switchBrain.winCheck()
-            if currentLevel != 0 {
+            if currentLevel > 0 {
                 if winState == true {
                     playSound(fileName: "winFanfare2", format: "mp3")
                     //gridDisabled = true
@@ -271,8 +215,6 @@ class AlternateViewController: UIViewController {
                 switchBrain.currentLevel += 1
                 loadData()
             }
-        } else {
-            
         }
     }
     @IBAction func resetButtonPressed(_ sender: UIButton) {
@@ -282,17 +224,17 @@ class AlternateViewController: UIViewController {
                 nextLevelButton.isHidden = true
                 scoreNumLabel.text = switchBrain.flipCount.description
                 switchBrain.flipCount = 0
-                switchBrain.resetAnimation2()
+                switchBrain.resetAnimation2(level: switchBrain.loadLevelArray(currentLevel: currentLevel))
                 //switchBrain.changeGridStatus()
                 //            currentLevel = currentLevel - 1
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.7) {
                     self.loadData()
                 }
             } else {
-                switchBrain.resetAnimation2()
+                switchBrain.resetAnimation2(level: switchBrain.loadLevelArray(currentLevel: currentLevel))
             }
         } else {
-            switchBrain.resetAnimation2()
+            switchBrain.resetAnimation2(level: switchBrain.loadLevelArray(currentLevel: currentLevel))
             switchBrain.changeGridStatus()
             nextLevelButton.isHidden = true
             print("Reset button pressed: gridStatus: \(gridDisabled)")
@@ -306,6 +248,7 @@ class AlternateViewController: UIViewController {
         currentLevel += 1
         switchBrain.currentLevel += 1
         nextLevelButton.isHidden = true
+        gridDisabled = false
         switchBrain.changeGridStatus()
         loadData()
     }

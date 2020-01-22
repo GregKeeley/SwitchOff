@@ -9,6 +9,8 @@
 import UIKit
 
 class SettingTableViewController: UITableViewController {
+    
+    
 
     @IBOutlet weak var winAnimationTestToggle: UISwitch!
     @IBOutlet weak var sfxStatusToggle: UISwitch!
@@ -32,7 +34,10 @@ class SettingTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         updateSettings()
+        
     }
     private func updateSwitch(status: String, toggle: UISwitch) {
         switch status {
@@ -80,7 +85,5 @@ class SettingTableViewController: UITableViewController {
             altVC.winAnimationTestButton.isEnabled = false
         }
     }
-
-    
 
 }
