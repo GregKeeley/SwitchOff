@@ -17,14 +17,14 @@ class SettingTableViewController: UITableViewController {
     @IBOutlet weak var aniTestLabel: UILabel!
     @IBOutlet weak var sfxStatusLabel: UILabel!
     
-    var currentSFXStatus = SFXStatus.on {
+    private var currentSFXStatus = SFXStatus.on {
         didSet {
             updateSwitch(status: currentSFXStatus.rawValue, toggle: sfxStatusToggle)
             sfxStatusLabel.text = ("Sound Effects: \(currentSFXStatus.rawValue)")
             UserPreference.shared.updateSFXStatus(with: currentSFXStatus)
         }
     }
-    var currentAniTestStatus = AnimationTestStatus.off {
+    private var currentAniTestStatus = AnimationTestStatus.off {
         didSet {
             updateSwitch(status: currentAniTestStatus.rawValue, toggle: winAnimationTestToggle)
             aniTestLabel.text = ("Win Animation Test Button: \(currentAniTestStatus.rawValue)")
@@ -38,6 +38,10 @@ class SettingTableViewController: UITableViewController {
         
         updateSettings()
         
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        UserPreference.shared.updateSFXStatus(with: currentSFXStatus)
+        UserPreference.shared.updateAnimationTest(with: currentAniTestStatus)
     }
     private func updateSwitch(status: String, toggle: UISwitch) {
         switch status {

@@ -34,7 +34,8 @@ class AlternateViewController: UIViewController {
             if currentAniTestStatus.rawValue == "On" {
                 winAnimationTestButton.isHidden = false
             }
-            UserPreference.shared.updateAnimationTest(with: currentAniTestStatus)
+            currentAniTestStatus = UserPreference.shared.getAniTestStatus()!
+//            UserPreference.shared.updateAnimationTest(with: currentAniTestStatus)
         }
     }
     var currentSFXStatus = SFXStatus.on {
@@ -45,6 +46,7 @@ class AlternateViewController: UIViewController {
                 muteIcon.isHidden = true
             }
             currentSFXStatus = UserPreference.shared.getSFXStatus()!
+//            currentSFXStatus = UserPreference.shared.getSFXStatus()!
             loadPreferenceSettings()
         }
     }
@@ -69,7 +71,7 @@ class AlternateViewController: UIViewController {
         switchGrid[0].isOn = false
         
         printLevelButton.isHidden = true
-        settingButton.isHidden = false
+        settingButton.isHidden = false // Do I need this line?
         winAnimationTestButton.isHidden = true
         currentLevelLabel.isHidden = true
         secretLevelButton.isHidden = true
@@ -87,7 +89,11 @@ class AlternateViewController: UIViewController {
         levelSelectButton.layer.cornerRadius = 4
         muteIcon.layer.cornerRadius = 4
     }
-
+    override func viewWillAppear(_ animated: Bool) {
+        currentAniTestStatus = UserPreference.shared.getAniTestStatus()!
+        currentSFXStatus = UserPreference.shared.getSFXStatus()!
+        updateUserPreferences()
+    }
     private func updateUserPreferences() {
         if let aniTestStatus = UserPreference.shared.getAniTestStatus() {
             currentAniTestStatus = aniTestStatus

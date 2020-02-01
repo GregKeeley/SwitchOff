@@ -37,6 +37,8 @@ class SwitchOffBrain {
     func changeGridStatus() {
         for toggle in switchRange {
             gridSwitches[toggle].isEnabled.toggle()
+            // TODO: use the below methods to turn off switches
+//            gridSwitches[toggle].isUserInteractionEnabled.toggle()
         }
     }
     
