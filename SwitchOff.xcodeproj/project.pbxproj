@@ -23,6 +23,7 @@
 		C199498023D62E7000F4462C /* winFanfare.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C199497F23D62E7000F4462C /* winFanfare.mp3 */; };
 		C199498223D647A900F4462C /* winFanfare2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C199498123D647A900F4462C /* winFanfare2.mp3 */; };
 		C199498923D65E4E00F4462C /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = C199498823D65E4E00F4462C /* UserDefaults.swift */; };
+		C1C96E0823E5FE6100D0BB9A /* Animations_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C96E0723E5FE6100D0BB9A /* Animations_Extension.swift */; };
 		C1E4E5EE238DBDCB00DAEB18 /* Levels.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E4E5ED238DBDCB00DAEB18 /* Levels.swift */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +46,7 @@
 		C199497F23D62E7000F4462C /* winFanfare.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = winFanfare.mp3; sourceTree = "<group>"; };
 		C199498123D647A900F4462C /* winFanfare2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = winFanfare2.mp3; sourceTree = "<group>"; };
 		C199498823D65E4E00F4462C /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
+		C1C96E0723E5FE6100D0BB9A /* Animations_Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animations_Extension.swift; sourceTree = "<group>"; };
 		C1E4E5ED238DBDCB00DAEB18 /* Levels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Levels.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,6 +84,7 @@
 				C199498523D65C1B00F4462C /* Storyboards */,
 				C199498423D65C0600F4462C /* Supporting Files */,
 				C17878052380FEE10055E341 /* SwitchOffBrain.swift */,
+				C1C96E0723E5FE6100D0BB9A /* Animations_Extension.swift */,
 				C176ECCA23D35DA400DE3009 /* brainExtensionAnimations.swift */,
 				C1E4E5ED238DBDCB00DAEB18 /* Levels.swift */,
 				C199498323D65BFE00F4462C /* Controllers */,
@@ -225,6 +228,7 @@
 				C105554223D4948F006BED53 /* SettingTableViewController.swift in Sources */,
 				C17878062380FEE10055E341 /* SwitchOffBrain.swift in Sources */,
 				C14D6D5E23915D1E00918CCC /* LevelSelectViewController.swift in Sources */,
+				C1C96E0823E5FE6100D0BB9A /* Animations_Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

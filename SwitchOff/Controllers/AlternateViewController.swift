@@ -10,6 +10,7 @@ import UIKit
 import AVFoundation
 
 class AlternateViewController: UIViewController {
+    
     @IBOutlet weak var winLabel: UILabel!
     @IBOutlet var switchGrid: [UISwitch]!
     @IBOutlet weak var resetButton: UIButton!
@@ -26,8 +27,6 @@ class AlternateViewController: UIViewController {
     @IBOutlet weak var muteIcon: UIImageView!
     @IBOutlet weak var winAnimationTestButton: UIButton!
     
-    var gridDisabled = false
-    
     var currentAniTestStatus = AnimationTestStatus.off {
         didSet {
             print(currentAniTestStatus.rawValue)
@@ -35,9 +34,9 @@ class AlternateViewController: UIViewController {
                 winAnimationTestButton.isHidden = false
             }
             currentAniTestStatus = UserPreference.shared.getAniTestStatus()!
-//            UserPreference.shared.updateAnimationTest(with: currentAniTestStatus)
         }
     }
+
     var currentSFXStatus = SFXStatus.on {
         didSet {
             if currentSFXStatus.rawValue == "Off" {
@@ -46,7 +45,6 @@ class AlternateViewController: UIViewController {
                 muteIcon.isHidden = true
             }
             currentSFXStatus = UserPreference.shared.getSFXStatus()!
-//            currentSFXStatus = UserPreference.shared.getSFXStatus()!
             loadPreferenceSettings()
         }
     }
@@ -56,7 +54,15 @@ class AlternateViewController: UIViewController {
     var switchBrain = SwitchOffBrain()
     var currentLevel = 0
     var secretButtonPresses = 0
+    
     var isEditingLevel = false
+    var gridDisabled = false
+    
+    override func viewDidAppear(_ animated: Bool) {
+        loadPreferenceSettings()
+        updateUserPreferences()
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,7 +72,6 @@ class AlternateViewController: UIViewController {
         allSwitchesOff()
         loadData()
         updateUserPreferences()
-        loadPreferenceSettings()
         
         switchGrid[0].isOn = false
         
@@ -207,6 +212,7 @@ class AlternateViewController: UIViewController {
                     switchBrain.changeGridStatus()
                     gridDisabled = true
                     DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                        self.switchBrain.nextLevelAnimation(self.nextLevelButton)
                         self.nextLevelButton.isHidden = false
                     }
                     //currentLevel += 1

@@ -25,11 +25,33 @@ class SwitchOffBrain {
     func randomToggle() -> Int {
         return Int.random(in: 0...24)
     }
-    
+    func nextLevelAnimation(_ button: UIButton) {
+        UIView.animate(withDuration: 1.5, delay: 0.0, options: [.repeat, .autoreverse], animations: {
+            // animation block
+            button.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
+        }) { (done) in
+
+            UIView.animate(withDuration: 1.5) {
+                button.transform = CGAffineTransform.identity
+            }
+        }
+    }
+
+    func toggleBounce(_ toggle: UISwitch) {
+        UIView.animate(withDuration: 0.3, delay: 0.0, options: [], animations: {
+            toggle.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
+        }) { (done) in
+            UIView.animate(withDuration: 0.1) {
+                toggle.transform = CGAffineTransform.identity
+            }
+        }
+    }
     func flipToggle(_ toggle: UISwitch) {
         if toggle.isOn == true  {
+            toggleBounce(toggle)
             toggle.isOn = false
         } else {
+            toggleBounce(toggle)
             toggle.isOn = true
         }
     }
