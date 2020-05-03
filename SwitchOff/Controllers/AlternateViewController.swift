@@ -29,7 +29,7 @@ class AlternateViewController: UIViewController {
     
     var currentAniTestStatus = AnimationTestStatus.off {
         didSet {
-            print(currentAniTestStatus.rawValue)
+//            print(currentAniTestStatus.rawValue)
             if currentAniTestStatus.rawValue == "On" {
                 winAnimationTestButton.isHidden = false
             }
@@ -74,9 +74,10 @@ class AlternateViewController: UIViewController {
         updateUserPreferences()
         
         switchGrid[0].isOn = false
+
         
         printLevelButton.isHidden = true
-        settingButton.isHidden = false // Do I need this line?
+//        settingButton.isHidden = false // Do I need this line?
         winAnimationTestButton.isHidden = true
         currentLevelLabel.isHidden = true
         secretLevelButton.isHidden = true
@@ -85,28 +86,32 @@ class AlternateViewController: UIViewController {
         resetButton.isHidden = true
         scoreNumLabel.isHidden = true
         scoreStrLabel.isHidden = true
-        levelSelectButton.setTitleColor(UIColor(named: "systemGreen"), for: .normal)
         levelSelectButton.isHidden = true
-    
+        
+        levelSelectButton.setTitleColor(UIColor(named: "systemGreen"), for: .normal)
         nextLevelButton.layer.cornerRadius = 4
         resetButton.layer.cornerRadius = 4
         settingButton.layer.cornerRadius = 4
         levelSelectButton.layer.cornerRadius = 4
         muteIcon.layer.cornerRadius = 4
+        switchGrid[12].isOn = true
+        switchGrid[12].isUserInteractionEnabled = true
+        
     }
     override func viewWillAppear(_ animated: Bool) {
-        currentAniTestStatus = UserPreference.shared.getAniTestStatus()!
-        currentSFXStatus = UserPreference.shared.getSFXStatus()!
+        //TODO: Provide defaults for user preferences for first load on device
+//        currentAniTestStatus = UserPreference.shared.getAniTestStatus() ??
+//        currentSFXStatus = UserPreference.shared.getSFXStatus() ??
         updateUserPreferences()
     }
     private func updateUserPreferences() {
         if let aniTestStatus = UserPreference.shared.getAniTestStatus() {
             currentAniTestStatus = aniTestStatus
-            print(aniTestStatus.rawValue)
+//            print(aniTestStatus.rawValue)
         }
         if let sfxTestStatus = UserPreference.shared.getSFXStatus() {
             currentSFXStatus = sfxTestStatus
-            print(sfxTestStatus.rawValue)
+//            print(sfxTestStatus.rawValue)
         }
     }
     func loadPreferenceSettings() {
@@ -136,12 +141,14 @@ class AlternateViewController: UIViewController {
         for state in switchGrid {
             if state.isOn == true {
                 state.isOn = false
+
             }
         }
     }
     func populateSwitchArray() {
         for toggle in switchGrid {
             switchBrain.gridSwitches.append(toggle)
+            
         }
     }
 
