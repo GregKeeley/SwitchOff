@@ -29,14 +29,17 @@ class AlternateViewController: UIViewController {
     
     var currentAniTestStatus = AnimationTestStatus.off {
         didSet {
-//            print(currentAniTestStatus.rawValue)
+            //            print(currentAniTestStatus.rawValue)
+            
             if currentAniTestStatus.rawValue == "On" {
                 winAnimationTestButton.isHidden = false
+            } else /*if currentAniTestStatus.rawValue == "Off"*/ {
+                winAnimationTestButton.isHidden = true
             }
-            currentAniTestStatus = UserPreference.shared.getAniTestStatus()!
+            currentAniTestStatus = UserPreference.shared.getAniTestStatus() ?? AnimationTestStatus.off
         }
     }
-
+    
     var currentSFXStatus = SFXStatus.on {
         didSet {
             if currentSFXStatus.rawValue == "Off" {
@@ -44,7 +47,7 @@ class AlternateViewController: UIViewController {
             } else {
                 muteIcon.isHidden = true
             }
-            currentSFXStatus = UserPreference.shared.getSFXStatus()!
+            currentSFXStatus = UserPreference.shared.getSFXStatus() ?? SFXStatus.on
             loadPreferenceSettings()
         }
     }
@@ -74,10 +77,10 @@ class AlternateViewController: UIViewController {
         updateUserPreferences()
         
         switchGrid[0].isOn = false
-
+        
         
         printLevelButton.isHidden = true
-//        settingButton.isHidden = false // Do I need this line?
+        //        settingButton.isHidden = false // Do I need this line?
         winAnimationTestButton.isHidden = true
         currentLevelLabel.isHidden = true
         secretLevelButton.isHidden = true
@@ -94,26 +97,31 @@ class AlternateViewController: UIViewController {
         settingButton.layer.cornerRadius = 4
         levelSelectButton.layer.cornerRadius = 4
         muteIcon.layer.cornerRadius = 4
-        switchGrid[12].isOn = true
-        switchGrid[12].isUserInteractionEnabled = true
+        //        switchGrid[12].isOn = true
+        //        switchGrid[12].isUserInteractionEnabled = true
         
     }
     override func viewWillAppear(_ animated: Bool) {
+        
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+        
         //TODO: Provide defaults for user preferences for first load on device
-//        currentAniTestStatus = UserPreference.shared.getAniTestStatus() ??
-//        currentSFXStatus = UserPreference.shared.getSFXStatus() ??
+        currentAniTestStatus = UserPreference.shared.getAniTestStatus() ?? AnimationTestStatus.off
+        currentSFXStatus = UserPreference.shared.getSFXStatus() ?? SFXStatus.off
         updateUserPreferences()
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        navigationController?.setNavigationBarHidden(false, animated: animated)
     }
     private func updateUserPreferences() {
         if let aniTestStatus = UserPreference.shared.getAniTestStatus() {
             currentAniTestStatus = aniTestStatus
-//            print(aniTestStatus.rawValue)
         }
         if let sfxTestStatus = UserPreference.shared.getSFXStatus() {
             currentSFXStatus = sfxTestStatus
-//            print(sfxTestStatus.rawValue)
         }
     }
+    
     func loadPreferenceSettings() {
         if currentSFXStatus.rawValue == "Off" {
             muteIcon.isHidden = false
@@ -141,7 +149,7 @@ class AlternateViewController: UIViewController {
         for state in switchGrid {
             if state.isOn == true {
                 state.isOn = false
-
+                
             }
         }
     }
@@ -151,7 +159,7 @@ class AlternateViewController: UIViewController {
             
         }
     }
-
+    
     func reset() {
         playSound(fileName: "resetSound2", format: "mp3")
         scoreNumLabel.text = switchBrain.flipCount.description
@@ -168,7 +176,7 @@ class AlternateViewController: UIViewController {
         populateSwitchArray()
         switchBrain.loadLevelSwitches(toggles: switchBrain.loadLevelArray(currentLevel: currentLevel))
     }
-
+    
     @IBAction func unwindSegue(segue: UIStoryboardSegue) {
         guard let levelSelectVC = segue.source as? LevelSelectViewController else {
             fatalError("Failed to load level")
@@ -272,7 +280,7 @@ class AlternateViewController: UIViewController {
         loadData()
     }
     @IBAction func secretButtonPressed() {
-       
+        
         secretButtonPresses += 1
         if secretButtonPresses > 5 {
             levelSelectButton.isHidden = false
@@ -291,7 +299,7 @@ class AlternateViewController: UIViewController {
                 
             }
         }
-       print(newLevelToggles)
+        print(newLevelToggles)
         
     }
 }

@@ -10,8 +10,6 @@ import UIKit
 
 class SettingTableViewController: UITableViewController {
     
-    
-
     @IBOutlet weak var winAnimationTestToggle: UISwitch!
     @IBOutlet weak var sfxStatusToggle: UISwitch!
     @IBOutlet weak var aniTestLabel: UILabel!
@@ -34,10 +32,7 @@ class SettingTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
         updateSettings()
-        
     }
     override func viewWillDisappear(_ animated: Bool) {
         UserPreference.shared.updateSFXStatus(with: currentSFXStatus)
