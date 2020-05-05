@@ -182,5 +182,10 @@ class SwitchOffBrain {
         }
         return [0]
     }
+    
+    public func solveLevel(toggles: [Int]) {
+        
+    }
+    
 }
 
