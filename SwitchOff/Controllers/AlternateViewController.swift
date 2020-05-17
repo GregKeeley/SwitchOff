@@ -10,6 +10,7 @@ import UIKit
 import AVFoundation
 
 class AlternateViewController: UIViewController {
+    
     @IBOutlet weak var winLabel: UILabel!
     @IBOutlet var switchGrid: [UISwitch]!
     @IBOutlet weak var resetButton: UIButton!
@@ -33,8 +34,14 @@ class AlternateViewController: UIViewController {
             print(currentAniTestStatus.rawValue)
             if currentAniTestStatus.rawValue == "On" {
                 winAnimationTestButton.isHidden = false
+                
+                if currentAniTestStatus.rawValue == "On" {
+                    winAnimationTestButton.isHidden = false
+                } else {
+                    winAnimationTestButton.isHidden = true
+                }
+                UserPreference.shared.updateAnimationTest(with: currentAniTestStatus)
             }
-            UserPreference.shared.updateAnimationTest(with: currentAniTestStatus)
         }
     }
     var currentSFXStatus = SFXStatus.on {
@@ -56,9 +63,16 @@ class AlternateViewController: UIViewController {
     var secretButtonPresses = 0
     var isEditingLevel = false
     
+
+    var currentLevelRecordScore = 0
+    
+    override func viewDidAppear(_ animated: Bool) {
+        loadPreferenceSettings()
+        updateUserPreferences()
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         populateSwitchArray()
         switchBrain.startGameState()
         allSwitchesOff()
@@ -86,8 +100,23 @@ class AlternateViewController: UIViewController {
         settingButton.layer.cornerRadius = 4
         levelSelectButton.layer.cornerRadius = 4
         muteIcon.layer.cornerRadius = 4
-    }
 
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+        //TODO: Provide defaults for user preferences for first load on device
+        currentAniTestStatus = UserPreference.shared.getAniTestStatus() ?? AnimationTestStatus.off
+        currentSFXStatus = UserPreference.shared.getSFXStatus() ?? SFXStatus.off
+        updateUserPreferences()
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+    private func getPlayerScore() {
+        
+    }
+    
     private func updateUserPreferences() {
         if let aniTestStatus = UserPreference.shared.getAniTestStatus() {
             currentAniTestStatus = aniTestStatus
