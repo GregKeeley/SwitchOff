@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		88B7B1772474B97C00844262 /* PersistenceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B7B1762474B97C00844262 /* PersistenceHelper.swift */; };
+		88B7B17A2474BA4D00844262 /* ImageKit in Frameworks */ = {isa = PBXBuildFile; productRef = 88B7B1792474BA4D00844262 /* ImageKit */; };
 		C105554223D4948F006BED53 /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C105554123D4948F006BED53 /* SettingTableViewController.swift */; };
 		C14D6D5E23915D1E00918CCC /* LevelSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14D6D5D23915D1E00918CCC /* LevelSelectViewController.swift */; };
 		C161FAD523807EEA006184E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C161FAD423807EEA006184E8 /* AppDelegate.swift */; };
@@ -27,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		88B7B1762474B97C00844262 /* PersistenceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceHelper.swift; sourceTree = "<group>"; };
 		C105554123D4948F006BED53 /* SettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
 		C14D6D5D23915D1E00918CCC /* LevelSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelSelectViewController.swift; sourceTree = "<group>"; };
 		C161FAD123807EEA006184E8 /* SwitchOff.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwitchOff.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88B7B17A2474BA4D00844262 /* ImageKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				C199498823D65E4E00F4462C /* UserDefaults.swift */,
+				88B7B1762474B97C00844262 /* PersistenceHelper.swift */,
 			);
 			path = UserDefaults;
 			sourceTree = "<group>";
@@ -156,6 +161,9 @@
 			dependencies = (
 			);
 			name = SwitchOff;
+			packageProductDependencies = (
+				88B7B1792474BA4D00844262 /* ImageKit */,
+			);
 			productName = SwitchOff;
 			productReference = C161FAD123807EEA006184E8 /* SwitchOff.app */;
 			productType = "com.apple.product-type.application";
@@ -184,6 +192,9 @@
 				Base,
 			);
 			mainGroup = C161FAC823807EEA006184E8;
+			packageReferences = (
+				88B7B1782474BA4D00844262 /* XCRemoteSwiftPackageReference "ImageKit" */,
+			);
 			productRefGroup = C161FAD223807EEA006184E8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -222,6 +233,7 @@
 				C161FB132380F106006184E8 /* AlternateViewController.swift in Sources */,
 				C176ECCB23D35DA400DE3009 /* brainExtensionAnimations.swift in Sources */,
 				C199498923D65E4E00F4462C /* UserDefaults.swift in Sources */,
+				88B7B1772474B97C00844262 /* PersistenceHelper.swift in Sources */,
 				C105554223D4948F006BED53 /* SettingTableViewController.swift in Sources */,
 				C17878062380FEE10055E341 /* SwitchOffBrain.swift in Sources */,
 				C14D6D5E23915D1E00918CCC /* LevelSelectViewController.swift in Sources */,
@@ -422,6 +434,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		88B7B1782474BA4D00844262 /* XCRemoteSwiftPackageReference "ImageKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/alexpaul/ImageKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.5;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		88B7B1792474BA4D00844262 /* ImageKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 88B7B1782474BA4D00844262 /* XCRemoteSwiftPackageReference "ImageKit" */;
+			productName = ImageKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C161FAC923807EEA006184E8 /* Project object */;
 }

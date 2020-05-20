@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SZn-eA-800">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SZn-eA-800">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -117,13 +117,13 @@
                                 </connections>
                             </switch>
                             <switch opaque="NO" multipleTouchEnabled="YES" tag="13" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iCD-Tr-h3S">
-                                <rect key="frame" x="163" y="390.66666666666669" width="51" height="30.666666666666686"/>
+                                <rect key="frame" x="163" y="390.66666666666669" width="51" height="31"/>
                                 <connections>
                                     <action selector="switchFlipped:" destination="SZn-eA-800" eventType="valueChanged" id="3nU-Nb-4qi"/>
                                 </connections>
                             </switch>
                             <switch opaque="NO" multipleTouchEnabled="YES" tag="18" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TU6-4g-Jbl">
-                                <rect key="frame" x="163" y="429.33333333333331" width="51" height="31"/>
+                                <rect key="frame" x="163" y="429.66666666666669" width="51" height="31"/>
                                 <connections>
                                     <action selector="switchFlipped:" destination="SZn-eA-800" eventType="valueChanged" id="12L-UI-d2p"/>
                                 </connections>
@@ -219,7 +219,7 @@
                                 </connections>
                             </switch>
                             <switch opaque="NO" multipleTouchEnabled="YES" tag="23" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aBl-gl-Kof">
-                                <rect key="frame" x="163" y="468.33333333333331" width="51" height="31"/>
+                                <rect key="frame" x="163" y="468.66666666666669" width="51" height="31"/>
                                 <connections>
                                     <action selector="switchFlipped:" destination="SZn-eA-800" eventType="valueChanged" id="2Wu-NI-AjE"/>
                                 </connections>
@@ -281,7 +281,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ns9-fx-HOf">
-                                <rect key="frame" x="85" y="247.99999999999997" width="217" height="52.666666666666657"/>
+                                <rect key="frame" x="79" y="243.99999999999997" width="217" height="52.666666666666657"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52.666666666666629" id="LKE-uq-fM1"/>
                                 </constraints>
@@ -290,6 +290,7 @@
                                         <attributes>
                                             <color key="NSColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="45" name="Menlo-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
@@ -469,8 +470,8 @@
                             <constraint firstItem="PoC-1C-0hj" firstAttribute="leading" secondItem="eq6-WQ-ajt" secondAttribute="leading" constant="91" id="2u9-9V-Szq"/>
                             <constraint firstItem="DGQ-e0-eTQ" firstAttribute="top" secondItem="9b7-b9-g1X" secondAttribute="bottom" constant="8" id="32A-na-fsN"/>
                             <constraint firstItem="DGQ-e0-eTQ" firstAttribute="top" secondItem="O2y-YW-jdZ" secondAttribute="top" id="3Qe-el-oDo"/>
+                            <constraint firstItem="fwd-On-E4S" firstAttribute="top" secondItem="Ns9-fx-HOf" secondAttribute="bottom" constant="16" id="3bF-1d-w2v"/>
                             <constraint firstItem="iQd-dq-1ma" firstAttribute="leading" secondItem="xsM-1H-H79" secondAttribute="trailing" constant="8" id="5db-KO-SHx"/>
-                            <constraint firstItem="fwd-On-E4S" firstAttribute="top" secondItem="Ns9-fx-HOf" secondAttribute="bottom" constant="12.000000000000057" id="6L0-9h-B1Y"/>
                             <constraint firstItem="j9M-OP-kNO" firstAttribute="leading" secondItem="0vR-e8-CmI" secondAttribute="trailing" constant="8" id="6Pw-aa-TMC"/>
                             <constraint firstItem="DGQ-e0-eTQ" firstAttribute="leading" secondItem="O2y-YW-jdZ" secondAttribute="trailing" constant="8" id="6hA-zl-oyT"/>
                             <constraint firstItem="iQd-dq-1ma" firstAttribute="top" secondItem="eq6-WQ-ajt" secondAttribute="top" constant="23.333333333333329" id="70K-cQ-mLU"/>
@@ -511,7 +512,6 @@
                             <constraint firstItem="M2h-FG-Pm9" firstAttribute="leading" secondItem="fwd-On-E4S" secondAttribute="trailing" constant="8" id="UrY-eg-1kN"/>
                             <constraint firstItem="Vnj-kt-f2g" firstAttribute="top" secondItem="8LL-2G-c30" secondAttribute="bottom" constant="8" id="UtM-LF-MRd"/>
                             <constraint firstItem="ReV-cZ-bVK" firstAttribute="top" secondItem="DGS-Ow-XHV" secondAttribute="top" id="WRF-eu-f7f"/>
-                            <constraint firstItem="Ns9-fx-HOf" firstAttribute="top" secondItem="4HA-h2-Mp0" secondAttribute="top" constant="248" id="Wey-oR-cB9"/>
                             <constraint firstItem="hqO-cZ-GSR" firstAttribute="leading" secondItem="m9m-Rk-eCA" secondAttribute="trailing" constant="8" id="XCP-6k-SI4"/>
                             <constraint firstItem="DGS-Ow-XHV" firstAttribute="top" secondItem="pLw-t3-gcw" secondAttribute="bottom" constant="8" id="XT2-X1-PF6"/>
                             <constraint firstItem="DGS-Ow-XHV" firstAttribute="top" secondItem="iCD-Tr-h3S" secondAttribute="top" id="Xa3-jO-UBe"/>
@@ -523,7 +523,7 @@
                             <constraint firstItem="9Dr-J0-Kea" firstAttribute="top" secondItem="ReV-cZ-bVK" secondAttribute="bottom" constant="8" id="dBs-J4-YyD"/>
                             <constraint firstItem="pLw-t3-gcw" firstAttribute="top" secondItem="hqO-cZ-GSR" secondAttribute="bottom" constant="8" id="dER-8M-x3l"/>
                             <constraint firstItem="yGb-md-kg8" firstAttribute="bottom" secondItem="eq6-WQ-ajt" secondAttribute="bottom" id="dQg-0L-vfT"/>
-                            <constraint firstItem="Ns9-fx-HOf" firstAttribute="leading" secondItem="eq6-WQ-ajt" secondAttribute="leading" constant="85" id="eJn-md-uDS"/>
+                            <constraint firstItem="Ns9-fx-HOf" firstAttribute="centerX" secondItem="4HA-h2-Mp0" secondAttribute="centerX" id="el0-Z4-FD0"/>
                             <constraint firstItem="eq6-WQ-ajt" firstAttribute="trailing" secondItem="qM5-eo-egm" secondAttribute="trailing" constant="20" id="eoj-qt-zsZ"/>
                             <constraint firstItem="xsM-1H-H79" firstAttribute="leading" secondItem="eq6-WQ-ajt" secondAttribute="leading" constant="20" id="f2m-cI-SVY"/>
                             <constraint firstItem="9b7-b9-g1X" firstAttribute="leading" secondItem="Pbi-4V-Ggs" secondAttribute="trailing" constant="8" id="fP8-Kq-dxV"/>
@@ -778,7 +778,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="gear" catalog="system" width="64" height="58"/>
-        <image name="speaker.slash" catalog="system" width="64" height="62"/>
+        <image name="gear" catalog="system" width="128" height="119"/>
+        <image name="speaker.slash" catalog="system" width="128" height="124"/>
     </resources>
 </document>
