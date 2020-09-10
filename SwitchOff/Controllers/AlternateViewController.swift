@@ -27,16 +27,16 @@ class AlternateViewController: UIViewController {
     @IBOutlet weak var muteIcon: UIImageView!
     @IBOutlet weak var winAnimationTestButton: UIButton!
     
-    var gridDisabled = false
-    
     var currentAniTestStatus = AnimationTestStatus.off {
         didSet {
+
             confifgureTestAnimationButton()
+
         }
     }
+    
     var currentSFXStatus = SFXStatus.on {
         didSet {
-            
             configureMuteIcon()
         }
     }
@@ -47,14 +47,17 @@ class AlternateViewController: UIViewController {
     var switchBrain = SwitchOffBrain()
     var currentLevel = 0
     var secretButtonPresses = 0
+    
     var isEditingLevel = false
+
     var currentLevelRecordScore = 0
     
+    var gridDisabled = false
+  
     override func viewDidAppear(_ animated: Bool) {
         //        configureMuteIcon()
         loadUserDefaults()
     }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         populateSwitchArray()
@@ -62,11 +65,12 @@ class AlternateViewController: UIViewController {
         allSwitchesOff()
         loadData()
         loadUserDefaults()
-        
         switchGrid[0].isOn = false
+        
         
         printLevelButton.isHidden = true
         settingButton.isHidden = false
+
         currentLevelLabel.isHidden = true
         secretLevelButton.isHidden = true
         nextLevelButton.isHidden = true
@@ -74,15 +78,15 @@ class AlternateViewController: UIViewController {
         resetButton.isHidden = true
         scoreNumLabel.isHidden = true
         scoreStrLabel.isHidden = true
-        levelSelectButton.setTitleColor(UIColor(named: "systemGreen"), for: .normal)
         levelSelectButton.isHidden = true
         
+
+        levelSelectButton.setTitleColor(UIColor(named: "systemGreen"), for: .normal)
         nextLevelButton.layer.cornerRadius = 4
         resetButton.layer.cornerRadius = 4
         settingButton.layer.cornerRadius = 4
         levelSelectButton.layer.cornerRadius = 4
-        muteIcon.layer.cornerRadius = 4
-        
+        muteIcon.layer.cornerRadius = 4  
     }
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.setNavigationBarHidden(true, animated: animated)
@@ -98,6 +102,7 @@ class AlternateViewController: UIViewController {
     }
     
     private func loadUserDefaults() {
+
         if let aniTestStatus = UserPreference.shared.getAniTestStatus() {
             currentAniTestStatus = aniTestStatus
         }
@@ -106,6 +111,7 @@ class AlternateViewController: UIViewController {
         }
     }
     func configureMuteIcon() {
+
         if currentSFXStatus.rawValue == "Off" {
             muteIcon.isHidden = false
         } else {
@@ -143,12 +149,14 @@ class AlternateViewController: UIViewController {
         for state in switchGrid {
             if state.isOn == true {
                 state.isOn = false
+                
             }
         }
     }
     func populateSwitchArray() {
         for toggle in switchGrid {
             switchBrain.gridSwitches.append(toggle)
+            
         }
     }
     
@@ -168,12 +176,14 @@ class AlternateViewController: UIViewController {
         populateSwitchArray()
         switchBrain.loadLevelSwitches(toggles: switchBrain.loadLevelArray(currentLevel: currentLevel))
     }
+
     @IBAction func settingsButtonPressed(_ sender: UIButton) {
         let settingsVC = UIStoryboard(name: "SettingsViewController", bundle: nil).instantiateViewController(identifier: "SettingsViewController")
         if let navigator = navigationController {
             navigator.pushViewController(settingsVC, animated: true)
         }
     }
+
     
     @IBAction func unwindSegue(segue: UIStoryboardSegue) {
         guard let levelSelectVC = segue.source as? LevelSelectViewController else {
@@ -230,6 +240,7 @@ class AlternateViewController: UIViewController {
                     switchBrain.changeGridStatus()
                     gridDisabled = true
                     DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                        self.switchBrain.nextLevelAnimation(self.nextLevelButton)
                         self.nextLevelButton.isHidden = false
                     }
                     //currentLevel += 1
@@ -281,7 +292,9 @@ class AlternateViewController: UIViewController {
         switchBrain.changeGridStatus()
         loadData()
     }
+
     @IBAction func secretLevelSelectButtonPressed() {
+
         secretButtonPresses += 1
         if secretButtonPresses > 5 {
             levelSelectButton.isHidden = false
