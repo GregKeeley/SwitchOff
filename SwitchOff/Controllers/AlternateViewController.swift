@@ -36,11 +36,11 @@ class AlternateViewController: UIViewController {
     }
     var currentSFXStatus = SFXStatus.on {
         didSet {
-
+            
             configureMuteIcon()
         }
     }
- 
+    
     
     var resetSFX: AVAudioPlayer?
     
@@ -51,10 +51,10 @@ class AlternateViewController: UIViewController {
     var currentLevelRecordScore = 0
     
     override func viewDidAppear(_ animated: Bool) {
-//        configureMuteIcon()
+        //        configureMuteIcon()
         loadUserDefaults()
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         populateSwitchArray()
@@ -76,13 +76,13 @@ class AlternateViewController: UIViewController {
         scoreStrLabel.isHidden = true
         levelSelectButton.setTitleColor(UIColor(named: "systemGreen"), for: .normal)
         levelSelectButton.isHidden = true
-    
+        
         nextLevelButton.layer.cornerRadius = 4
         resetButton.layer.cornerRadius = 4
         settingButton.layer.cornerRadius = 4
         levelSelectButton.layer.cornerRadius = 4
         muteIcon.layer.cornerRadius = 4
-
+        
     }
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.setNavigationBarHidden(true, animated: animated)
@@ -96,7 +96,7 @@ class AlternateViewController: UIViewController {
     private func getPlayerScore() {
         // TODO: Create a player score to be saved and loaded from userDefaults
     }
-
+    
     private func loadUserDefaults() {
         if let aniTestStatus = UserPreference.shared.getAniTestStatus() {
             currentAniTestStatus = aniTestStatus
@@ -113,8 +113,12 @@ class AlternateViewController: UIViewController {
         }
     }
     func confifgureTestAnimationButton() {
-        if currentAniTestStatus.rawValue == "On" {
-            winAnimationTestButton.isHidden = false
+        if switchBrain.gameStarted {
+            if currentAniTestStatus.rawValue == "On" {
+                winAnimationTestButton.isHidden = false
+            } else {
+                winAnimationTestButton.isHidden = true
+            }
         } else {
             winAnimationTestButton.isHidden = true
         }
@@ -147,7 +151,7 @@ class AlternateViewController: UIViewController {
             switchBrain.gridSwitches.append(toggle)
         }
     }
-
+    
     func reset() {
         playSound(fileName: "resetSound2", format: "mp3")
         scoreNumLabel.text = switchBrain.flipCount.description
@@ -185,7 +189,7 @@ class AlternateViewController: UIViewController {
         } else {
             printLevelButton.isHidden = false
         }
-
+        
     }
     @IBAction func unwindSettingsSegue(segue: UIStoryboardSegue) {
         guard let settingsVC = segue.source as? SettingTableViewController else {
@@ -284,6 +288,7 @@ class AlternateViewController: UIViewController {
         }
     }
     @IBAction func winAnimationTestPressed(_ sender: Any) {
+        playSound(fileName: "winFanfare2", format: "mp3")
         switchBrain.winAnimation()
     }
     @IBAction func printLevelButtonPressed() {
@@ -294,7 +299,7 @@ class AlternateViewController: UIViewController {
                 newLevelToggles.append(toggle.tag - 1)
             }
         }
-       print(newLevelToggles)
+        print(newLevelToggles)
     }
 }
 

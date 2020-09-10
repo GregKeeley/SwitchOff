@@ -21,6 +21,7 @@ class SwitchOffBrain {
     var flipCount = 0
     var currentLevel = 1
     let impact = UIImpactFeedbackGenerator()
+    var gameStarted: Bool = false
     
     func randomToggle() -> Int {
         return Int.random(in: 0...24)
@@ -86,6 +87,7 @@ class SwitchOffBrain {
         }
     }
     func gameHasBegun() {
+        gameStarted = true
         for toggle in SwitchOffBrain.disabledToggles {
             if gridSwitches[toggle].isHidden == true {
                 gridSwitches[toggle].isHidden = false
