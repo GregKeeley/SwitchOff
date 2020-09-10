@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		88252296250A89BA00003599 /* SettingsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88252295250A89BA00003599 /* SettingsViewController.storyboard */; };
 		88B7B1772474B97C00844262 /* PersistenceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B7B1762474B97C00844262 /* PersistenceHelper.swift */; };
 		88B7B17A2474BA4D00844262 /* ImageKit in Frameworks */ = {isa = PBXBuildFile; productRef = 88B7B1792474BA4D00844262 /* ImageKit */; };
 		C105554223D4948F006BED53 /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C105554123D4948F006BED53 /* SettingTableViewController.swift */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		88252295250A89BA00003599 /* SettingsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingsViewController.storyboard; sourceTree = "<group>"; };
 		88B7B1762474B97C00844262 /* PersistenceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceHelper.swift; sourceTree = "<group>"; };
 		C105554123D4948F006BED53 /* SettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
 		C14D6D5D23915D1E00918CCC /* LevelSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelSelectViewController.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 			children = (
 				C161FADA23807EEA006184E8 /* Main.storyboard */,
 				C161FADF23807EED006184E8 /* LaunchScreen.storyboard */,
+				88252295250A89BA00003599 /* SettingsViewController.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88252296250A89BA00003599 /* SettingsViewController.storyboard in Resources */,
 				C161FAE123807EED006184E8 /* LaunchScreen.storyboard in Resources */,
 				C161FADE23807EED006184E8 /* Assets.xcassets in Resources */,
 				C161FADC23807EEA006184E8 /* Main.storyboard in Resources */,

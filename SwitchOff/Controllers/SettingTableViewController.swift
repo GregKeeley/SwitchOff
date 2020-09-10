@@ -10,12 +10,11 @@ import UIKit
 
 class SettingTableViewController: UITableViewController {
     
-    
-
     @IBOutlet weak var winAnimationTestToggle: UISwitch!
     @IBOutlet weak var sfxStatusToggle: UISwitch!
     @IBOutlet weak var aniTestLabel: UILabel!
     @IBOutlet weak var sfxStatusLabel: UILabel!
+    
     
     var currentSFXStatus = SFXStatus.on {
         didSet {
@@ -34,10 +33,7 @@ class SettingTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
         updateSettings()
-        
     }
     private func updateSwitch(status: String, toggle: UISwitch) {
         switch status {
@@ -57,7 +53,22 @@ class SettingTableViewController: UITableViewController {
             currentAniTestStatus = aniTestStatus
         }
     }
-    
+    private func toggleSFXStatus() {
+        currentSFXStatus = currentSFXStatus == SFXStatus.on ? SFXStatus.off : SFXStatus.on
+        UserPreference.shared.updateSFXStatus(with: currentSFXStatus)
+//        guard let mainVC = AlternateViewController() as? AlternateViewController else {
+//            return
+//        }
+//        mainVC.currentSFXStatus = currentSFXStatus
+    }
+    private func toggleAniTestButtonStatus() {
+        currentAniTestStatus = currentAniTestStatus == AnimationTestStatus.on ? AnimationTestStatus.off : AnimationTestStatus.on
+        UserPreference.shared.updateAnimationTest(with: currentAniTestStatus)
+//        guard let mainVC = UIViewController() as? AlternateViewController else {
+//                   return
+//               }
+//               mainVC.currentAniTestStatus = currentAniTestStatus
+    }
     
     @IBAction func aniTestStatusChanged(_ sender: UISwitch) {
         toggleAniTestButtonStatus()
@@ -65,25 +76,16 @@ class SettingTableViewController: UITableViewController {
     @IBAction func SFXStatusChanged(_ sender: UISwitch) {
         toggleSFXStatus()
     }
-    private func toggleSFXStatus() {
-        currentSFXStatus = currentSFXStatus == SFXStatus.on ? SFXStatus.off : SFXStatus.on
-        UserPreference.shared.updateSFXStatus(with: currentSFXStatus)
-    }
-    private func toggleAniTestButtonStatus() {
-        currentAniTestStatus = currentAniTestStatus == AnimationTestStatus.on ? AnimationTestStatus.off : AnimationTestStatus.on
-        UserPreference.shared.updateAnimationTest(with: currentAniTestStatus)
-    }
-    
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let altVC = segue.destination as? AlternateViewController else {
-            fatalError("Failed to prepare for segue")
-        }
-        if winAnimationTestToggle.isOn == true {
-            altVC.winAnimationTestButton.isEnabled = true
-        } else {
-            altVC.winAnimationTestButton.isEnabled = false
-        }
-    }
+
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        guard let altVC = segue.destination as? AlternateViewController else {
+//            fatalError("Failed to prepare for segue")
+//        }
+//        if winAnimationTestToggle.isOn == true {
+//            altVC.winAnimationTestButton.isEnabled = true
+//        } else {
+//            altVC.winAnimationTestButton.isEnabled = false
+//        }
+//    }
 
 }
