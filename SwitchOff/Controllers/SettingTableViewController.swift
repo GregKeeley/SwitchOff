@@ -24,7 +24,7 @@ class SettingTableViewController: UITableViewController {
             UserPreference.shared.updateSFXStatus(with: currentSFXStatus)
         }
     }
-    private var currentAniTestStatus = AnimationTestStatus.off {
+    var currentAniTestStatus = AnimationTestStatus.off {
         didSet {
             updateSwitch(status: currentAniTestStatus.rawValue, toggle: winAnimationTestToggle)
             aniTestLabel.text = ("Win Animation Test Button: \(currentAniTestStatus.rawValue)")
