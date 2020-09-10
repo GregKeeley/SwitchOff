@@ -102,528 +102,16 @@
             </objects>
             <point key="canvasLocation" x="-57.971014492753625" y="113.83928571428571"/>
         </scene>
-        <!--Alternate View Controller-->
-        <scene sceneID="D8b-ZG-3LP">
-            <objects>
-                <viewController id="SZn-eA-800" customClass="AlternateViewController" customModule="SwitchOff" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="4HA-h2-Mp0">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <switch opaque="NO" multipleTouchEnabled="YES" tag="8" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TJq-FH-rAP">
-                                <rect key="frame" x="177" y="337.66666666666669" width="51" height="31"/>
-                                <connections>
-                                    <action selector="switchFlipped:" destination="SZn-eA-800" eventType="valueChanged" id="Ttd-57-vjs"/>
-                                </connections>
-                            </switch>
-                            <switch opaque="NO" multipleTouchEnabled="YES" tag="13" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iCD-Tr-h3S">
-                                <rect key="frame" x="163" y="390.66666666666669" width="51" height="31"/>
-                                <connections>
-                                    <action selector="switchFlipped:" destination="SZn-eA-800" eventType="valueChanged" id="3nU-Nb-4qi"/>
-                                </connections>
-                            </switch>
-                            <switch opaque="NO" multipleTouchEnabled="YES" tag="18" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TU6-4g-Jbl">
-                                <rect key="frame" x="177" y="443.66666666666669" width="51" height="31"/>
-                                <connections>
-                                    <action selector="switchFlipped:" destination="SZn-eA-800" eventType="valueChanged" id="12L-UI-d2p"/>
-                                </connections>
-                            </switch>
-                            <switch opaque="NO" multipleTouchEnabled="YES" tag="9" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pbi-4V-Ggs">
-                                <rect key="frame" x="248" y="379.5" width="51" height="31"/>
-                                <connections>
-                                    <action selector="switchFlipped:" destination="SZn-eA-800" eventType="valueChanged" id="s9H-xb-mqK"/>
-                                </connections>
-                            </switch>
-                            <switch opaque="NO" multipleTouchEnabled="YES" tag="14" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O2y-YW-jdZ">
-                                <rect key="frame" x="234" y="432.5" width="51" height="31"/>
-                                <connections>
-                                    <action selector="switchFlipped:" destination="SZn-eA-800" eventType="valueChanged" id="39i-Kn-EoK"/>
-                                </connections>
-                            </switch>
-                            <switch opaque="NO" multipleTouchEnabled="YES" tag="19" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8LL-2G-c30">
-                                <rect key="frame" x="248" y="443.66666666666669" width="51" height="31"/>
-                                <connections>
-                                    <action selector="switchFlipped:" destination="SZn-eA-800" eventType="valueChanged" id="Abi-Jn-3ah"/>
-                                </connections>
-                            </switch>
-                            <switch opaque="NO" multipleTouchEnabled="YES" tag="24" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vnj-kt-f2g">
-                                <rect key="frame" x="248" y="496.66666666666674" width="51" height="31"/>
-                                <connections>
-                                    <action selector="switchFlipped:" destination="SZn-eA-800" eventType="valueChanged" id="ctR-mx-Suq"/>
-                                </connections>
-                            </switch>
-                            <switch opaque="NO" multipleTouchEnabled="YES" tag="10" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9b7-b9-g1X">
-                                <rect key="frame" x="319" y="379.5" width="51" height="31"/>
-                                <connections>
-                                    <action selector="switchFlipped:" destination="SZn-eA-800" eventType="valueChanged" id="yXO-Jr-hLF"/>
-                                </connections>
-                            </switch>
-                            <switch opaque="NO" multipleTouchEnabled="YES" tag="15" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DGQ-e0-eTQ">
-                                <rect key="frame" x="319" y="432.5" width="51" height="31"/>
-                                <connections>
-                                    <action selector="switchFlipped:" destination="SZn-eA-800" eventType="valueChanged" id="m95-DD-aiC"/>
-                                </connections>
-                            </switch>
-                            <switch opaque="NO" multipleTouchEnabled="YES" tag="20" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2td-tG-nPi">
-                                <rect key="frame" x="319" y="485.5" width="51" height="31"/>
-                                <connections>
-                                    <action selector="switchFlipped:" destination="SZn-eA-800" eventType="valueChanged" id="Rhw-Or-6yN"/>
-                                </connections>
-                            </switch>
-                            <switch opaque="NO" multipleTouchEnabled="YES" tag="25" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="32x-Rg-6GY">
-                                <rect key="frame" x="319" y="538.5" width="51" height="31"/>
-                                <connections>
-                                    <action selector="switchFlipped:" destination="SZn-eA-800" eventType="valueChanged" id="bCt-qO-6Ul"/>
-                                </connections>
-                            </switch>
-                            <switch opaque="NO" multipleTouchEnabled="YES" tag="7" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pLw-t3-gcw">
-                                <rect key="frame" x="106" y="351.66666666666669" width="51" height="31"/>
-                                <connections>
-                                    <action selector="switchFlipped:" destination="SZn-eA-800" eventType="valueChanged" id="6Rz-vR-gKs"/>
-                                </connections>
-                            </switch>
-                            <switch opaque="NO" multipleTouchEnabled="YES" tag="22" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OhL-Lh-ErO">
-                                <rect key="frame" x="106" y="496.66666666666674" width="51" height="31"/>
-                                <connections>
-                                    <action selector="switchFlipped:" destination="SZn-eA-800" eventType="valueChanged" id="NgP-C5-wlg"/>
-                                </connections>
-                            </switch>
-                            <switch opaque="NO" multipleTouchEnabled="YES" tag="12" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DGS-Ow-XHV">
-                                <rect key="frame" x="106" y="390.66666666666669" width="51" height="31"/>
-                                <connections>
-                                    <action selector="switchFlipped:" destination="SZn-eA-800" eventType="valueChanged" id="CJw-Gg-hlG"/>
-                                </connections>
-                            </switch>
-                            <switch opaque="NO" multipleTouchEnabled="YES" tag="23" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aBl-gl-Kof">
-                                <rect key="frame" x="177" y="496.66666666666674" width="51" height="31"/>
-                                <connections>
-                                    <action selector="switchFlipped:" destination="SZn-eA-800" eventType="valueChanged" id="2Wu-NI-AjE"/>
-                                </connections>
-                            </switch>
-                            <switch opaque="NO" multipleTouchEnabled="YES" tag="17" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j6L-k2-XIW">
-                                <rect key="frame" x="106" y="443.66666666666669" width="51" height="31"/>
-                                <connections>
-                                    <action selector="switchFlipped:" destination="SZn-eA-800" eventType="valueChanged" id="GRy-90-SAl"/>
-                                </connections>
-                            </switch>
-                            <switch opaque="NO" multipleTouchEnabled="YES" tag="6" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3ON-sJ-tRM">
-                                <rect key="frame" x="35" y="337.66666666666669" width="51" height="31"/>
-                                <connections>
-                                    <action selector="switchFlipped:" destination="SZn-eA-800" eventType="valueChanged" id="zL4-DT-Mdb"/>
-                                </connections>
-                            </switch>
-                            <switch opaque="NO" multipleTouchEnabled="YES" tag="11" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ReV-cZ-bVK">
-                                <rect key="frame" x="35" y="390.66666666666669" width="51" height="31"/>
-                                <connections>
-                                    <action selector="switchFlipped:" destination="SZn-eA-800" eventType="valueChanged" id="mjd-kv-Wug"/>
-                                </connections>
-                            </switch>
-                            <switch opaque="NO" multipleTouchEnabled="YES" tag="16" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Dr-J0-Kea">
-                                <rect key="frame" x="35" y="443.66666666666669" width="51" height="31"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="31" id="jBV-w9-qfB"/>
-                                </constraints>
-                                <connections>
-                                    <action selector="switchFlipped:" destination="SZn-eA-800" eventType="valueChanged" id="dbQ-T4-78f"/>
-                                </connections>
-                            </switch>
-                            <switch opaque="NO" multipleTouchEnabled="YES" tag="21" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kei-g6-QkA">
-                                <rect key="frame" x="35" y="496.66666666666674" width="51" height="31"/>
-                                <connections>
-                                    <action selector="switchFlipped:" destination="SZn-eA-800" eventType="valueChanged" id="oLw-wx-iq6"/>
-                                </connections>
-                            </switch>
-                            <switch opaque="NO" multipleTouchEnabled="YES" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fwd-On-E4S">
-                                <rect key="frame" x="182" y="326" width="51" height="31"/>
-                                <connections>
-                                    <action selector="switchFlipped:" destination="SZn-eA-800" eventType="valueChanged" id="OCD-AC-duU"/>
-                                </connections>
-                            </switch>
-                            <switch opaque="NO" multipleTouchEnabled="YES" tag="4" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M2h-FG-Pm9">
-                                <rect key="frame" x="253" y="326" width="51" height="31"/>
-                                <connections>
-                                    <action selector="switchFlipped:" destination="SZn-eA-800" eventType="valueChanged" id="EJS-f2-wYz"/>
-                                </connections>
-                            </switch>
-                            <switch opaque="NO" multipleTouchEnabled="YES" tag="5" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Iua-sO-sQm">
-                                <rect key="frame" x="319" y="326" width="51" height="31"/>
-                                <connections>
-                                    <action selector="switchFlipped:" destination="SZn-eA-800" eventType="valueChanged" id="VQK-7x-N1r"/>
-                                </connections>
-                            </switch>
-                            <switch opaque="NO" multipleTouchEnabled="YES" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hqO-cZ-GSR">
-                                <rect key="frame" x="106" y="312.66666666666669" width="51" height="31"/>
-                                <connections>
-                                    <action selector="switchFlipped:" destination="SZn-eA-800" eventType="valueChanged" id="RTy-0K-U04"/>
-                                </connections>
-                            </switch>
-                            <switch opaque="NO" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="m9m-Rk-eCA">
-                                <rect key="frame" x="35" y="312.66666666666669" width="51" height="31"/>
-                                <connections>
-                                    <action selector="switchFlipped:" destination="SZn-eA-800" eventType="valueChanged" id="tVK-8X-gAw"/>
-                                </connections>
-                            </switch>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yGb-md-kg8">
-                                <rect key="frame" x="285" y="748" width="55" height="30"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="55" id="3cw-Vj-R4L"/>
-                                </constraints>
-                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <state key="normal">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="reset">
-                                            <attributes>
-                                                <font key="NSFont" size="15" name="Menlo-Regular"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </state>
-                                <connections>
-                                    <action selector="resetButtonPressed:" destination="SZn-eA-800" eventType="touchUpInside" id="rck-0H-1o5"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ns9-fx-HOf">
-                                <rect key="frame" x="79" y="244" width="217" height="52.666666666666629"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="52.666666666666629" id="LKE-uq-fM1"/>
-                                </constraints>
-                                <attributedString key="attributedText">
-                                    <fragment content="You won!">
-                                        <attributes>
-                                            <color key="NSColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="45" name="Menlo-Regular"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j9M-OP-kNO">
-                                <rect key="frame" x="115" y="727" width="31" height="58"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="0">
-                                        <attributes>
-                                            <color key="NSColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="50" name="Menlo-Regular"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0vR-e8-CmI">
-                                <rect key="frame" x="20" y="742" width="87" height="28"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="Score:">
-                                        <attributes>
-                                            <color key="NSColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="24" name="Menlo-Regular"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qM5-eo-egm">
-                                <rect key="frame" x="240" y="111.33333333333333" width="115" height="24.999999999999986"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="115" id="kvR-3V-bcH"/>
-                                    <constraint firstAttribute="height" constant="25" id="yzM-A5-JCK"/>
-                                </constraints>
-                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <state key="normal">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Level Select">
-                                            <attributes>
-                                                <font key="NSFont" size="15" name="Menlo-Regular"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </state>
-                                <connections>
-                                    <segue destination="xol-NE-ilL" kind="presentation" id="YP2-B0-yqd"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d6g-XF-k4d">
-                                <rect key="frame" x="64" y="211" width="247" height="48"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="Switch Off">
-                                        <attributes>
-                                            <color key="NSColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="41" name="Menlo-Regular"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F8N-QE-Dnq">
-                                <rect key="frame" x="69" y="267" width="237" height="17"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="Turn off every switch to win">
-                                        <attributes>
-                                            <color key="NSColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="14" name="Menlo-Regular"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WWj-h2-6hN">
-                                <rect key="frame" x="20" y="704" width="55" height="30"/>
-                                <color key="tintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Level:">
-                                            <attributes>
-                                                <color key="NSColor" red="0.20316129920000001" green="0.78006720539999996" blue="0.3476932049" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <font key="NSFont" size="15" name="Menlo-Regular"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </state>
-                                <connections>
-                                    <action selector="secretLevelSelectButtonPressed" destination="SZn-eA-800" eventType="touchUpInside" id="M6q-iS-Jkg"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fdZ-FY-why">
-                                <rect key="frame" x="83" y="709" width="10" height="20"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="0">
-                                        <attributes>
-                                            <color key="NSColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="17" name="Menlo-Regular"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WYc-kz-chF">
-                                <rect key="frame" x="217" y="710" width="123" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="WinAnimationTest"/>
-                                <connections>
-                                    <action selector="winAnimationTestPressed:" destination="SZn-eA-800" eventType="touchUpInside" id="wkn-JI-IUt"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xsM-1H-H79">
-                                <rect key="frame" x="20" y="113" width="25" height="25"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="25" id="9FF-na-UCj"/>
-                                    <constraint firstAttribute="height" constant="25" id="i6L-mM-9Q4"/>
-                                </constraints>
-                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <state key="normal" image="gear" catalog="system"/>
-                                <connections>
-                                    <action selector="settingsButtonPressed:" destination="SZn-eA-800" eventType="touchUpInside" id="yU0-dr-oD1"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sY7-CI-jNz">
-                                <rect key="frame" x="151.66666666666666" y="593" width="72" height="30"/>
-                                <state key="normal" title="Print Level"/>
-                                <connections>
-                                    <action selector="printLevelButtonPressed" destination="SZn-eA-800" eventType="touchUpInside" id="qEQ-nE-JAP"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PoC-1C-0hj">
-                                <rect key="frame" x="91" y="587" width="192" height="45"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Next Level">
-                                            <attributes>
-                                                <font key="NSFont" size="28" name="Menlo-Regular"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </state>
-                                <connections>
-                                    <action selector="nextLevelButtonPressed" destination="SZn-eA-800" eventType="touchUpInside" id="gRM-fo-PGN"/>
-                                </connections>
-                            </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="speaker.slash" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="iQd-dq-1ma">
-                                <rect key="frame" x="53" y="113" width="25" height="24.999999999999986"/>
-                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="27" id="49S-qu-T7W"/>
-                                    <constraint firstAttribute="width" constant="25" id="ZVy-g4-YYb"/>
-                                </constraints>
-                            </imageView>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZCB-bJ-pYg">
-                                <rect key="frame" x="48" y="535" width="279" height="17"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="17" id="6Bi-4z-6Qr"/>
-                                </constraints>
-                                <attributedString key="attributedText">
-                                    <fragment content="Toggle the middle switch to begin">
-                                        <attributes>
-                                            <color key="NSColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="14" name="Menlo-Regular"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="iCD-Tr-h3S" firstAttribute="top" secondItem="TJq-FH-rAP" secondAttribute="bottom" constant="22" id="12W-3J-JgY"/>
-                            <constraint firstItem="8LL-2G-c30" firstAttribute="leading" secondItem="TU6-4g-Jbl" secondAttribute="trailing" constant="22" id="1Ry-qr-gBt"/>
-                            <constraint firstItem="fdZ-FY-why" firstAttribute="leading" secondItem="WWj-h2-6hN" secondAttribute="trailing" constant="8" id="2HU-cq-uEa"/>
-                            <constraint firstItem="PoC-1C-0hj" firstAttribute="leading" secondItem="eq6-WQ-ajt" secondAttribute="leading" constant="91" id="2u9-9V-Szq"/>
-                            <constraint firstItem="DGQ-e0-eTQ" firstAttribute="top" secondItem="9b7-b9-g1X" secondAttribute="bottom" constant="8" id="32A-na-fsN"/>
-                            <constraint firstItem="DGQ-e0-eTQ" firstAttribute="top" secondItem="O2y-YW-jdZ" secondAttribute="top" id="3Qe-el-oDo"/>
-                            <constraint firstItem="fwd-On-E4S" firstAttribute="top" secondItem="Ns9-fx-HOf" secondAttribute="bottom" constant="16" id="3bF-1d-w2v"/>
-                            <constraint firstItem="iQd-dq-1ma" firstAttribute="leading" secondItem="xsM-1H-H79" secondAttribute="trailing" constant="8" id="5db-KO-SHx"/>
-                            <constraint firstItem="j9M-OP-kNO" firstAttribute="leading" secondItem="0vR-e8-CmI" secondAttribute="trailing" constant="8" id="6Pw-aa-TMC"/>
-                            <constraint firstItem="j6L-k2-XIW" firstAttribute="leading" secondItem="9Dr-J0-Kea" secondAttribute="trailing" constant="22" id="6Zh-xO-d6z"/>
-                            <constraint firstItem="ZCB-bJ-pYg" firstAttribute="top" secondItem="Vnj-kt-f2g" secondAttribute="bottom" constant="7.3333333333332575" id="6yn-bQ-4p3"/>
-                            <constraint firstItem="iQd-dq-1ma" firstAttribute="top" secondItem="eq6-WQ-ajt" secondAttribute="top" constant="23.333333333333329" id="70K-cQ-mLU"/>
-                            <constraint firstItem="TU6-4g-Jbl" firstAttribute="leading" secondItem="j6L-k2-XIW" secondAttribute="trailing" constant="22" id="7JI-rF-u1N"/>
-                            <constraint firstItem="iCD-Tr-h3S" firstAttribute="centerY" secondItem="4HA-h2-Mp0" secondAttribute="centerY" id="8hl-Bj-MZE"/>
-                            <constraint firstItem="Kei-g6-QkA" firstAttribute="bottom" secondItem="OhL-Lh-ErO" secondAttribute="bottom" id="93e-9G-JhF"/>
-                            <constraint firstItem="0vR-e8-CmI" firstAttribute="top" secondItem="WWj-h2-6hN" secondAttribute="bottom" constant="8" id="Avg-18-G22"/>
-                            <constraint firstItem="Vnj-kt-f2g" firstAttribute="leading" secondItem="aBl-gl-Kof" secondAttribute="trailing" constant="22" id="CS2-ME-kGk"/>
-                            <constraint firstItem="F8N-QE-Dnq" firstAttribute="top" secondItem="d6g-XF-k4d" secondAttribute="bottom" constant="8" id="Cyc-PR-FLP"/>
-                            <constraint firstItem="iCD-Tr-h3S" firstAttribute="centerX" secondItem="4HA-h2-Mp0" secondAttribute="centerX" id="Dcf-pe-Lkv"/>
-                            <constraint firstItem="qM5-eo-egm" firstAttribute="top" secondItem="iQd-dq-1ma" secondAttribute="top" id="DgN-wS-yEH"/>
-                            <constraint firstItem="OhL-Lh-ErO" firstAttribute="top" secondItem="Vnj-kt-f2g" secondAttribute="top" id="Eqb-01-1X3"/>
-                            <constraint firstItem="OhL-Lh-ErO" firstAttribute="leading" secondItem="Kei-g6-QkA" secondAttribute="trailing" constant="22" id="G1s-RK-z1R"/>
-                            <constraint firstItem="DGQ-e0-eTQ" firstAttribute="trailing" secondItem="9b7-b9-g1X" secondAttribute="trailing" id="GEg-G2-YTP"/>
-                            <constraint firstItem="M2h-FG-Pm9" firstAttribute="leading" secondItem="fwd-On-E4S" secondAttribute="trailing" constant="22" id="GtV-rk-iuu"/>
-                            <constraint firstItem="3ON-sJ-tRM" firstAttribute="leading" secondItem="m9m-Rk-eCA" secondAttribute="leading" id="H54-ay-tdn"/>
-                            <constraint firstItem="Pbi-4V-Ggs" firstAttribute="leading" secondItem="TJq-FH-rAP" secondAttribute="trailing" constant="22" id="HXZ-7D-n3H"/>
-                            <constraint firstItem="iCD-Tr-h3S" firstAttribute="leading" secondItem="DGS-Ow-XHV" secondAttribute="trailing" constant="22" id="J5H-ia-svV"/>
-                            <constraint firstItem="j6L-k2-XIW" firstAttribute="top" secondItem="TU6-4g-Jbl" secondAttribute="top" id="KY8-iQ-dPq"/>
-                            <constraint firstItem="OhL-Lh-ErO" firstAttribute="top" secondItem="j6L-k2-XIW" secondAttribute="bottom" constant="22" id="M2E-Bz-LuQ"/>
-                            <constraint firstItem="O2y-YW-jdZ" firstAttribute="leading" secondItem="iCD-Tr-h3S" secondAttribute="trailing" constant="22" id="MFf-d9-9el"/>
-                            <constraint firstItem="fdZ-FY-why" firstAttribute="centerY" secondItem="WWj-h2-6hN" secondAttribute="centerY" id="MWz-qe-E3t"/>
-                            <constraint firstItem="F8N-QE-Dnq" firstAttribute="centerX" secondItem="4HA-h2-Mp0" secondAttribute="centerX" id="Nmp-1W-0Vr"/>
-                            <constraint firstItem="0vR-e8-CmI" firstAttribute="leading" secondItem="eq6-WQ-ajt" secondAttribute="leading" constant="20" id="Nr0-yt-vob"/>
-                            <constraint firstItem="PoC-1C-0hj" firstAttribute="top" secondItem="ZCB-bJ-pYg" secondAttribute="bottom" constant="35" id="Nt4-I9-wQL"/>
-                            <constraint firstItem="d6g-XF-k4d" firstAttribute="centerX" secondItem="4HA-h2-Mp0" secondAttribute="centerX" id="OKU-rB-AJX"/>
-                            <constraint firstItem="eq6-WQ-ajt" firstAttribute="trailing" secondItem="yGb-md-kg8" secondAttribute="trailing" constant="35" id="PTm-NA-SJi"/>
-                            <constraint firstItem="j6L-k2-XIW" firstAttribute="top" secondItem="DGS-Ow-XHV" secondAttribute="bottom" constant="22" id="Q1z-7c-uYu"/>
-                            <constraint firstItem="DGS-Ow-XHV" firstAttribute="top" secondItem="iCD-Tr-h3S" secondAttribute="top" id="Qf4-Yx-PZO"/>
-                            <constraint firstItem="OhL-Lh-ErO" firstAttribute="bottom" secondItem="aBl-gl-Kof" secondAttribute="bottom" id="Rk6-aY-sPO"/>
-                            <constraint firstItem="eq6-WQ-ajt" firstAttribute="bottom" secondItem="0vR-e8-CmI" secondAttribute="bottom" constant="8" id="SEp-Q1-otZ"/>
-                            <constraint firstItem="aBl-gl-Kof" firstAttribute="leading" secondItem="OhL-Lh-ErO" secondAttribute="trailing" constant="8" id="STZ-bb-0fq"/>
-                            <constraint firstItem="iCD-Tr-h3S" firstAttribute="leading" secondItem="DGS-Ow-XHV" secondAttribute="trailing" constant="8" id="Sgv-L9-d17"/>
-                            <constraint firstItem="2td-tG-nPi" firstAttribute="top" secondItem="DGQ-e0-eTQ" secondAttribute="bottom" constant="8" id="UPg-Gv-SaO"/>
-                            <constraint firstItem="fwd-On-E4S" firstAttribute="top" secondItem="M2h-FG-Pm9" secondAttribute="top" id="Ua6-3c-Kyb"/>
-                            <constraint firstItem="M2h-FG-Pm9" firstAttribute="leading" secondItem="fwd-On-E4S" secondAttribute="trailing" constant="8" id="UrY-eg-1kN"/>
-                            <constraint firstItem="Vnj-kt-f2g" firstAttribute="top" secondItem="8LL-2G-c30" secondAttribute="bottom" constant="8" id="UtM-LF-MRd"/>
-                            <constraint firstItem="ReV-cZ-bVK" firstAttribute="top" secondItem="DGS-Ow-XHV" secondAttribute="top" id="WRF-eu-f7f"/>
-                            <constraint firstItem="hqO-cZ-GSR" firstAttribute="leading" secondItem="m9m-Rk-eCA" secondAttribute="trailing" constant="8" id="XCP-6k-SI4"/>
-                            <constraint firstItem="DGS-Ow-XHV" firstAttribute="top" secondItem="pLw-t3-gcw" secondAttribute="bottom" constant="8" id="XT2-X1-PF6"/>
-                            <constraint firstItem="DGS-Ow-XHV" firstAttribute="top" secondItem="iCD-Tr-h3S" secondAttribute="top" id="Xa3-jO-UBe"/>
-                            <constraint firstItem="32x-Rg-6GY" firstAttribute="top" secondItem="2td-tG-nPi" secondAttribute="bottom" constant="8" id="aVZ-j9-C7W"/>
-                            <constraint firstItem="sY7-CI-jNz" firstAttribute="centerX" secondItem="4HA-h2-Mp0" secondAttribute="centerX" id="asH-9f-IR6"/>
-                            <constraint firstItem="pLw-t3-gcw" firstAttribute="leading" secondItem="3ON-sJ-tRM" secondAttribute="trailing" constant="8" id="b7q-Ku-s8x"/>
-                            <constraint firstItem="iCD-Tr-h3S" firstAttribute="centerY" secondItem="4HA-h2-Mp0" secondAttribute="centerY" id="bBV-SF-H9F"/>
-                            <constraint firstItem="Pbi-4V-Ggs" firstAttribute="top" secondItem="M2h-FG-Pm9" secondAttribute="bottom" constant="8" id="bsy-Wd-Rb4"/>
-                            <constraint firstItem="9Dr-J0-Kea" firstAttribute="top" secondItem="ReV-cZ-bVK" secondAttribute="bottom" constant="8" id="dBs-J4-YyD"/>
-                            <constraint firstItem="pLw-t3-gcw" firstAttribute="top" secondItem="hqO-cZ-GSR" secondAttribute="bottom" constant="8" id="dER-8M-x3l"/>
-                            <constraint firstItem="yGb-md-kg8" firstAttribute="bottom" secondItem="eq6-WQ-ajt" secondAttribute="bottom" id="dQg-0L-vfT"/>
-                            <constraint firstItem="Ns9-fx-HOf" firstAttribute="centerX" secondItem="4HA-h2-Mp0" secondAttribute="centerX" id="el0-Z4-FD0"/>
-                            <constraint firstItem="eq6-WQ-ajt" firstAttribute="trailing" secondItem="qM5-eo-egm" secondAttribute="trailing" constant="20" id="eoj-qt-zsZ"/>
-                            <constraint firstItem="xsM-1H-H79" firstAttribute="leading" secondItem="eq6-WQ-ajt" secondAttribute="leading" constant="20" id="f2m-cI-SVY"/>
-                            <constraint firstItem="DGS-Ow-XHV" firstAttribute="leading" secondItem="ReV-cZ-bVK" secondAttribute="trailing" constant="22" id="gOn-Gq-UIa"/>
-                            <constraint firstItem="hqO-cZ-GSR" firstAttribute="leading" secondItem="m9m-Rk-eCA" secondAttribute="trailing" constant="22" id="iDJ-DL-vJ2"/>
-                            <constraint firstItem="ReV-cZ-bVK" firstAttribute="top" secondItem="3ON-sJ-tRM" secondAttribute="bottom" constant="22" id="iG0-mA-z5s"/>
-                            <constraint firstItem="d6g-XF-k4d" firstAttribute="top" secondItem="sY7-CI-jNz" secondAttribute="bottom" constant="-412" id="iTl-Z3-paQ"/>
-                            <constraint firstItem="9b7-b9-g1X" firstAttribute="trailing" secondItem="Iua-sO-sQm" secondAttribute="trailing" id="jQl-Qc-dDv"/>
-                            <constraint firstItem="xsM-1H-H79" firstAttribute="top" secondItem="eq6-WQ-ajt" secondAttribute="top" constant="25" id="jmA-GD-DOu"/>
-                            <constraint firstItem="32x-Rg-6GY" firstAttribute="leading" secondItem="Vnj-kt-f2g" secondAttribute="trailing" constant="22" id="kCe-vo-nuQ"/>
-                            <constraint firstItem="TJq-FH-rAP" firstAttribute="leading" secondItem="pLw-t3-gcw" secondAttribute="trailing" constant="22" id="kZG-N6-Gsc"/>
-                            <constraint firstItem="WWj-h2-6hN" firstAttribute="leading" secondItem="eq6-WQ-ajt" secondAttribute="leading" constant="20" id="kmY-v2-fF2"/>
-                            <constraint firstItem="pLw-t3-gcw" firstAttribute="leading" secondItem="3ON-sJ-tRM" secondAttribute="trailing" constant="22" id="lIR-a1-Asx"/>
-                            <constraint firstItem="9b7-b9-g1X" firstAttribute="leading" secondItem="Pbi-4V-Ggs" secondAttribute="trailing" constant="22" id="lJ1-BW-OmR"/>
-                            <constraint firstItem="j9M-OP-kNO" firstAttribute="centerY" secondItem="0vR-e8-CmI" secondAttribute="centerY" id="lQb-59-nO0"/>
-                            <constraint firstItem="O2y-YW-jdZ" firstAttribute="top" secondItem="Pbi-4V-Ggs" secondAttribute="bottom" constant="22" id="mGd-jp-RmD"/>
-                            <constraint firstItem="d6g-XF-k4d" firstAttribute="top" secondItem="eq6-WQ-ajt" secondAttribute="top" constant="123" id="mep-Fq-7eN"/>
-                            <constraint firstItem="32x-Rg-6GY" firstAttribute="top" secondItem="2td-tG-nPi" secondAttribute="bottom" constant="22" id="s8J-3W-ori"/>
-                            <constraint firstItem="aBl-gl-Kof" firstAttribute="leading" secondItem="OhL-Lh-ErO" secondAttribute="trailing" constant="22" id="sWy-GS-Chu"/>
-                            <constraint firstItem="m9m-Rk-eCA" firstAttribute="top" secondItem="hqO-cZ-GSR" secondAttribute="top" id="t3G-oQ-tO2"/>
-                            <constraint firstItem="ReV-cZ-bVK" firstAttribute="leading" secondItem="9Dr-J0-Kea" secondAttribute="leading" id="tGC-dc-sT6"/>
-                            <constraint firstItem="TU6-4g-Jbl" firstAttribute="top" secondItem="iCD-Tr-h3S" secondAttribute="bottom" constant="22" id="v1f-MH-cDc"/>
-                            <constraint firstItem="Kei-g6-QkA" firstAttribute="top" secondItem="OhL-Lh-ErO" secondAttribute="top" id="vTR-IJ-4jk"/>
-                            <constraint firstItem="9Dr-J0-Kea" firstAttribute="top" secondItem="ReV-cZ-bVK" secondAttribute="bottom" constant="22" id="vVt-zV-5U4"/>
-                            <constraint firstItem="Vnj-kt-f2g" firstAttribute="top" secondItem="8LL-2G-c30" secondAttribute="bottom" constant="22" id="vhg-QI-JAU"/>
-                            <constraint firstItem="9Dr-J0-Kea" firstAttribute="leading" secondItem="Kei-g6-QkA" secondAttribute="leading" id="vwh-lO-8SE"/>
-                            <constraint firstItem="Iua-sO-sQm" firstAttribute="top" secondItem="M2h-FG-Pm9" secondAttribute="top" id="wGT-zq-6AU"/>
-                            <constraint firstItem="2td-tG-nPi" firstAttribute="trailing" secondItem="32x-Rg-6GY" secondAttribute="trailing" id="wNY-Xt-LCQ"/>
-                            <constraint firstItem="ZCB-bJ-pYg" firstAttribute="centerX" secondItem="4HA-h2-Mp0" secondAttribute="centerX" id="xXW-I7-67F"/>
-                            <constraint firstItem="Kei-g6-QkA" firstAttribute="top" secondItem="9Dr-J0-Kea" secondAttribute="bottom" constant="22" id="ybi-ds-viE"/>
-                            <constraint firstItem="DGQ-e0-eTQ" firstAttribute="trailing" secondItem="2td-tG-nPi" secondAttribute="trailing" id="yn5-GW-pPe"/>
-                            <constraint firstAttribute="bottom" secondItem="ZCB-bJ-pYg" secondAttribute="bottom" constant="260" id="yoB-MP-kpq"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="eq6-WQ-ajt"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="FJQ-6t-Sh7">
-                        <barButtonItem key="rightBarButtonItem" title="Level Select" id="M9V-3W-tcG"/>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="currentLevelLabel" destination="fdZ-FY-why" id="1cf-Sm-olA"/>
-                        <outlet property="levelSelectButton" destination="qM5-eo-egm" id="pc8-PM-yfb"/>
-                        <outlet property="muteIcon" destination="iQd-dq-1ma" id="cva-JG-iDs"/>
-                        <outlet property="nextLevelButton" destination="PoC-1C-0hj" id="mgS-8o-ZUi"/>
-                        <outlet property="printLevelButton" destination="sY7-CI-jNz" id="ibT-mG-F0h"/>
-                        <outlet property="resetButton" destination="yGb-md-kg8" id="mOU-Nw-2Og"/>
-                        <outlet property="scoreNumLabel" destination="j9M-OP-kNO" id="1kv-Il-mGx"/>
-                        <outlet property="scoreStrLabel" destination="0vR-e8-CmI" id="WM0-kd-xxn"/>
-                        <outlet property="secretLevelButton" destination="WWj-h2-6hN" id="no9-GD-48A"/>
-                        <outlet property="settingButton" destination="xsM-1H-H79" id="MXA-MN-LjT"/>
-                        <outlet property="winAnimationTestButton" destination="WYc-kz-chF" id="0d1-vU-xas"/>
-                        <outlet property="winLabel" destination="Ns9-fx-HOf" id="Mwh-7m-Qrh"/>
-                        <outletCollection property="switchGrid" destination="m9m-Rk-eCA" collectionClass="NSMutableArray" id="kKs-yg-uM1"/>
-                        <outletCollection property="switchGrid" destination="hqO-cZ-GSR" collectionClass="NSMutableArray" id="dxG-3t-0IP"/>
-                        <outletCollection property="switchGrid" destination="fwd-On-E4S" collectionClass="NSMutableArray" id="ugI-Mr-VXb"/>
-                        <outletCollection property="switchGrid" destination="M2h-FG-Pm9" collectionClass="NSMutableArray" id="xDH-tc-h4S"/>
-                        <outletCollection property="switchGrid" destination="Iua-sO-sQm" collectionClass="NSMutableArray" id="BOd-fb-98l"/>
-                        <outletCollection property="switchGrid" destination="3ON-sJ-tRM" collectionClass="NSMutableArray" id="SUg-2U-173"/>
-                        <outletCollection property="switchGrid" destination="pLw-t3-gcw" collectionClass="NSMutableArray" id="zZ7-98-6lI"/>
-                        <outletCollection property="switchGrid" destination="TJq-FH-rAP" collectionClass="NSMutableArray" id="aKv-85-VL9"/>
-                        <outletCollection property="switchGrid" destination="Pbi-4V-Ggs" collectionClass="NSMutableArray" id="i9C-RV-N1V"/>
-                        <outletCollection property="switchGrid" destination="9b7-b9-g1X" collectionClass="NSMutableArray" id="bqx-GK-p0d"/>
-                        <outletCollection property="switchGrid" destination="ReV-cZ-bVK" collectionClass="NSMutableArray" id="q5B-CM-mGd"/>
-                        <outletCollection property="switchGrid" destination="DGS-Ow-XHV" collectionClass="NSMutableArray" id="hhf-yE-yvZ"/>
-                        <outletCollection property="switchGrid" destination="iCD-Tr-h3S" collectionClass="NSMutableArray" id="7dL-ag-Om6"/>
-                        <outletCollection property="switchGrid" destination="O2y-YW-jdZ" collectionClass="NSMutableArray" id="AlC-9A-EQR"/>
-                        <outletCollection property="switchGrid" destination="DGQ-e0-eTQ" collectionClass="NSMutableArray" id="m5x-rR-Eu7"/>
-                        <outletCollection property="switchGrid" destination="9Dr-J0-Kea" collectionClass="NSMutableArray" id="PBx-0F-GwU"/>
-                        <outletCollection property="switchGrid" destination="j6L-k2-XIW" collectionClass="NSMutableArray" id="iN2-YU-h9t"/>
-                        <outletCollection property="switchGrid" destination="TU6-4g-Jbl" collectionClass="NSMutableArray" id="aBx-Cm-DB6"/>
-                        <outletCollection property="switchGrid" destination="8LL-2G-c30" collectionClass="NSMutableArray" id="mY0-kb-nfq"/>
-                        <outletCollection property="switchGrid" destination="2td-tG-nPi" collectionClass="NSMutableArray" id="TTn-TZ-Afb"/>
-                        <outletCollection property="switchGrid" destination="Kei-g6-QkA" collectionClass="NSMutableArray" id="8qh-GJ-sVP"/>
-                        <outletCollection property="switchGrid" destination="OhL-Lh-ErO" collectionClass="NSMutableArray" id="917-gN-Hgz"/>
-                        <outletCollection property="switchGrid" destination="aBl-gl-Kof" collectionClass="NSMutableArray" id="T0J-Na-S1V"/>
-                        <outletCollection property="switchGrid" destination="Vnj-kt-f2g" collectionClass="NSMutableArray" id="n3m-n3-qoT"/>
-                        <outletCollection property="switchGrid" destination="32x-Rg-6GY" collectionClass="NSMutableArray" id="RMX-cA-7Ei"/>
-                        <outletCollection property="titleLabels" destination="F8N-QE-Dnq" collectionClass="NSMutableArray" id="iQE-7t-5aw"/>
-                        <outletCollection property="titleLabels" destination="d6g-XF-k4d" collectionClass="NSMutableArray" id="XdU-QG-n2T"/>
-                        <outletCollection property="titleLabels" destination="ZCB-bJ-pYg" collectionClass="NSMutableArray" id="KGm-OK-awU"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yDL-JQ-dn6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1826.4000000000001" y="770.68965517241384"/>
-        </scene>
         <!--Level Select View Controller-->
         <scene sceneID="gtj-m7-tJD">
             <objects>
                 <viewController id="B3n-WI-hyn" customClass="LevelSelectViewController" customModule="SwitchOff" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0YA-ic-XCW">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Msh-80-y6W">
-                                <rect key="frame" x="118.66666666666669" y="690" width="138" height="34"/>
+                                <rect key="frame" x="118.66666666666669" y="744" width="138" height="34"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment content="Level Editor">
@@ -639,10 +127,10 @@
                                 </connections>
                             </button>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gKJ-7v-k9G">
-                                <rect key="frame" x="0.0" y="271" width="375" height="216"/>
+                                <rect key="frame" x="0.0" y="298" width="375" height="216"/>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K6U-qp-9Cf">
-                                <rect key="frame" x="67" y="495" width="241" height="30.666666666666629"/>
+                                <rect key="frame" x="67" y="522" width="241" height="30.666666666666629"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment content="Press here to go to level">
@@ -657,7 +145,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tHb-Fq-1k1">
-                                <rect key="frame" x="110.66666666666669" y="662" width="154" height="20"/>
+                                <rect key="frame" x="110.66666666666669" y="716" width="154" height="20"/>
                                 <attributedString key="attributedText">
                                     <fragment content="(Dev mode only)">
                                         <attributes>
@@ -668,7 +156,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PCE-Ba-GRt">
-                                <rect key="frame" x="69.666666666666686" y="76" width="236" height="20"/>
+                                <rect key="frame" x="69.666666666666686" y="108" width="236" height="20"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Debug/Level select Menu">
                                         <attributes>
@@ -710,8 +198,9 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xol-NE-ilL" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="0iv-lT-jSh"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Lps-cv-bGG">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -734,12 +223,510 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="SZn-eA-800" kind="relationship" relationship="rootViewController" id="VDc-mj-4Mj"/>
+                        <segue destination="Yw8-gl-1Vr" kind="relationship" relationship="rootViewController" id="sOw-mk-2vd"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yvU-AE-tFA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="884" y="770.68965517241384"/>
+        </scene>
+        <!--Alternate View Controller-->
+        <scene sceneID="Mfy-WN-2Jy">
+            <objects>
+                <viewController id="Yw8-gl-1Vr" customClass="AlternateViewController" customModule="SwitchOff" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yvT-fy-M5j">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <switch opaque="NO" multipleTouchEnabled="YES" tag="8" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T4j-qq-XQ4">
+                                <rect key="frame" x="163" y="351.66666666666669" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchFlipped:" destination="Yw8-gl-1Vr" eventType="valueChanged" id="fLb-PN-53j"/>
+                                </connections>
+                            </switch>
+                            <switch opaque="NO" multipleTouchEnabled="YES" tag="13" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ufa-Xd-zdZ">
+                                <rect key="frame" x="163" y="390.66666666666669" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchFlipped:" destination="Yw8-gl-1Vr" eventType="valueChanged" id="bJI-hz-yzN"/>
+                                </connections>
+                            </switch>
+                            <switch opaque="NO" multipleTouchEnabled="YES" tag="18" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SSs-Sq-GeA">
+                                <rect key="frame" x="163" y="429.66666666666669" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchFlipped:" destination="Yw8-gl-1Vr" eventType="valueChanged" id="zlw-33-iqo"/>
+                                </connections>
+                            </switch>
+                            <switch opaque="NO" multipleTouchEnabled="YES" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gxe-na-VSp">
+                                <rect key="frame" x="163" y="312.66666666666669" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchFlipped:" destination="Yw8-gl-1Vr" eventType="valueChanged" id="TTy-7x-Trm"/>
+                                </connections>
+                            </switch>
+                            <switch opaque="NO" multipleTouchEnabled="YES" tag="9" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lpX-qh-CxU">
+                                <rect key="frame" x="220" y="351.66666666666669" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchFlipped:" destination="Yw8-gl-1Vr" eventType="valueChanged" id="TFE-dk-QML"/>
+                                </connections>
+                            </switch>
+                            <switch opaque="NO" multipleTouchEnabled="YES" tag="14" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qpy-I5-Yt8">
+                                <rect key="frame" x="220" y="390.66666666666669" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchFlipped:" destination="Yw8-gl-1Vr" eventType="valueChanged" id="Ail-aQ-18w"/>
+                                </connections>
+                            </switch>
+                            <switch opaque="NO" multipleTouchEnabled="YES" tag="19" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zKg-AU-aSF">
+                                <rect key="frame" x="220" y="429.66666666666669" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchFlipped:" destination="Yw8-gl-1Vr" eventType="valueChanged" id="9a4-ca-Mfa"/>
+                                </connections>
+                            </switch>
+                            <switch opaque="NO" multipleTouchEnabled="YES" tag="24" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vnJ-2b-THT">
+                                <rect key="frame" x="220" y="468.66666666666669" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchFlipped:" destination="Yw8-gl-1Vr" eventType="valueChanged" id="wc1-IU-L8L"/>
+                                </connections>
+                            </switch>
+                            <switch opaque="NO" multipleTouchEnabled="YES" tag="4" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O71-j4-eTr">
+                                <rect key="frame" x="220" y="312.66666666666669" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchFlipped:" destination="Yw8-gl-1Vr" eventType="valueChanged" id="5cN-NG-2gz"/>
+                                </connections>
+                            </switch>
+                            <switch opaque="NO" multipleTouchEnabled="YES" tag="10" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1ea-vh-Sss">
+                                <rect key="frame" x="277" y="351.66666666666669" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchFlipped:" destination="Yw8-gl-1Vr" eventType="valueChanged" id="kOn-LH-By0"/>
+                                </connections>
+                            </switch>
+                            <switch opaque="NO" multipleTouchEnabled="YES" tag="15" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JVK-Wz-kC2">
+                                <rect key="frame" x="277" y="390.66666666666669" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchFlipped:" destination="Yw8-gl-1Vr" eventType="valueChanged" id="7Xf-Yp-s9e"/>
+                                </connections>
+                            </switch>
+                            <switch opaque="NO" multipleTouchEnabled="YES" tag="20" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OTc-iL-cyA">
+                                <rect key="frame" x="277" y="429.66666666666669" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchFlipped:" destination="Yw8-gl-1Vr" eventType="valueChanged" id="C9y-Vq-JJM"/>
+                                </connections>
+                            </switch>
+                            <switch opaque="NO" multipleTouchEnabled="YES" tag="25" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aCe-aD-iio">
+                                <rect key="frame" x="277" y="468.66666666666669" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchFlipped:" destination="Yw8-gl-1Vr" eventType="valueChanged" id="hSt-ZU-Jsd"/>
+                                </connections>
+                            </switch>
+                            <switch opaque="NO" multipleTouchEnabled="YES" tag="5" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hDs-Uq-p3l">
+                                <rect key="frame" x="277" y="312.66666666666669" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchFlipped:" destination="Yw8-gl-1Vr" eventType="valueChanged" id="vuv-xc-3EM"/>
+                                </connections>
+                            </switch>
+                            <switch opaque="NO" multipleTouchEnabled="YES" tag="7" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5lS-50-mHI">
+                                <rect key="frame" x="106" y="351.66666666666669" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchFlipped:" destination="Yw8-gl-1Vr" eventType="valueChanged" id="Rjo-Kx-cwT"/>
+                                </connections>
+                            </switch>
+                            <switch opaque="NO" multipleTouchEnabled="YES" tag="22" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jgr-42-xCC">
+                                <rect key="frame" x="106" y="468.66666666666669" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchFlipped:" destination="Yw8-gl-1Vr" eventType="valueChanged" id="r9W-gi-7d4"/>
+                                </connections>
+                            </switch>
+                            <switch opaque="NO" multipleTouchEnabled="YES" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qKG-WZ-djo">
+                                <rect key="frame" x="106" y="312.66666666666669" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchFlipped:" destination="Yw8-gl-1Vr" eventType="valueChanged" id="u0b-MN-ivf"/>
+                                </connections>
+                            </switch>
+                            <switch opaque="NO" multipleTouchEnabled="YES" tag="12" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZhC-op-coI">
+                                <rect key="frame" x="106" y="390.66666666666669" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchFlipped:" destination="Yw8-gl-1Vr" eventType="valueChanged" id="vJc-7W-7zt"/>
+                                </connections>
+                            </switch>
+                            <switch opaque="NO" multipleTouchEnabled="YES" tag="23" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BEV-Kr-5t8">
+                                <rect key="frame" x="163" y="468.66666666666669" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchFlipped:" destination="Yw8-gl-1Vr" eventType="valueChanged" id="UMc-kh-KE4"/>
+                                </connections>
+                            </switch>
+                            <switch opaque="NO" multipleTouchEnabled="YES" tag="17" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VQ3-DE-ReR">
+                                <rect key="frame" x="106" y="429.66666666666669" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchFlipped:" destination="Yw8-gl-1Vr" eventType="valueChanged" id="o4L-Wz-Sdz"/>
+                                </connections>
+                            </switch>
+                            <switch opaque="NO" multipleTouchEnabled="YES" tag="6" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Un-RV-j77">
+                                <rect key="frame" x="49" y="351.66666666666669" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchFlipped:" destination="Yw8-gl-1Vr" eventType="valueChanged" id="HRS-Vs-zu7"/>
+                                </connections>
+                            </switch>
+                            <switch opaque="NO" multipleTouchEnabled="YES" tag="11" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="llw-UK-hHY">
+                                <rect key="frame" x="49" y="390.66666666666669" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchFlipped:" destination="Yw8-gl-1Vr" eventType="valueChanged" id="RT1-03-pgG"/>
+                                </connections>
+                            </switch>
+                            <switch opaque="NO" multipleTouchEnabled="YES" tag="16" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V2R-Sb-66V">
+                                <rect key="frame" x="49" y="429.66666666666669" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchFlipped:" destination="Yw8-gl-1Vr" eventType="valueChanged" id="QCt-hm-cSc"/>
+                                </connections>
+                            </switch>
+                            <switch opaque="NO" multipleTouchEnabled="YES" tag="21" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CXk-Yh-F1K">
+                                <rect key="frame" x="49" y="468.66666666666669" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchFlipped:" destination="Yw8-gl-1Vr" eventType="valueChanged" id="bmq-XK-AZC"/>
+                                </connections>
+                            </switch>
+                            <switch opaque="NO" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="D1L-HJ-8Qs">
+                                <rect key="frame" x="49" y="312.66666666666669" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchFlipped:" destination="Yw8-gl-1Vr" eventType="valueChanged" id="5Zc-xO-NQ1"/>
+                                </connections>
+                            </switch>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Faa-bI-Wim">
+                                <rect key="frame" x="285" y="748" width="55" height="30"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="55" id="QK8-Kf-KAL"/>
+                                </constraints>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="reset">
+                                            <attributes>
+                                                <font key="NSFont" size="15" name="Menlo-Regular"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="resetButtonPressed:" destination="Yw8-gl-1Vr" eventType="touchUpInside" id="1Yj-b5-bzT"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9kG-UF-Lva">
+                                <rect key="frame" x="79" y="243.99999999999997" width="217" height="52.666666666666657"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52.666666666666629" id="Cnj-Bc-XEA"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="You won!">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="45" name="Menlo-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z8R-NS-oXR">
+                                <rect key="frame" x="115" y="727" width="31" height="58.333333333333371"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="0">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="50" name="Menlo-Regular"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CoS-Rp-6T3">
+                                <rect key="frame" x="20" y="742" width="87" height="28"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Score:">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="24" name="Menlo-Regular"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hh2-hP-lUv">
+                                <rect key="frame" x="240" y="111.33333333333333" width="115" height="24.999999999999986"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="3Lh-6r-c20"/>
+                                    <constraint firstAttribute="width" constant="115" id="8hM-Wm-51e"/>
+                                </constraints>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Level Select">
+                                            <attributes>
+                                                <font key="NSFont" size="15" name="Menlo-Regular"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <segue destination="xol-NE-ilL" kind="show" id="bTB-8u-JwQ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mwm-hK-vEc">
+                                <rect key="frame" x="76.333333333333329" y="211" width="222.33333333333337" height="48"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="on -&gt; off">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="41" name="Menlo-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cbm-RW-Vno">
+                                <rect key="frame" x="69" y="267" width="237" height="17"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Turn off every switch to win">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="14" name="Menlo-Regular"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NrW-wK-Y5E">
+                                <rect key="frame" x="48" y="507.66666666666674" width="279" height="17"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Toggle the middle switch to begin">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="14" name="Menlo-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jXi-rg-xQo">
+                                <rect key="frame" x="20" y="704" width="55" height="30"/>
+                                <color key="tintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Level:">
+                                            <attributes>
+                                                <color key="NSColor" red="0.20316129920000001" green="0.78006720539999996" blue="0.3476932049" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="15" name="Menlo-Regular"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="secretLevelSelectButtonPressed" destination="Yw8-gl-1Vr" eventType="touchUpInside" id="Yjm-qV-v8z"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DUr-Nv-lLy">
+                                <rect key="frame" x="83" y="709" width="10" height="20"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="0">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="17" name="Menlo-Regular"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="heg-KR-ZpR">
+                                <rect key="frame" x="217" y="710" width="123" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="WinAnimationTest"/>
+                                <connections>
+                                    <action selector="winAnimationTestPressed:" destination="Yw8-gl-1Vr" eventType="touchUpInside" id="YP8-XH-vfD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y8U-zO-9ed">
+                                <rect key="frame" x="20" y="113" width="25" height="25"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="Bvq-G4-u9z"/>
+                                    <constraint firstAttribute="width" constant="25" id="Oct-6M-Vdy"/>
+                                </constraints>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" image="gear" catalog="system"/>
+                                <connections>
+                                    <action selector="settingsButtonPressed:" destination="Yw8-gl-1Vr" eventType="touchUpInside" id="FFN-pq-e8Y"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E11-iS-a7q">
+                                <rect key="frame" x="151.66666666666666" y="564" width="72" height="30"/>
+                                <state key="normal" title="Print Level"/>
+                                <connections>
+                                    <action selector="printLevelButtonPressed" destination="Yw8-gl-1Vr" eventType="touchUpInside" id="kRl-I4-Aa7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F8P-6E-hdx">
+                                <rect key="frame" x="91" y="587" width="192" height="45"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Next Level">
+                                            <attributes>
+                                                <font key="NSFont" size="28" name="Menlo-Regular"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="nextLevelButtonPressed" destination="Yw8-gl-1Vr" eventType="touchUpInside" id="8UD-TU-HhZ"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="speaker.slash" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="j5w-XT-Zrl">
+                                <rect key="frame" x="53" y="113" width="25" height="24.999999999999986"/>
+                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="EoI-pT-NhH"/>
+                                    <constraint firstAttribute="height" constant="27" id="c6f-f4-IvA"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="F8P-6E-hdx" firstAttribute="top" secondItem="vnJ-2b-THT" secondAttribute="bottom" constant="84.333335876464844" id="02e-af-FjY"/>
+                            <constraint firstItem="ZhC-op-coI" firstAttribute="top" secondItem="ufa-Xd-zdZ" secondAttribute="top" id="03W-Zc-Gr5"/>
+                            <constraint firstItem="vnJ-2b-THT" firstAttribute="top" secondItem="zKg-AU-aSF" secondAttribute="bottom" constant="8" id="0Ra-CK-Bvl"/>
+                            <constraint firstItem="5lS-50-mHI" firstAttribute="leading" secondItem="4Un-RV-j77" secondAttribute="trailing" constant="8" id="20J-L3-szB"/>
+                            <constraint firstItem="y8U-zO-9ed" firstAttribute="top" secondItem="dbS-WP-Onb" secondAttribute="top" constant="25" id="2Cc-r0-aNi"/>
+                            <constraint firstItem="Qpy-I5-Yt8" firstAttribute="top" secondItem="ufa-Xd-zdZ" secondAttribute="top" id="3Zm-SE-dCd"/>
+                            <constraint firstItem="ZhC-op-coI" firstAttribute="top" secondItem="5lS-50-mHI" secondAttribute="bottom" constant="8" id="3fX-qM-2bt"/>
+                            <constraint firstItem="CoS-Rp-6T3" firstAttribute="top" secondItem="jXi-rg-xQo" secondAttribute="bottom" constant="8" id="3kY-eq-44q"/>
+                            <constraint firstItem="CoS-Rp-6T3" firstAttribute="leading" secondItem="dbS-WP-Onb" secondAttribute="leading" constant="20" id="46U-L0-CJM"/>
+                            <constraint firstItem="4Un-RV-j77" firstAttribute="top" secondItem="D1L-HJ-8Qs" secondAttribute="bottom" constant="8" id="4tg-Wd-fgE"/>
+                            <constraint firstItem="j5w-XT-Zrl" firstAttribute="leading" secondItem="y8U-zO-9ed" secondAttribute="trailing" constant="8" id="53x-Qp-oAI"/>
+                            <constraint firstItem="VQ3-DE-ReR" firstAttribute="leading" secondItem="V2R-Sb-66V" secondAttribute="trailing" constant="8" id="58g-hr-pon"/>
+                            <constraint firstItem="1ea-vh-Sss" firstAttribute="top" secondItem="hDs-Uq-p3l" secondAttribute="bottom" constant="8" id="5bH-0w-NVS"/>
+                            <constraint firstItem="llw-UK-hHY" firstAttribute="top" secondItem="ZhC-op-coI" secondAttribute="top" id="8EB-Qn-68F"/>
+                            <constraint firstItem="Faa-bI-Wim" firstAttribute="bottom" secondItem="dbS-WP-Onb" secondAttribute="bottom" id="8Nk-4h-53k"/>
+                            <constraint firstItem="zKg-AU-aSF" firstAttribute="top" secondItem="Qpy-I5-Yt8" secondAttribute="bottom" constant="8" id="90i-T7-kGU"/>
+                            <constraint firstItem="aCe-aD-iio" firstAttribute="leading" secondItem="vnJ-2b-THT" secondAttribute="trailing" constant="8" id="9Dm-Zb-3gs"/>
+                            <constraint firstItem="Gxe-na-VSp" firstAttribute="leading" secondItem="T4j-qq-XQ4" secondAttribute="leading" id="9xK-1A-wUS"/>
+                            <constraint firstItem="Gxe-na-VSp" firstAttribute="top" secondItem="hDs-Uq-p3l" secondAttribute="top" id="Ahm-3X-baf"/>
+                            <constraint firstItem="SSs-Sq-GeA" firstAttribute="leading" secondItem="ufa-Xd-zdZ" secondAttribute="leading" id="B8w-sU-1nt"/>
+                            <constraint firstItem="jXi-rg-xQo" firstAttribute="leading" secondItem="dbS-WP-Onb" secondAttribute="leading" constant="20" id="Cl2-qZ-oOJ"/>
+                            <constraint firstItem="zKg-AU-aSF" firstAttribute="leading" secondItem="SSs-Sq-GeA" secondAttribute="trailing" constant="8" id="Cm4-2j-NwE"/>
+                            <constraint firstItem="qKG-WZ-djo" firstAttribute="leading" secondItem="D1L-HJ-8Qs" secondAttribute="trailing" constant="8" id="Cvi-vr-MnI"/>
+                            <constraint firstItem="ufa-Xd-zdZ" firstAttribute="centerY" secondItem="yvT-fy-M5j" secondAttribute="centerY" id="DgA-YS-yF2"/>
+                            <constraint firstItem="Jgr-42-xCC" firstAttribute="leading" secondItem="CXk-Yh-F1K" secondAttribute="trailing" constant="8" id="EDo-P0-q6g"/>
+                            <constraint firstItem="lpX-qh-CxU" firstAttribute="top" secondItem="O71-j4-eTr" secondAttribute="bottom" constant="8" id="FGf-VG-TJT"/>
+                            <constraint firstItem="Mwm-hK-vEc" firstAttribute="top" secondItem="dbS-WP-Onb" secondAttribute="top" constant="123" id="FXZ-b3-i4D"/>
+                            <constraint firstItem="F8P-6E-hdx" firstAttribute="centerX" secondItem="BEV-Kr-5t8" secondAttribute="centerX" id="Fcf-Ay-P81"/>
+                            <constraint firstItem="Z8R-NS-oXR" firstAttribute="leading" secondItem="CoS-Rp-6T3" secondAttribute="trailing" constant="8" id="G3s-co-If0"/>
+                            <constraint firstItem="NrW-wK-Y5E" firstAttribute="top" secondItem="vnJ-2b-THT" secondAttribute="bottom" constant="8" id="GDM-1G-E21"/>
+                            <constraint firstItem="ufa-Xd-zdZ" firstAttribute="top" secondItem="T4j-qq-XQ4" secondAttribute="bottom" constant="8" id="GOB-2i-X7K"/>
+                            <constraint firstItem="JVK-Wz-kC2" firstAttribute="leading" secondItem="Qpy-I5-Yt8" secondAttribute="trailing" constant="8" id="GUX-vO-SpG"/>
+                            <constraint firstItem="O71-j4-eTr" firstAttribute="leading" secondItem="Gxe-na-VSp" secondAttribute="trailing" constant="8" id="Gim-l8-0Fg"/>
+                            <constraint firstItem="Mwm-hK-vEc" firstAttribute="top" secondItem="E11-iS-a7q" secondAttribute="bottom" constant="-383" id="HMG-VC-keK"/>
+                            <constraint firstItem="y8U-zO-9ed" firstAttribute="leading" secondItem="dbS-WP-Onb" secondAttribute="leading" constant="20" id="HRF-6e-Dzh"/>
+                            <constraint firstItem="vnJ-2b-THT" firstAttribute="leading" secondItem="BEV-Kr-5t8" secondAttribute="trailing" constant="8" id="Hui-Lt-7RG"/>
+                            <constraint firstItem="j5w-XT-Zrl" firstAttribute="top" secondItem="dbS-WP-Onb" secondAttribute="top" constant="23.333333333333329" id="L7g-Wp-2sy"/>
+                            <constraint firstItem="OTc-iL-cyA" firstAttribute="top" secondItem="JVK-Wz-kC2" secondAttribute="bottom" constant="8" id="LfO-Gu-tiz"/>
+                            <constraint firstItem="aCe-aD-iio" firstAttribute="top" secondItem="OTc-iL-cyA" secondAttribute="bottom" constant="8" id="Nkg-WA-wxw"/>
+                            <constraint firstItem="Qpy-I5-Yt8" firstAttribute="leading" secondItem="ufa-Xd-zdZ" secondAttribute="trailing" constant="8" id="P6g-Mh-Ei8"/>
+                            <constraint firstItem="T4j-qq-XQ4" firstAttribute="leading" secondItem="ufa-Xd-zdZ" secondAttribute="leading" id="Q0Y-ji-tKd"/>
+                            <constraint firstItem="CXk-Yh-F1K" firstAttribute="top" secondItem="V2R-Sb-66V" secondAttribute="bottom" constant="8" id="QCb-SX-qNq"/>
+                            <constraint firstItem="llw-UK-hHY" firstAttribute="top" secondItem="4Un-RV-j77" secondAttribute="bottom" constant="8" id="SMy-32-y9Q"/>
+                            <constraint firstItem="Gxe-na-VSp" firstAttribute="top" secondItem="D1L-HJ-8Qs" secondAttribute="top" id="Sth-Ox-CA6"/>
+                            <constraint firstItem="Z8R-NS-oXR" firstAttribute="centerY" secondItem="CoS-Rp-6T3" secondAttribute="centerY" id="UMm-7Q-gu9"/>
+                            <constraint firstItem="SSs-Sq-GeA" firstAttribute="leading" secondItem="VQ3-DE-ReR" secondAttribute="trailing" constant="8" id="Uuc-XW-Q9t"/>
+                            <constraint firstItem="hh2-hP-lUv" firstAttribute="top" secondItem="j5w-XT-Zrl" secondAttribute="top" id="VLw-f1-oen"/>
+                            <constraint firstItem="Gxe-na-VSp" firstAttribute="top" secondItem="qKG-WZ-djo" secondAttribute="top" id="VlG-1Y-4EQ"/>
+                            <constraint firstItem="hDs-Uq-p3l" firstAttribute="leading" secondItem="O71-j4-eTr" secondAttribute="trailing" constant="8" id="XKL-Zx-Rkg"/>
+                            <constraint firstItem="T4j-qq-XQ4" firstAttribute="leading" secondItem="5lS-50-mHI" secondAttribute="trailing" constant="8" id="XfF-BF-p9m"/>
+                            <constraint firstItem="dbS-WP-Onb" firstAttribute="trailing" secondItem="hh2-hP-lUv" secondAttribute="trailing" constant="20" id="Xnd-Zj-Xgk"/>
+                            <constraint firstItem="Gxe-na-VSp" firstAttribute="leading" secondItem="qKG-WZ-djo" secondAttribute="trailing" constant="8" id="aL3-7Y-TWt"/>
+                            <constraint firstItem="VQ3-DE-ReR" firstAttribute="top" secondItem="ZhC-op-coI" secondAttribute="bottom" constant="8" id="ack-mA-o0R"/>
+                            <constraint firstItem="NrW-wK-Y5E" firstAttribute="centerX" secondItem="yvT-fy-M5j" secondAttribute="centerX" id="c3S-cA-dZn"/>
+                            <constraint firstItem="V2R-Sb-66V" firstAttribute="top" secondItem="llw-UK-hHY" secondAttribute="bottom" constant="8" id="d5r-7G-gWx"/>
+                            <constraint firstItem="9kG-UF-Lva" firstAttribute="centerX" secondItem="yvT-fy-M5j" secondAttribute="centerX" id="dCc-sA-bYd"/>
+                            <constraint firstItem="JVK-Wz-kC2" firstAttribute="top" secondItem="Qpy-I5-Yt8" secondAttribute="top" id="dgg-Va-L6C"/>
+                            <constraint firstItem="Cbm-RW-Vno" firstAttribute="top" secondItem="Mwm-hK-vEc" secondAttribute="bottom" constant="8" id="dmX-nH-swb"/>
+                            <constraint firstItem="ufa-Xd-zdZ" firstAttribute="leading" secondItem="ZhC-op-coI" secondAttribute="trailing" constant="8" id="hbR-3f-6s9"/>
+                            <constraint firstItem="Mwm-hK-vEc" firstAttribute="centerX" secondItem="yvT-fy-M5j" secondAttribute="centerX" id="jKq-wd-2TM"/>
+                            <constraint firstItem="SSs-Sq-GeA" firstAttribute="top" secondItem="ufa-Xd-zdZ" secondAttribute="bottom" constant="8" id="jOx-6b-Chf"/>
+                            <constraint firstItem="BEV-Kr-5t8" firstAttribute="leading" secondItem="SSs-Sq-GeA" secondAttribute="leading" id="jqO-oV-CFr"/>
+                            <constraint firstItem="Gxe-na-VSp" firstAttribute="top" secondItem="9kG-UF-Lva" secondAttribute="bottom" constant="16" id="mIB-8M-fwe"/>
+                            <constraint firstItem="DUr-Nv-lLy" firstAttribute="leading" secondItem="jXi-rg-xQo" secondAttribute="trailing" constant="8" id="nGY-Za-BPi"/>
+                            <constraint firstItem="F8P-6E-hdx" firstAttribute="leading" secondItem="dbS-WP-Onb" secondAttribute="leading" constant="91" id="o7x-sR-SGb"/>
+                            <constraint firstItem="Cbm-RW-Vno" firstAttribute="centerX" secondItem="yvT-fy-M5j" secondAttribute="centerX" id="oFc-Gi-y3d"/>
+                            <constraint firstItem="5lS-50-mHI" firstAttribute="top" secondItem="qKG-WZ-djo" secondAttribute="bottom" constant="8" id="q6j-Pg-RUW"/>
+                            <constraint firstItem="dbS-WP-Onb" firstAttribute="trailing" secondItem="Faa-bI-Wim" secondAttribute="trailing" constant="35" id="qbH-FG-Y0k"/>
+                            <constraint firstItem="lpX-qh-CxU" firstAttribute="leading" secondItem="T4j-qq-XQ4" secondAttribute="trailing" constant="8" id="ryB-Ir-bUS"/>
+                            <constraint firstItem="dbS-WP-Onb" firstAttribute="bottom" secondItem="CoS-Rp-6T3" secondAttribute="bottom" constant="8" id="smA-1j-uzi"/>
+                            <constraint firstItem="Jgr-42-xCC" firstAttribute="top" secondItem="VQ3-DE-ReR" secondAttribute="bottom" constant="8" id="u5b-pC-Rs5"/>
+                            <constraint firstItem="E11-iS-a7q" firstAttribute="centerX" secondItem="yvT-fy-M5j" secondAttribute="centerX" id="ugJ-YO-NyY"/>
+                            <constraint firstItem="ufa-Xd-zdZ" firstAttribute="centerX" secondItem="yvT-fy-M5j" secondAttribute="centerX" id="vwD-FR-fb0"/>
+                            <constraint firstItem="BEV-Kr-5t8" firstAttribute="leading" secondItem="Jgr-42-xCC" secondAttribute="trailing" constant="8" id="wIn-Gg-iZi"/>
+                            <constraint firstItem="1ea-vh-Sss" firstAttribute="leading" secondItem="lpX-qh-CxU" secondAttribute="trailing" constant="8" id="wce-iS-FjJ"/>
+                            <constraint firstItem="BEV-Kr-5t8" firstAttribute="top" secondItem="SSs-Sq-GeA" secondAttribute="bottom" constant="8" id="wzp-Jy-7dp"/>
+                            <constraint firstItem="DUr-Nv-lLy" firstAttribute="centerY" secondItem="jXi-rg-xQo" secondAttribute="centerY" id="x0M-Bz-aPU"/>
+                            <constraint firstItem="ZhC-op-coI" firstAttribute="leading" secondItem="llw-UK-hHY" secondAttribute="trailing" constant="8" id="xnU-BF-w5l"/>
+                            <constraint firstItem="JVK-Wz-kC2" firstAttribute="top" secondItem="1ea-vh-Sss" secondAttribute="bottom" constant="8" id="y94-fd-RPJ"/>
+                            <constraint firstItem="OTc-iL-cyA" firstAttribute="leading" secondItem="zKg-AU-aSF" secondAttribute="trailing" constant="8" id="yeX-UY-Df4"/>
+                            <constraint firstItem="Gxe-na-VSp" firstAttribute="top" secondItem="O71-j4-eTr" secondAttribute="top" id="yse-Zn-7Sc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dbS-WP-Onb"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="brm-2F-tv8">
+                        <barButtonItem key="rightBarButtonItem" title="Level Select" id="Grj-Og-G7V"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="currentLevelLabel" destination="DUr-Nv-lLy" id="tIh-4h-YDU"/>
+                        <outlet property="levelSelectButton" destination="hh2-hP-lUv" id="cnD-N3-XvI"/>
+                        <outlet property="muteIcon" destination="j5w-XT-Zrl" id="zDI-Cv-bOw"/>
+                        <outlet property="nextLevelButton" destination="F8P-6E-hdx" id="3I8-wk-7kI"/>
+                        <outlet property="printLevelButton" destination="E11-iS-a7q" id="G72-CP-7b2"/>
+                        <outlet property="resetButton" destination="Faa-bI-Wim" id="vMB-js-CjW"/>
+                        <outlet property="scoreNumLabel" destination="Z8R-NS-oXR" id="uUD-de-YYd"/>
+                        <outlet property="scoreStrLabel" destination="CoS-Rp-6T3" id="YT9-jS-gvS"/>
+                        <outlet property="secretLevelButton" destination="jXi-rg-xQo" id="naC-t0-su2"/>
+                        <outlet property="settingButton" destination="y8U-zO-9ed" id="jvM-3z-M8l"/>
+                        <outlet property="winAnimationTestButton" destination="heg-KR-ZpR" id="dki-G6-Nxp"/>
+                        <outlet property="winLabel" destination="9kG-UF-Lva" id="aPI-Xm-DF0"/>
+                        <outletCollection property="switchGrid" destination="D1L-HJ-8Qs" collectionClass="NSMutableArray" id="7c7-RF-JiQ"/>
+                        <outletCollection property="switchGrid" destination="qKG-WZ-djo" collectionClass="NSMutableArray" id="1sj-oe-zIX"/>
+                        <outletCollection property="switchGrid" destination="Gxe-na-VSp" collectionClass="NSMutableArray" id="Kpm-yZ-cal"/>
+                        <outletCollection property="switchGrid" destination="O71-j4-eTr" collectionClass="NSMutableArray" id="nic-83-Q6o"/>
+                        <outletCollection property="switchGrid" destination="hDs-Uq-p3l" collectionClass="NSMutableArray" id="EY0-UQ-RdJ"/>
+                        <outletCollection property="switchGrid" destination="4Un-RV-j77" collectionClass="NSMutableArray" id="VnO-Ga-0QR"/>
+                        <outletCollection property="switchGrid" destination="5lS-50-mHI" collectionClass="NSMutableArray" id="PiU-HF-TAV"/>
+                        <outletCollection property="switchGrid" destination="T4j-qq-XQ4" collectionClass="NSMutableArray" id="7TG-N3-MVX"/>
+                        <outletCollection property="switchGrid" destination="lpX-qh-CxU" collectionClass="NSMutableArray" id="rsL-8y-LbD"/>
+                        <outletCollection property="switchGrid" destination="1ea-vh-Sss" collectionClass="NSMutableArray" id="BZY-Vu-Byl"/>
+                        <outletCollection property="switchGrid" destination="llw-UK-hHY" collectionClass="NSMutableArray" id="LHp-we-143"/>
+                        <outletCollection property="switchGrid" destination="ZhC-op-coI" collectionClass="NSMutableArray" id="ynr-JM-tJH"/>
+                        <outletCollection property="switchGrid" destination="ufa-Xd-zdZ" collectionClass="NSMutableArray" id="46C-ys-9pS"/>
+                        <outletCollection property="switchGrid" destination="Qpy-I5-Yt8" collectionClass="NSMutableArray" id="AQh-H5-f7S"/>
+                        <outletCollection property="switchGrid" destination="JVK-Wz-kC2" collectionClass="NSMutableArray" id="cn2-fN-Ym7"/>
+                        <outletCollection property="switchGrid" destination="V2R-Sb-66V" collectionClass="NSMutableArray" id="aYL-Pt-tUW"/>
+                        <outletCollection property="switchGrid" destination="VQ3-DE-ReR" collectionClass="NSMutableArray" id="ehL-JO-zfG"/>
+                        <outletCollection property="switchGrid" destination="SSs-Sq-GeA" collectionClass="NSMutableArray" id="pMg-jG-8pT"/>
+                        <outletCollection property="switchGrid" destination="zKg-AU-aSF" collectionClass="NSMutableArray" id="hLK-Ug-b83"/>
+                        <outletCollection property="switchGrid" destination="OTc-iL-cyA" collectionClass="NSMutableArray" id="M6O-IP-D8Q"/>
+                        <outletCollection property="switchGrid" destination="CXk-Yh-F1K" collectionClass="NSMutableArray" id="3ns-Ux-Mhb"/>
+                        <outletCollection property="switchGrid" destination="Jgr-42-xCC" collectionClass="NSMutableArray" id="7PA-HZ-q9t"/>
+                        <outletCollection property="switchGrid" destination="BEV-Kr-5t8" collectionClass="NSMutableArray" id="1qJ-Ej-Ho3"/>
+                        <outletCollection property="switchGrid" destination="vnJ-2b-THT" collectionClass="NSMutableArray" id="8KX-bp-9z8"/>
+                        <outletCollection property="switchGrid" destination="aCe-aD-iio" collectionClass="NSMutableArray" id="avz-zG-rMY"/>
+                        <outletCollection property="titleLabels" destination="Cbm-RW-Vno" collectionClass="NSMutableArray" id="FR4-qc-4RM"/>
+                        <outletCollection property="titleLabels" destination="Mwm-hK-vEc" collectionClass="NSMutableArray" id="qtR-Ag-Bbd"/>
+                        <outletCollection property="titleLabels" destination="NrW-wK-Y5E" collectionClass="NSMutableArray" id="HQW-Uy-DXd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uEU-0i-54r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1826.4000000000001" y="770.68965517241384"/>
         </scene>
     </scenes>
     <resources>
