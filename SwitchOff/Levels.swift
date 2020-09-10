@@ -35,4 +35,11 @@ struct levels {
     static let level23 = [2, 5, 9, 10, 14, 20, 22, 24]
     static let level24 = [1, 3, 6, 7, 8, 10, 11, 13, 16, 18, 19, 21, 22, 23]
     static let level25 = [0, 4, 6, 8, 11, 13, 17, 21, 23]
+    
+//    private let playerScores = [Int]()
+//    
+//    static func getPlayerScoreForLevel(level: Int) -> Int {
+//        guard let currentLevel = level - 1 else { return }
+//        return playerScores.firstIndex(of: currentLevel) ?? 0
+//    }
 }
